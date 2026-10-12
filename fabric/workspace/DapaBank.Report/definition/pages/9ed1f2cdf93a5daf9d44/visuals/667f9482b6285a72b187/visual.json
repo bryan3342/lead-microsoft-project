@@ -3,11 +3,11 @@
   "name": "667f9482b6285a72b187",
   "position": {
     "x": 320,
-    "y": 10,
-    "z": 1000,
+    "y": 75,
+    "z": 2000,
     "width": 300,
-    "height": 100,
-    "tabOrder": 1000
+    "height": 90,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Active 90 Days'"
+                  "Value": "'PLACEHOLDER: Active 90 Days'"
                 }
               }
             }

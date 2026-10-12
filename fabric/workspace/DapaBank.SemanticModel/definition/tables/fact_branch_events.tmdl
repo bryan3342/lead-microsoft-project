@@ -1,0 +1,58 @@
+/// PLACEHOLDER. Branch openings, closings, relocations and sales.
+table fact_branch_events
+	lineageTag: a660310d-9f7a-5c1e-96b9-88d004f4e556
+	sourceLineageTag: [dbo].[fact_branch_events]
+
+	measure 'Branch Closings' = CALCULATE(COUNTROWS(fact_branch_events), fact_branch_events[event] = "Closing")
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 2a93d75b-486d-5336-b103-63d16aa95be6
+
+	measure 'Branch Openings' = CALCULATE(COUNTROWS(fact_branch_events), fact_branch_events[event] = "Opening")
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 036bb911-a7cd-5108-9bee-b014de4d19c0
+
+	column uninum
+		dataType: int64
+		lineageTag: a4dc2894-f0c4-5df9-b27f-7c2ad6936bbb
+		sourceLineageTag: uninum
+		summarizeBy: none
+		sourceColumn: uninum
+
+	column tract_geoid
+		dataType: string
+		lineageTag: bcc53dac-6c52-5cad-b346-f9f70aefc6df
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b4fcdaf-9a7a-5dc8-935d-f6baca6d7f5c
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column effective_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c4b4aab4-00ac-544b-b775-47f3870cab59
+		sourceLineageTag: effective_date
+		summarizeBy: none
+		sourceColumn: effective_date
+
+	column event
+		dataType: string
+		lineageTag: cbf0f69a-f146-5802-a822-952df63151a9
+		sourceLineageTag: event
+		summarizeBy: none
+		sourceColumn: event
+
+	partition fact_branch_events = entity
+		mode: directLake
+		source
+			entityName: fact_branch_events
+			schemaName: dbo
+			expressionSource: DatabaseQuery

@@ -3,11 +3,11 @@
   "name": "16fb0598dd4d50438362",
   "position": {
     "x": 10,
-    "y": 10,
-    "z": 0,
+    "y": 75,
+    "z": 1000,
     "width": 200,
-    "height": 100,
-    "tabOrder": 0
+    "height": 90,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Events'"
+                  "Value": "'PLACEHOLDER: Events'"
                 }
               }
             }

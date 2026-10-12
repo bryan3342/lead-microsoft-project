@@ -3,11 +3,11 @@
   "name": "94c6466203985447a99a",
   "position": {
     "x": 640,
-    "y": 10,
-    "z": 3000,
+    "y": 75,
+    "z": 4000,
     "width": 200,
-    "height": 100,
-    "tabOrder": 3000
+    "height": 90,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Active Rate'"
+                  "Value": "'PLACEHOLDER: Active Rate'"
                 }
               }
             }

@@ -3,10 +3,10 @@
   "name": "38e8e803e70050b38514",
   "position": {
     "x": 10,
-    "y": 420,
+    "y": 445,
     "z": 9000,
     "width": 1260,
-    "height": 290,
+    "height": 265,
     "tabOrder": 9000
   },
   "visual": {
@@ -173,7 +173,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Results by event'"
+                  "Value": "'PLACEHOLDER: Results by event'"
                 }
               }
             }

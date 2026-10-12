@@ -3,7 +3,7 @@
   "metadata": {
     "type": "Report",
     "displayName": "DAPA Bank Dashboard",
-    "description": "Bank-facing pilot dashboard (SAMPLE data)."
+    "description": "Bank-facing dashboard skeleton (placeholders, no data)."
   },
   "config": {
     "version": "2.0",

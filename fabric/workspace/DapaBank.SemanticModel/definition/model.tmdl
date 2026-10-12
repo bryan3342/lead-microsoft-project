@@ -9,9 +9,16 @@ model Model
 
 annotation PBI_QueryOrder = ["DatabaseQuery"]
 
+ref table dim_county
 ref table dim_tract
+ref table dim_year
 ref table dim_bank
 ref table dim_branch
+ref table fact_branch_deposits
+ref table fact_branch_events
+ref table fact_tract_lending
+ref table fact_tract_complaints
+ref table fact_tract_accounts
 ref table dim_event
 ref table fact_attendee
 ref table scenario_ltv

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "7dc6defcbe5758d78aa9",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 7000,
+    "width": 620,
+    "height": 300,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "pilot_arm"
+                }
+              },
+              "queryRef": "dim_tract.pilot_arm",
+              "nativeQueryRef": "pilot_arm"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_tract_accounts"
+                    }
+                  },
+                  "Property": "New Active Accounts per 1k Households"
+                }
+              },
+              "queryRef": "fact_tract_accounts.New Active Accounts per 1k Households",
+              "nativeQueryRef": "New Active Accounts per 1k Households"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: New active accounts per 1k households, pilot vs matched control'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

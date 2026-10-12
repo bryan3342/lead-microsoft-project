@@ -1,4 +1,4 @@
-/// Community events run by the tenant bank.
+/// PLACEHOLDER. Community events run by the bank.
 table dim_event
 	lineageTag: a81f49f2-a698-58eb-8300-702aa3a5edc6
 	sourceLineageTag: [dbo].[dim_event]
@@ -25,19 +25,19 @@ table dim_event
 		summarizeBy: none
 		sourceColumn: event_id
 
-	column bank_id
-		dataType: string
-		lineageTag: a0370d5d-9f2f-5d58-a22f-4ea3faf0a1dc
-		sourceLineageTag: bank_id
+	column cert
+		dataType: int64
+		lineageTag: a267d2b0-9443-5a7a-b0f6-5a9b908f9078
+		sourceLineageTag: cert
 		summarizeBy: none
-		sourceColumn: bank_id
+		sourceColumn: cert
 
-	column tract_id
+	column tract_geoid
 		dataType: string
-		lineageTag: 8fc2ff08-e5b2-5887-8040-e9212cddcc96
-		sourceLineageTag: tract_id
+		lineageTag: 122526d6-d60b-5bd5-9bb2-7f9a4d67b58e
+		sourceLineageTag: tract_geoid
 		summarizeBy: none
-		sourceColumn: tract_id
+		sourceColumn: tract_geoid
 
 	column event_date
 		dataType: dateTime

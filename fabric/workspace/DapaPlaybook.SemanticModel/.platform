@@ -3,7 +3,7 @@
   "metadata": {
     "type": "SemanticModel",
     "displayName": "DAPA Playbook",
-    "description": "Mastercard view: de-identified aggregates only, never personal data."
+    "description": "Mastercard view (placeholders): de-identified aggregates only, never personal data."
   },
   "config": {
     "version": "2.0",

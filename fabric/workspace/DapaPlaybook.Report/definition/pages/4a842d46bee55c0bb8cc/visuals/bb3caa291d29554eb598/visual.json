@@ -3,11 +3,11 @@
   "name": "bb3caa291d29554eb598",
   "position": {
     "x": 10,
-    "y": 270,
-    "z": 7000,
+    "y": 310,
+    "z": 8000,
     "width": 300,
-    "height": 140,
-    "tabOrder": 7000
+    "height": 125,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Product focus'"
+                  "Value": "'PLACEHOLDER: Product focus'"
                 }
               }
             }

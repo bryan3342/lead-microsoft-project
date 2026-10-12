@@ -3,11 +3,11 @@
   "name": "9957f83aeaef55e89504",
   "position": {
     "x": 320,
-    "y": 120,
-    "z": 8000,
+    "y": 175,
+    "z": 9000,
     "width": 470,
-    "height": 290,
-    "tabOrder": 8000
+    "height": 260,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -65,7 +65,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cost per active customer by event type'"
+                  "Value": "'PLACEHOLDER: Cost per active customer by event type'"
                 }
               }
             }

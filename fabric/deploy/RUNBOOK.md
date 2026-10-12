@@ -1,6 +1,6 @@
 # Runbook: stand up the DAPA dashboards in Azure
 
-One command creates a Fabric capacity in your Azure resource group, creates a Fabric workspace on it, loads the sample data and publishes both Power BI dashboards. It signs in as you through the Azure CLI, so there are no keys or passwords to handle.
+One command creates a Fabric capacity in your Azure resource group, creates a Fabric workspace on it, creates the empty data tables and publishes both Power BI dashboard skeletons. No data is loaded. It signs in as you through the Azure CLI, so there are no keys or passwords to handle.
 
 Works on macOS, Windows and Linux. Expect about 15 minutes end to end, most of it waiting on Azure and Spark.
 
@@ -88,7 +88,9 @@ To show the maps, a Fabric administrator also needs to turn on "Use Azure Maps v
 
    It prints each stage as it goes. The notebook run takes the longest because Spark has to start. At the end it prints a link to each dashboard.
 
-7. **Open the links** and sign in with the same account. The Bank Dashboard has three pages: Opportunity Map, Pilot Results and Scenario. The Mastercard Playbook has one page.
+7. **Open the links** and sign in with the same account. The Bank Dashboard has six pages: Overview, Opportunity Map, Community Evidence, Branch Opportunities, Pilot Results and Scenario. The Mastercard Playbook has one page. Every chart is an empty, labeled placeholder until data pipelines fill the tables.
+
+   To see the layout without deploying anything, run `python3 fabric/tools/preview.py` from the repository root.
 
 ## Day to day
 
@@ -120,7 +122,7 @@ The script never deletes anything. Do these by hand, and only when the team agre
 | `AuthorizationFailed` creating the capacity | You need Contributor on the resource group |
 | `Capacity is active in Azure but not visible in Fabric` | Add your email to `CAPACITY_ADMINS`, then re-run `up` |
 | `FeatureNotAvailable` or `Unauthorized` creating the workspace | Fabric is turned off for your organization. Ask a Fabric administrator. |
-| `Notebook run Failed` | Open the workspace, open Load Sample Data, and look at the failed cell. Re-run `up` once it's fixed. |
+| `Notebook run Failed` | Open the workspace, open Create Tables, and look at the failed cell. Re-run `up` once it's fixed. |
 | A model refresh keeps failing | Wait two minutes and re-run `up`. Sometimes the lakehouse takes a moment to show new tables. |
 | Reports open but visuals show errors | Open the semantic model's settings and confirm the data source sign-in uses single sign-on with your account. Then refresh the model. |
 | Maps are blank | Turn on the Azure Maps visual in tenant settings. If they are still blank, drag `latitude` and `longitude` back into the map's field wells and save. |
@@ -131,4 +133,4 @@ The script never deletes anything. Do these by hand, and only when the team agre
 - **No stored credentials.** The script borrows short-lived tokens from your Azure CLI sign-in. `config.env` holds only names and IDs, and git ignores it.
 - **Least privilege.** Only the people you list get capacity admin or workspace admin. Add others in Fabric with the lowest role they need, such as Viewer.
 - **Data stays in your tenant.** The lakehouse, models and reports live in your organization's Fabric tenant. The script never turns on sharing outside the organization, public links or "publish to web".
-- **Sample data only.** Everything loaded is synthetic. Before any real bank data arrives, move the Mastercard Playbook model and report into a separate workspace that receives only the aggregated table, and apply sensitivity labels.
+- **No data yet.** The tables start empty. Before any real bank data arrives, move the Mastercard Playbook model and report into a separate workspace that receives only the aggregated table, and apply sensitivity labels.

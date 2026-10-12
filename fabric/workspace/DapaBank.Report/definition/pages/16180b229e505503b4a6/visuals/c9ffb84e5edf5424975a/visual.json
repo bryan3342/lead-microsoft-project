@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c9ffb84e5edf5424975a",
+  "position": {
+    "x": 320,
+    "y": 75,
+    "z": 2000,
+    "width": 300,
+    "height": 90,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_bank"
+                    }
+                  },
+                  "Property": "target_issuer"
+                }
+              },
+              "queryRef": "dim_bank.target_issuer",
+              "nativeQueryRef": "target_issuer"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Local issuer (under $10B)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

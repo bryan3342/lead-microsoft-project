@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "856d9b63c86b5aa893c7",
+  "position": {
+    "x": 430,
+    "y": 75,
+    "z": 3000,
+    "width": 200,
+    "height": 90,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_tract_lending"
+                    }
+                  },
+                  "Property": "Mortgage Denial Rate"
+                }
+              },
+              "queryRef": "fact_tract_lending.Mortgage Denial Rate",
+              "nativeQueryRef": "Mortgage Denial Rate"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Mortgage Denial Rate'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

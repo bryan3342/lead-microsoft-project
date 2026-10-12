@@ -1,0 +1,50 @@
+/// PLACEHOLDER. Consumer complaints per tract per year by product group (CFPB, ZIP mapped to tract).
+table fact_tract_complaints
+	lineageTag: 71687ee9-eceb-5b10-a9c5-b33629ed6573
+	sourceLineageTag: [dbo].[fact_tract_complaints]
+
+	measure 'Banking Access Complaints' = CALCULATE(SUM(fact_tract_complaints[complaints]), fact_tract_complaints[product_group] = "banking_access")
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: f6fc7fc7-c37f-5213-bb20-16a047901176
+
+	measure 'Complaints per 1k Households' = DIVIDE([Banking Access Complaints], [Households]) * 1000
+		formatString: 0.0
+		displayFolder: Community
+		lineageTag: 5402610d-71b8-53ba-beb5-33fe71dd4a08
+
+	column tract_geoid
+		dataType: string
+		lineageTag: d8e8b21f-a958-598f-9bc7-88b2f59771e2
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 61ba87e7-f41a-59d4-8188-2b4d9f08c8ae
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column product_group
+		dataType: string
+		lineageTag: 0adcde11-2d3c-5fa1-8d01-6d0baa60c8ec
+		sourceLineageTag: product_group
+		summarizeBy: none
+		sourceColumn: product_group
+
+	column complaints
+		dataType: double
+		lineageTag: d11e7b7f-2bda-5522-add3-c680a9ae3999
+		sourceLineageTag: complaints
+		summarizeBy: none
+		sourceColumn: complaints
+
+	partition fact_tract_complaints = entity
+		mode: directLake
+		source
+			entityName: fact_tract_complaints
+			schemaName: dbo
+			expressionSource: DatabaseQuery

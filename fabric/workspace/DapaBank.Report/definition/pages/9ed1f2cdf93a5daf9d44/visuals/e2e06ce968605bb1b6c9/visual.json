@@ -3,11 +3,11 @@
   "name": "e2e06ce968605bb1b6c9",
   "position": {
     "x": 10,
-    "y": 120,
-    "z": 2000,
+    "y": 175,
+    "z": 3000,
     "width": 1260,
-    "height": 400,
-    "tabOrder": 2000
+    "height": 345,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -107,7 +107,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ASSUMPTION: 5-year cumulative LTV per active account vs measured cost per active customer'"
+                  "Value": "'PLACEHOLDER: ASSUMPTION: 5-year cumulative LTV per active account vs measured cost per active customer'"
                 }
               }
             }

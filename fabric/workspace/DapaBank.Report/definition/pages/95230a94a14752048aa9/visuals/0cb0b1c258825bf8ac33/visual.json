@@ -3,11 +3,11 @@
   "name": "0cb0b1c258825bf8ac33",
   "position": {
     "x": 640,
-    "y": 120,
-    "z": 5000,
+    "y": 175,
+    "z": 7000,
     "width": 630,
-    "height": 290,
-    "tabOrder": 5000
+    "height": 260,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "azureMap",
@@ -23,11 +23,11 @@
                       "Entity": "dim_branch"
                     }
                   },
-                  "Property": "branch_id"
+                  "Property": "office_name"
                 }
               },
-              "queryRef": "dim_branch.branch_id",
-              "nativeQueryRef": "branch_id"
+              "queryRef": "dim_branch.office_name",
+              "nativeQueryRef": "office_name"
             }
           ]
         },
@@ -119,7 +119,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Branch overlay by bank'"
+                  "Value": "'PLACEHOLDER: Branch overlay by bank'"
                 }
               }
             }

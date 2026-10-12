@@ -1,5 +1,5 @@
 /// Direct Lake connection to the DapaLakehouse SQL analytics endpoint.
-/// Replace both placeholders after the lakehouse exists (see fabric/README.md).
+/// The deploy script fills both placeholders in memory (see fabric/deploy/RUNBOOK.md).
 expression DatabaseQuery =
 		let
 		    database = Sql.Database("<SQL_ENDPOINT_HOST>", "<SQL_ENDPOINT_ID>")

@@ -3,11 +3,11 @@
   "name": "dc08a464c711524f9de5",
   "position": {
     "x": 640,
-    "y": 420,
-    "z": 6000,
+    "y": 445,
+    "z": 8000,
     "width": 630,
-    "height": 290,
-    "tabOrder": 6000
+    "height": 265,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -45,17 +45,17 @@
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "dim_tract"
                     }
                   },
-                  "Property": "top_non_english_language"
+                  "Property": "Est. Unbanked Households"
                 }
               },
-              "queryRef": "dim_tract.top_non_english_language",
-              "nativeQueryRef": "top_non_english_language"
+              "queryRef": "dim_tract.Est. Unbanked Households",
+              "nativeQueryRef": "Est. Unbanked Households"
             },
             {
               "field": {
@@ -131,7 +131,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ranked tracts'"
+                  "Value": "'PLACEHOLDER: Ranked tracts'"
                 }
               }
             }

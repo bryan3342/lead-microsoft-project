@@ -1,4 +1,4 @@
-/// One row per census tract with need, readiness and bank-fit scores (SAMPLE data).
+/// PLACEHOLDER. One row per census tract: households, estimated unbanked households, scores, pilot arm.
 table dim_tract
 	lineageTag: ec41c553-9460-577c-b407-cbe14b1a9dee
 	sourceLineageTag: [dbo].[dim_tract]
@@ -7,6 +7,21 @@ table dim_tract
 		formatString: #,0
 		displayFolder: Opportunity
 		lineageTag: 4ea9a505-5143-5df2-afff-f46fe46e2beb
+
+	measure Households = SUM(dim_tract[households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 6a3e7c89-70be-5709-a889-11f03379c593
+
+	measure 'Est. Unbanked Households' = SUM(dim_tract[est_unbanked_households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 4134b365-440b-5435-94ac-2faa4c196494
+
+	measure 'Est. Underbanked Households' = SUM(dim_tract[est_underbanked_households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 004d0213-3aaa-522e-84cc-f835c8679df3
 
 	measure 'Avg Need Score' = AVERAGE(dim_tract[need_score])
 		formatString: 0.00
@@ -28,25 +43,19 @@ table dim_tract
 		displayFolder: Opportunity
 		lineageTag: d053207b-40f8-5b0a-ba36-818dba2130c6
 
-	measure 'Active Accounts per 1k Adults' = DIVIDE(SUM(dim_tract[observed_new_active_accounts]), SUM(dim_tract[adult_population])) * 1000
-		formatString: 0.0
-		displayFolder: Pilot vs control
-		lineageTag: a65da4e5-b9e1-541b-998a-96abdc658bc5
-
-	measure 'Lift vs Control' =
-			VAR pilot = CALCULATE([Active Accounts per 1k Adults], dim_tract[pilot_arm] IN {"Pilot A", "Pilot B"})
-			VAR control = CALCULATE([Active Accounts per 1k Adults], dim_tract[pilot_arm] = "Control")
-			RETURN pilot - control
-		formatString: +0.0;-0.0;0.0
-		displayFolder: Pilot vs control
-		lineageTag: 8d8bf5f8-401f-511a-a9eb-89db5e2238d1
-
-	column tract_id
+	column tract_geoid
 		dataType: string
-		lineageTag: 3352477c-c582-5772-9bb3-bcb0287955b5
-		sourceLineageTag: tract_id
+		lineageTag: 27be3e81-ea4f-57f9-8978-c8eadcdaec75
+		sourceLineageTag: tract_geoid
 		summarizeBy: none
-		sourceColumn: tract_id
+		sourceColumn: tract_geoid
+
+	column county_fips
+		dataType: string
+		lineageTag: ae68bbaf-12f8-5e25-8d90-a91b96a72df7
+		sourceLineageTag: county_fips
+		summarizeBy: none
+		sourceColumn: county_fips
 
 	column tract_name
 		dataType: string
@@ -54,20 +63,6 @@ table dim_tract
 		sourceLineageTag: tract_name
 		summarizeBy: none
 		sourceColumn: tract_name
-
-	column county
-		dataType: string
-		lineageTag: 3d8289af-d8bc-5f11-abec-b404b4626851
-		sourceLineageTag: county
-		summarizeBy: none
-		sourceColumn: county
-
-	column state
-		dataType: string
-		lineageTag: e47fbcc7-ef1b-57ac-a3c9-260de3db15dc
-		sourceLineageTag: state
-		summarizeBy: none
-		sourceColumn: state
 
 	column latitude
 		dataType: double
@@ -85,82 +80,40 @@ table dim_tract
 		summarizeBy: none
 		sourceColumn: longitude
 
-	column adult_population
+	column households
 		dataType: int64
-		lineageTag: 2564eb44-1340-5f4a-90ba-9d20dddf1596
-		sourceLineageTag: adult_population
+		lineageTag: e4e6b698-55a1-5aef-993a-6196d42393bb
+		sourceLineageTag: households
 		summarizeBy: none
-		sourceColumn: adult_population
+		sourceColumn: households
 
-	column unbanked_rate
-		dataType: double
-		lineageTag: 291e00ce-61cd-54be-a794-0a86fdcd0bfe
-		sourceLineageTag: unbanked_rate
-		summarizeBy: none
-		sourceColumn: unbanked_rate
-
-	column underbanked_rate
-		dataType: double
-		lineageTag: e10f8000-ca8e-581f-a164-c9e0b70fcd18
-		sourceLineageTag: underbanked_rate
-		summarizeBy: none
-		sourceColumn: underbanked_rate
-
-	column low_income_share
-		dataType: double
-		lineageTag: a3b6363b-a254-52e3-94a3-130d974cf95a
-		sourceLineageTag: low_income_share
-		summarizeBy: none
-		sourceColumn: low_income_share
-
-	column alt_financial_outlets
+	column low_income_households
 		dataType: int64
-		lineageTag: 6c94bd60-fbd1-5f8f-a3ae-8bb7506ce855
-		sourceLineageTag: alt_financial_outlets
+		lineageTag: 226c914b-7d93-518e-a051-b92567a1ccb8
+		sourceLineageTag: low_income_households
 		summarizeBy: none
-		sourceColumn: alt_financial_outlets
+		sourceColumn: low_income_households
 
-	column smartphone_rate
+	column limited_english_households
+		dataType: int64
+		lineageTag: cf693128-fad4-59bd-96ba-e2a900850226
+		sourceLineageTag: limited_english_households
+		summarizeBy: none
+		sourceColumn: limited_english_households
+
+	column est_unbanked_households
 		dataType: double
-		lineageTag: e2bedd8a-0423-5a8e-977c-ec2e839e5a32
-		sourceLineageTag: smartphone_rate
+		lineageTag: c220fb8f-8767-592a-b3d4-59f3f0ea7386
+		sourceLineageTag: est_unbanked_households
 		summarizeBy: none
-		sourceColumn: smartphone_rate
+		sourceColumn: est_unbanked_households
 
-	column broadband_rate
+	column est_underbanked_households
 		dataType: double
-		lineageTag: 03c75511-5927-55dc-8310-407a58c9a86d
-		sourceLineageTag: broadband_rate
+		lineageTag: aac8d3be-cd6e-594d-949a-fc65ae8d8454
+		sourceLineageTag: est_underbanked_households
 		summarizeBy: none
-		sourceColumn: broadband_rate
-
-	column small_business_per_1k
-		dataType: double
-		lineageTag: a09d3969-26b1-5393-b993-c2f7412c8b3c
-		sourceLineageTag: small_business_per_1k
-		summarizeBy: none
-		sourceColumn: small_business_per_1k
-
-	column inclusive_growth_score
-		dataType: double
-		lineageTag: 3bed7a39-c969-5481-99b5-5eb43a77c750
-		sourceLineageTag: inclusive_growth_score
-		summarizeBy: none
-		sourceColumn: inclusive_growth_score
-
-	column top_non_english_language
-		dataType: string
-		lineageTag: 085caf0b-e48f-58ae-8ea8-ce042b099e59
-		sourceLineageTag: top_non_english_language
-		summarizeBy: none
-		sourceColumn: top_non_english_language
-
-	column limited_english_rate
-		dataType: double
-		lineageTag: 34dfa8db-c6f7-5e40-b735-4cd46932ce21
-		sourceLineageTag: limited_english_rate
-		summarizeBy: none
-		sourceColumn: limited_english_rate
+		sourceColumn: est_underbanked_households
 
 	column need_score
 		dataType: double
@@ -196,13 +149,6 @@ table dim_tract
 		sourceLineageTag: pilot_arm
 		summarizeBy: none
 		sourceColumn: pilot_arm
-
-	column observed_new_active_accounts
-		dataType: int64
-		lineageTag: b039c777-dac4-5548-9b17-ca0867cbfc18
-		sourceLineageTag: observed_new_active_accounts
-		summarizeBy: none
-		sourceColumn: observed_new_active_accounts
 
 	partition dim_tract = entity
 		mode: directLake

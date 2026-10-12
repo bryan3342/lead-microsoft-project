@@ -3,10 +3,10 @@
   "name": "0103e37a39f4517e8563",
   "position": {
     "x": 640,
-    "y": 270,
+    "y": 175,
     "z": 8000,
     "width": 630,
-    "height": 140,
+    "height": 260,
     "tabOrder": 8000
   },
   "visual": {
@@ -93,7 +93,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Funnel rates by approach'"
+                  "Value": "'PLACEHOLDER: Funnel rates by approach'"
                 }
               }
             }

@@ -3,11 +3,11 @@
   "name": "8848b8a84ee45007aba4",
   "position": {
     "x": 800,
-    "y": 120,
-    "z": 9000,
+    "y": 175,
+    "z": 10000,
     "width": 470,
-    "height": 290,
-    "tabOrder": 9000
+    "height": 260,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -65,7 +65,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Active rate by approach'"
+                  "Value": "'PLACEHOLDER: Active rate by approach'"
                 }
               }
             }

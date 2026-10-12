@@ -1,18 +1,21 @@
-"""Offline checks for the Fabric workspace definitions.
+"""Offline checks for the Fabric workspace skeleton.
 
 Run from the repo root: pytest fabric/tests
 """
 import json
-import os
 import re
+import subprocess
+import sys
 from pathlib import Path
 
-import pandas as pd
 import pytest
 
-WORKSPACE = Path(__file__).resolve().parents[1] / "workspace"
-NOTEBOOK = WORKSPACE / "LoadSampleData.Notebook" / "notebook-content.ipynb"
+FABRIC = Path(__file__).resolve().parents[1]
+WORKSPACE = FABRIC / "workspace"
+NOTEBOOK = WORKSPACE / "CreateTables.Notebook" / "notebook-content.ipynb"
 PROTECTED = {"race", "ethnicity", "religion", "gender", "sex", "national", "origin", "born", "citizenship"}
+PERSONAL_KEYS = {"referral_code", "tract_geoid", "event_id", "cert", "uninum"}
+TMDL_TYPE = {"string": "string", "double": "double", "bigint": "int64", "boolean": "boolean", "date": "dateTime"}
 
 
 def unquote(name):
@@ -20,13 +23,13 @@ def unquote(name):
 
 
 def parse_model(folder):
-    """Return {table: {"columns": set, "measures": set}} for a TMDL semantic model."""
+    """Return {table: {"columns": {name: dataType}, "measures": set}} for a TMDL semantic model."""
     tables = {}
     for f in (WORKSPACE / folder / "definition" / "tables").glob("*.tmdl"):
         text = f.read_text()
         table = unquote(re.search(r"^table (.+)$", text, re.M).group(1))
         tables[table] = {
-            "columns": {unquote(m) for m in re.findall(r"^\tcolumn (.+)$", text, re.M)},
+            "columns": dict(re.findall(r"^\tcolumn (\S+)\n\t\tdataType: (\S+)", text, re.M)),
             "measures": {unquote(m) for m in re.findall(r"^\tmeasure ('[^']+'|\S+) =", text, re.M)},
         }
     return tables
@@ -60,20 +63,13 @@ def field_refs(node):
 
 
 @pytest.fixture(scope="session")
-def sample_tables(tmp_path_factory):
-    """Run the notebook's code cells locally (no Spark), which writes CSVs to sample-output/."""
+def schemas():
+    """Run the notebook's code cells locally (no Spark), which only defines and prints the schemas."""
     nb = json.loads(NOTEBOOK.read_text())
     code = "\n\n".join("".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code")
-    cwd = os.getcwd()
-    os.chdir(tmp_path_factory.mktemp("notebook"))
-    try:
-        ns = {}
-        exec(compile(code, str(NOTEBOOK), "exec"), ns)
-        written = {p.stem for p in Path("sample-output").glob("*.csv")}
-    finally:
-        os.chdir(cwd)
-    assert written == set(ns["TABLES"]), "notebook did not write every table"
-    return ns
+    ns = {}
+    exec(compile(code, str(NOTEBOOK), "exec"), ns)
+    return ns["SCHEMAS"]
 
 
 def test_every_definition_file_is_json_with_a_schema():
@@ -83,6 +79,14 @@ def test_every_definition_file_is_json_with_a_schema():
         doc = json.loads(f.read_text())  # fails loudly on malformed JSON
         if f.name != "lakehouse.metadata.json":  # Fabric writes this one without a schema
             assert "$schema" in doc, f
+
+
+def test_notebook_only_creates_tables_and_never_overwrites(schemas):
+    code = "".join("".join(c["source"]) for c in json.loads(NOTEBOOK.read_text())["cells"] if c["cell_type"] == "code")
+    assert "CREATE TABLE IF NOT EXISTS" in code
+    for risky in ("overwrite", "INSERT", "DROP", "DELETE", "read_parquet", "read_csv"):
+        assert risky not in code, f"notebook must not load or replace data: found {risky}"
+    assert schemas
 
 
 @pytest.mark.parametrize("report", reports())
@@ -102,54 +106,74 @@ def test_visual_fields_exist_in_bound_model(report):
             assert prop in pool, f"{v}: {kind} {table}[{prop}] not in model"
 
 
+@pytest.mark.parametrize("report", reports())
+def test_every_data_visual_is_labeled_a_placeholder(report):
+    for v in (WORKSPACE / report).rglob("visual.json"):
+        vis = json.loads(v.read_text())["visual"]
+        if vis["visualType"] == "textbox":
+            continue
+        title = vis["visualContainerObjects"]["title"][0]["properties"]["text"]["expr"]["Literal"]["Value"]
+        assert title.startswith("'PLACEHOLDER: "), f"{v}: {title}"
+
+
+@pytest.mark.parametrize("report", reports())
+def test_every_page_has_a_skeleton_banner(report):
+    for page in (WORKSPACE / report / "definition" / "pages").iterdir():
+        if not page.is_dir():
+            continue
+        texts = [json.dumps(json.loads(v.read_text())) for v in page.rglob("visual.json")]
+        assert any("SKELETON, no data loaded" in t for t in texts), page
+
+
 @pytest.mark.parametrize("model", models())
 def test_relationships_reference_real_columns(model):
     rel = WORKSPACE / model / "definition" / "relationships.tmdl"
     if not rel.exists():
         pytest.skip("no relationships")
     tables = parse_model(model)
-    for ref in re.findall(r"^\t(?:from|to)Column: (\S+)\.(\S+)$", rel.read_text(), re.M):
-        assert ref[1] in tables[ref[0]]["columns"], ref
+    for table, column in re.findall(r"^\t(?:from|to)Column: (\S+)\.(\S+)$", rel.read_text(), re.M):
+        assert column in tables[table]["columns"], (table, column)
 
 
 @pytest.mark.parametrize("model", models())
-def test_model_columns_match_notebook_output(model, sample_tables):
+def test_model_columns_and_types_match_the_notebook(model, schemas):
     for table, spec in parse_model(model).items():
-        produced = set(sample_tables["TABLES"][table].columns)
-        assert spec["columns"] == produced, f"{model}/{table} drifted from the notebook"
+        expected = {col: TMDL_TYPE[t] for col, t in schemas[table]}
+        assert spec["columns"] == expected, f"{model}/{table} drifted from the notebook"
 
 
-def test_playbook_model_reads_only_the_aggregate(sample_tables):
+def test_every_notebook_table_is_used_by_a_model(schemas):
+    used = {t for m in models() for t in parse_model(m)}
+    assert used == set(schemas)
+
+
+def test_playbook_model_reads_only_the_aggregate(schemas):
     assert set(parse_model("DapaPlaybook.SemanticModel")) == {"agg_playbook"}
-    agg = sample_tables["agg_playbook"]
-    assert not {"referral_code", "tract_id", "event_id", "bank_id"} & set(agg.columns)
-    assert (agg["attendees"] >= sample_tables["MIN_GROUP_SIZE"]).all()
-    assert len(agg) > 0, "suppression removed every group; the sample is too small"
+    agg_columns = {col for col, _ in schemas["agg_playbook"]}
+    assert not PERSONAL_KEYS & agg_columns
 
 
-def test_no_protected_attributes_in_any_model():
-    for model in models():
-        for table, spec in parse_model(model).items():
-            for col in spec["columns"]:
-                assert not PROTECTED & set(col.lower().split("_")), f"{model}/{table}.{col}"
+def test_no_protected_attributes_anywhere(schemas):
+    for table, columns in schemas.items():
+        for col, _ in columns:
+            assert not PROTECTED & set(col.lower().split("_")), f"{table}.{col}"
 
 
-def test_outcomes_only_for_opted_in_attendees(sample_tables):
-    fa = sample_tables["fact_attendee"]
-    unmatched = fa[~(fa["consented"] & fa["attended"])]
-    outcomes = ["account_opened", "funded_30d", "active_90d", "products_held", "trust_before", "trust_after"]
-    assert unmatched[outcomes].isna().all().all()
+def test_terminal_preview_renders_every_page():
+    result = subprocess.run([sys.executable, str(FABRIC / "tools" / "preview.py"), "--width", "100"],
+                            capture_output=True, text=True, check=True)
+    pages = sum(len(json.loads((WORKSPACE / r / "definition/pages/pages.json").read_text())["pageOrder"])
+                for r in reports())
+    assert len(re.findall(r"\|  page \d+ of \d+: ", result.stdout)) == pages
+    assert "links (many -> one)" in result.stdout
 
 
-def test_matched_control_tracts_have_no_events(sample_tables):
-    tracts = sample_tables["dim_tract"]
-    control = set(tracts.loc[tracts["pilot_arm"] == "Control", "tract_id"])
-    assert len(control) == 2
-    assert not control & set(sample_tables["dim_event"]["tract_id"])
-
-
-def test_scenario_values_are_labeled_assumptions(sample_tables):
-    ltv = sample_tables["scenario_ltv"]
-    assert set(ltv["basis"]) == {"Assumption"}
-    for _, rows in ltv.groupby("scenario"):
-        assert pd.Series(rows.sort_values("year")["cumulative_ltv_usd"]).is_monotonic_increasing
+def test_web_preview_places_every_visual_at_its_report_position(tmp_path):
+    out = tmp_path / "preview.html"
+    subprocess.run([sys.executable, str(FABRIC / "tools" / "web_preview.py"), "--out", str(out)], check=True,
+                   capture_output=True)
+    page = out.read_text()
+    for report in reports():
+        for v in (WORKSPACE / report).rglob("visual.json"):
+            p = json.loads(v.read_text())["position"]
+            assert f"left:{p['x']}px;top:{p['y']}px;width:{p['width']}px;height:{p['height']}px" in page, v

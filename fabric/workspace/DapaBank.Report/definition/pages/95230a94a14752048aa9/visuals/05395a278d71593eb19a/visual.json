@@ -1,0 +1,159 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "05395a278d71593eb19a",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 6000,
+    "width": 620,
+    "height": 535,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "azureMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "tract_name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "latitude"
+                }
+              },
+              "queryRef": "dim_tract.latitude",
+              "nativeQueryRef": "latitude"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "longitude"
+                }
+              },
+              "queryRef": "dim_tract.longitude",
+              "nativeQueryRef": "longitude"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Opportunity Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Opportunity Score",
+              "nativeQueryRef": "Avg Opportunity Score"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Need Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Need Score",
+              "nativeQueryRef": "Avg Need Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Readiness Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Readiness Score",
+              "nativeQueryRef": "Avg Readiness Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Bank Fit Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Bank Fit Score",
+              "nativeQueryRef": "Avg Bank Fit Score"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Tracts sized by opportunity score'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

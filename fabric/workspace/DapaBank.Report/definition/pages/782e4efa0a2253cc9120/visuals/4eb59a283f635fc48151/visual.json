@@ -3,11 +3,11 @@
   "name": "4eb59a283f635fc48151",
   "position": {
     "x": 850,
-    "y": 10,
-    "z": 4000,
+    "y": 75,
+    "z": 5000,
     "width": 200,
-    "height": 100,
-    "tabOrder": 4000
+    "height": 90,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cost per Active Customer'"
+                  "Value": "'PLACEHOLDER: Cost per Active Customer'"
                 }
               }
             }

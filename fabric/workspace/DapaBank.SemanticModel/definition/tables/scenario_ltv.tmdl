@@ -1,4 +1,4 @@
-/// ASSUMPTION: cumulative lifetime value ranges per active account. Replace with model output, then actuals.
+/// PLACEHOLDER. ASSUMPTION ranges for lifetime value per active account. Replace with model output, then actuals.
 table scenario_ltv
 	lineageTag: 668ca843-6b69-5808-8980-29addb7bff8c
 	sourceLineageTag: [dbo].[scenario_ltv]
@@ -27,6 +27,7 @@ table scenario_ltv
 
 	column year
 		dataType: int64
+		formatString: 0
 		lineageTag: 22789255-14e1-5719-89d5-cc684ceb5f15
 		sourceLineageTag: year
 		summarizeBy: none

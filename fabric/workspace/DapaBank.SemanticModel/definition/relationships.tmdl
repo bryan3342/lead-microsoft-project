@@ -1,18 +1,62 @@
-relationship 798e2e51-f9a0-5a9b-a457-fa550dd618c9
-	fromColumn: dim_branch.bank_id
-	toColumn: dim_bank.bank_id
+relationship ac9ba9f4-bc53-5238-8f12-47ef95979ae2
+	fromColumn: dim_tract.county_fips
+	toColumn: dim_county.county_fips
 
-relationship 8ddd07d3-09de-5c3b-9f14-8eaa6ff63e97
-	fromColumn: dim_branch.tract_id
-	toColumn: dim_tract.tract_id
+relationship 170aa73a-8ce4-5fb7-83fd-77ddbf52bd8a
+	fromColumn: dim_branch.cert
+	toColumn: dim_bank.cert
 
-relationship 122be4a5-4dfe-51c1-8f76-c254ab52c3a8
-	fromColumn: dim_event.bank_id
-	toColumn: dim_bank.bank_id
+relationship 63f295c1-db01-574c-bb2f-38c0920d8d74
+	fromColumn: dim_branch.tract_geoid
+	toColumn: dim_tract.tract_geoid
 
-relationship 8531bec9-364a-5514-a0b3-6a3a0166cd68
-	fromColumn: dim_event.tract_id
-	toColumn: dim_tract.tract_id
+relationship caefb53e-b3c5-58a3-8222-a28ec7d9f4f8
+	fromColumn: fact_branch_deposits.uninum
+	toColumn: dim_branch.uninum
+
+relationship ff4fcfb2-f286-5066-ac2f-ea4ec920b16c
+	fromColumn: fact_branch_deposits.year
+	toColumn: dim_year.year
+
+relationship 72712697-fc2e-5eeb-8b62-ed18a9c302b5
+	fromColumn: fact_branch_events.tract_geoid
+	toColumn: dim_tract.tract_geoid
+
+relationship dfc49f1c-7ac8-5bc3-8cfc-7684e0792a8e
+	fromColumn: fact_branch_events.year
+	toColumn: dim_year.year
+
+relationship 1a73b083-010d-520d-869f-db65071c95c5
+	fromColumn: fact_tract_lending.tract_geoid
+	toColumn: dim_tract.tract_geoid
+
+relationship a85cfbcb-ebb7-54d9-8b74-edf56d3a3888
+	fromColumn: fact_tract_lending.year
+	toColumn: dim_year.year
+
+relationship 6ab242fa-9836-5663-8086-a8c86025aba0
+	fromColumn: fact_tract_complaints.tract_geoid
+	toColumn: dim_tract.tract_geoid
+
+relationship 9694c9dd-9d2b-5fe2-a011-c7fb17c9f027
+	fromColumn: fact_tract_complaints.year
+	toColumn: dim_year.year
+
+relationship 75d0159c-76e6-53a5-941e-7bc982e09033
+	fromColumn: fact_tract_accounts.tract_geoid
+	toColumn: dim_tract.tract_geoid
+
+relationship 1a4dfb8d-dfa7-5390-8081-32b349efdc05
+	fromColumn: fact_tract_accounts.year
+	toColumn: dim_year.year
+
+relationship 5d6d3caf-298a-5247-a378-f66c8cfde359
+	fromColumn: dim_event.cert
+	toColumn: dim_bank.cert
+
+relationship 503232fc-6655-5c34-b44f-5f1e7ea5c4df
+	fromColumn: dim_event.tract_geoid
+	toColumn: dim_tract.tract_geoid
 
 relationship dc1aacf3-df54-5729-8f80-f7cb91ae48ec
 	fromColumn: fact_attendee.event_id

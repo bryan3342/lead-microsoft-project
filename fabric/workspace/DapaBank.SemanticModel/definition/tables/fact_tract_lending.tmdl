@@ -1,0 +1,76 @@
+/// PLACEHOLDER. Mortgage applications and outcomes per tract per year (HMDA).
+table fact_tract_lending
+	lineageTag: 1076cdc0-ee55-55fe-9c37-5824d7e73af7
+	sourceLineageTag: [dbo].[fact_tract_lending]
+
+	measure 'Mortgage Applications' = SUM(fact_tract_lending[applications])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 93a11323-77f9-50f7-a9d2-2b3f2ee253c9
+
+	measure 'Mortgage Denial Rate' = DIVIDE(SUM(fact_tract_lending[denials]), SUM(fact_tract_lending[applications]))
+		formatString: 0.0%
+		displayFolder: Community
+		lineageTag: 9fb12bc6-1799-50e1-b23d-351c66ef2c42
+
+	measure 'High-Cost Loan Share' = DIVIDE(SUM(fact_tract_lending[high_cost_originations]), SUM(fact_tract_lending[originations]))
+		formatString: 0.0%
+		displayFolder: Community
+		lineageTag: 910042b6-d6e7-5394-be7c-964f7f60f6a2
+
+	column tract_geoid
+		dataType: string
+		lineageTag: ad252dc6-87d9-50da-9d79-fa9753373825
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 07ce8047-20ef-5497-8512-ba7c7b82ff23
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column applications
+		dataType: int64
+		lineageTag: eca949a3-6f3b-56ba-87a7-67251b5a5c8b
+		sourceLineageTag: applications
+		summarizeBy: none
+		sourceColumn: applications
+
+	column originations
+		dataType: int64
+		lineageTag: ac58e033-6cc4-5c4b-a277-12a6c3465f6d
+		sourceLineageTag: originations
+		summarizeBy: none
+		sourceColumn: originations
+
+	column denials
+		dataType: int64
+		lineageTag: e21e33ec-a1d8-5475-87e4-10083489a36b
+		sourceLineageTag: denials
+		summarizeBy: none
+		sourceColumn: denials
+
+	column high_cost_originations
+		dataType: int64
+		lineageTag: 258aaa6c-32b8-57d2-bbb8-17ee01968df5
+		sourceLineageTag: high_cost_originations
+		summarizeBy: none
+		sourceColumn: high_cost_originations
+
+	column owner_occupied_units
+		dataType: int64
+		lineageTag: fda61dcb-71a5-51eb-a1fb-d94a508f16cb
+		sourceLineageTag: owner_occupied_units
+		summarizeBy: none
+		sourceColumn: owner_occupied_units
+
+	partition fact_tract_lending = entity
+		mode: directLake
+		source
+			entityName: fact_tract_lending
+			schemaName: dbo
+			expressionSource: DatabaseQuery

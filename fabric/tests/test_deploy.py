@@ -76,5 +76,5 @@ def test_dry_run_builds_every_definition_without_azure(tmp_path):
     result = subprocess.run(
         [sys.executable, str(DEPLOY / "deploy.py"), "up", "--dry-run", "--config", str(write_config(tmp_path))],
         capture_output=True, text=True, check=True)
-    for name in ["DapaLakehouse", "Load Sample Data", "DAPA Bank Dashboard", "DAPA Mastercard Playbook"]:
+    for name in ["DapaLakehouse", "Create Tables", "DAPA Bank Dashboard", "DAPA Mastercard Playbook"]:
         assert name in result.stdout

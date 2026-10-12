@@ -23,7 +23,7 @@ CAPACITY_API = "2023-11-01"
 REQUIRED = ["SUBSCRIPTION_ID", "RESOURCE_GROUP", "LOCATION", "CAPACITY_NAME", "CAPACITY_SKU",
             "CAPACITY_ADMINS", "WORKSPACE_NAME"]
 LAKEHOUSE = "DapaLakehouse.Lakehouse"
-NOTEBOOK = "LoadSampleData.Notebook"
+NOTEBOOK = "CreateTables.Notebook"
 MODELS_AND_REPORTS = [("DapaBank.SemanticModel", "DapaBank.Report"),
                       ("DapaPlaybook.SemanticModel", "DapaPlaybook.Report")]
 
@@ -111,7 +111,7 @@ def ensure_workspace(api, cfg, capacity_id):
     ws = next((w for w in api.list_all("/workspaces") if w["displayName"] == name), None)
     if ws is None:
         ws = api.fabric("POST", "/workspaces", {"displayName": name, "capacityId": capacity_id,
-                                                "description": "DAPA ROI Engine dashboards (sample data)."})
+                                                "description": "DAPA ROI Engine dashboards (skeleton, no data yet)."})
         print("created")
     elif ws.get("capacityId") != capacity_id:
         api.fabric("POST", f"/workspaces/{ws['id']}/assignToCapacity", {"capacityId": capacity_id})
@@ -159,7 +159,7 @@ def sql_endpoint(api, ws, lakehouse_id):
 
 
 def run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name):
-    step("Running Load Sample Data notebook (a few minutes while Spark starts)")
+    step("Running Create Tables notebook to make the empty tables (a few minutes while Spark starts)")
     _, headers, _ = api.request("POST", f"{FABRIC}/workspaces/{ws}/items/{notebook_id}/jobs/instances?jobType=RunNotebook", {
         "executionData": {"configuration": {"defaultLakehouse": {
             "name": lakehouse_name, "id": lakehouse_id, "workspaceId": ws}}}})

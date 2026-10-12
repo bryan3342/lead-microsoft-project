@@ -58,7 +58,7 @@ def sample_zips():
 
 
 def main():
-    out = raw_dir("cfpb") / "complaints.csv.zip"
+    out = raw_dir("cfpb", shared=True) / "complaints.csv.zip"
     if not out.exists():
         with get(BULK_URL, stream=True, timeout=900) as src, open(out, "wb") as dst:
             shutil.copyfileobj(src.raw, dst)

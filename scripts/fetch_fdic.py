@@ -158,7 +158,7 @@ def branch_events(counties):
             "event": df["CHANGECODE_DESC"],
             "change_code": df["CHANGECODE"],
             "uninum": df["UNINUM"],
-            "cert": df["CERT"],
+            "cert": pd.to_numeric(df["CERT"]).astype("Int64"),
             "bank_name": df["INSTNAME"],
             "office_name": df["OFF_NAME"],
             "address": df["OFF_PADDR"],

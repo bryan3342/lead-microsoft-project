@@ -11,11 +11,12 @@ import gzip
 import io
 import re
 import shutil
+import sys
 import zipfile
 
 import pandas as pd
 
-from common import START_YEAR, get, raw_dir, sample_counties, write_processed, write_provenance
+from common import PROCESSED, START_YEAR, get, raw_dir, sample_counties, write_processed, write_provenance
 
 API = "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv"
 PANEL = "https://files.ffiec.cfpb.gov/static-data/snapshot/{year}/{year}_public_panel_csv.zip"
@@ -60,7 +61,7 @@ def lenders():
         except Exception:
             print(f"  panel {year}: not published")
             continue
-        out = raw_dir("hmda") / f"panel_{year}.zip"
+        out = raw_dir("hmda_panels", shared=True) / f"panel_{year}.zip"
         out.write_bytes(content)
         with zipfile.ZipFile(io.BytesIO(content)) as zf:
             df = pd.read_csv(zf.open(zf.namelist()[0]), dtype=str)
@@ -74,7 +75,63 @@ def lenders():
     write_processed(out, "hmda_lenders")
 
 
+PURPOSE_GROUP = {1: "home_purchase", 31: "refinance", 32: "refinance", 2: "other", 4: "other", 5: "other"}
+
+
+def to_2020_tracts(loans):
+    """HMDA 2021 uses 2010 tract boundaries; split those loans across 2020 tracts by land share.
+    Returns (tract_geoid, weight) per loan row: weight 1 for 2022+, fractional for converted 2021 rows."""
+    xwalk = pd.read_parquet(PROCESSED / "tract_2010_2020.parquet")
+    current = loans[loans["activity_year"] >= 2022].assign(tract_geoid=lambda d: d["census_tract"], weight=1.0)
+    old = loans[loans["activity_year"] < 2022].merge(xwalk, left_on="census_tract", right_on="tract_2010", how="left")
+    unmatched = old["tract_2020"].isna()
+    old["tract_geoid"] = old["tract_2020"].where(~unmatched, old["census_tract"])
+    old["weight"] = old["share_of_2010_tract"].where(~unmatched, 1.0)
+    return pd.concat([current, old.drop(columns=["tract_2010", "tract_2020", "share_of_2010_tract"])], ignore_index=True)
+
+
+def build_tract_year(loans):
+    """Tract x year x loan-purpose lending signals. Applications exclude purchased loans (not consumer decisions).
+    Home purchase is the cleanest access signal: refinance volume swings with interest rates (2021 refi boom)."""
+    apps = loans[loans["action_taken"].isin([1, 2, 3, 4, 5])].copy()
+    apps["activity_year"] = apps["activity_year"].astype(int)
+    apps["purpose"] = apps["loan_purpose"].map(PURPOSE_GROUP).fillna("other")
+    apps = to_2020_tracts(apps)
+    w = apps["weight"]
+    apps["applications"] = w
+    apps["originations"] = w * (apps["action_taken"] == 1)
+    apps["denials"] = w * (apps["action_taken"] == 3)
+    # High-cost: first-lien originations priced 1.5+ points above the average prime offer rate.
+    apps["high_cost_originations"] = w * ((apps["action_taken"] == 1) & (apps["lien_status"] == 1) & (apps["rate_spread"] >= 1.5))
+    apps["originated_amount_000"] = w * (apps["action_taken"] == 1) * apps["loan_amount"] / 1000
+    apps["converted_from_2010"] = w * (apps["activity_year"] < 2022)
+    measures = ["applications", "originations", "denials", "high_cost_originations", "originated_amount_000", "converted_from_2010"]
+
+    by_purpose = apps.groupby(["tract_geoid", "activity_year", "purpose"])[measures].sum().reset_index()
+    total = apps.groupby(["tract_geoid", "activity_year"])[measures].sum().reset_index().assign(purpose="all")
+    tract = pd.concat([total, by_purpose], ignore_index=True).rename(columns={"activity_year": "year", "purpose": "loan_purpose_group"})
+
+    # Owner-occupied homes per tract come from HMDA's own tract fields (2020 boundaries, 2022+ filings).
+    owner_units = loans[loans["activity_year"].astype(int) >= 2022].groupby("census_tract")["tract_owner_occupied_units"].max()
+    tract["owner_occupied_units"] = tract["tract_geoid"].map(owner_units)
+    tract["denial_rate"] = tract["denials"] / (tract["originations"] + tract["denials"]).where(lambda s: s > 0)
+    tract["high_cost_share"] = tract["high_cost_originations"] / tract["originations"].where(lambda s: s > 0)
+    tract["originations_per_1k_owner_units"] = 1000 * tract["originations"] / tract["owner_occupied_units"].where(lambda s: s > 0)
+    tract["share_converted_from_2010_tracts"] = tract["converted_from_2010"] / tract["applications"].where(lambda s: s > 0)
+    tract = tract.drop(columns="converted_from_2010")
+    counts = ["applications", "originations", "denials", "high_cost_originations"]
+    tract[counts] = tract[counts].round(2)
+    return tract
+
+
 def main():
+    if "--rebuild" in sys.argv:
+        # Rebuild the tract table from the saved loan-level data without downloading again.
+        loans = pd.read_parquet(PROCESSED / "hmda_loans.parquet")
+        loans["activity_year"] = loans["activity_year"].astype(int)
+        write_processed(build_tract_year(loans), "hmda_tract_year")
+        return
+
     counties = sample_counties()
     loans = []
     for year in range(START_YEAR, LATEST_YEAR + 1):
@@ -88,34 +145,11 @@ def main():
     for col in numeric:
         if col in loans:
             loans[col] = pd.to_numeric(loans[col], errors="coerce")
+    loans["activity_year"] = loans["activity_year"].astype(int)
     loans["action"] = loans["action_taken"].map(ACTION)
     write_processed(loans, "hmda_loans")
 
-    # Tract-level lending signals (applications exclude purchased loans, which are not consumer decisions).
-    apps = loans[loans["action_taken"].isin([1, 2, 3, 4, 5])]
-    g = apps.groupby(["census_tract", "activity_year"])
-    tract = pd.DataFrame(
-        {
-            "applications": g.size(),
-            "originations": g["action_taken"].apply(lambda s: (s == 1).sum()),
-            "denials": g["action_taken"].apply(lambda s: (s == 3).sum()),
-            "median_loan_amount_000": g.apply(lambda d: d.loc[d.action_taken == 1, "loan_amount"].median() / 1000),
-            # High-cost: first-lien originations priced 1.5+ points above the average prime offer rate.
-            "high_cost_originations": g.apply(
-                lambda d: ((d.action_taken == 1) & (d.lien_status == 1) & (d.rate_spread >= 1.5)).sum()
-            ),
-            "owner_occupied_units": g["tract_owner_occupied_units"].max(),
-            "tract_to_msa_income_pct": g["tract_to_msa_income_percentage"].max(),
-        }
-    ).reset_index()
-    tract = tract.rename(columns={"census_tract": "tract_geoid", "activity_year": "year"})
-    tract["denial_rate"] = tract["denials"] / (tract["originations"] + tract["denials"]).where(lambda s: s > 0)
-    tract["high_cost_share"] = tract["high_cost_originations"] / tract["originations"].where(lambda s: s > 0)
-    tract["originations_per_1k_owner_units"] = 1000 * tract["originations"] / tract["owner_occupied_units"].where(
-        lambda s: s > 0
-    )
-    write_processed(tract, "hmda_tract_year")
-
+    write_processed(build_tract_year(loans), "hmda_tract_year")
     lenders()
 
 

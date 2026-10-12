@@ -9,7 +9,8 @@ bank's real branches. The output is a branch-by-branch evidence base for Masterc
 **Guardrail (SOW §4, §15):** target by place and need, never by race or ethnicity. Race/ethnicity fields in HMDA and the
 FDIC survey are not collected for targeting. Language and household composition are outreach context only.
 
-**Sample:** Washington DC metro (DC, MD, VA, WV). **Period:** 2021 onward (post-COVID). All sources tested live 2026-10-12.
+**Samples:** Washington DC metro (DC, MD, VA, WV), the first test sample; and Houston metro (TX), the showcase, with a much
+higher unbanked rate (9.4% vs 1.5% in 2023). **Period:** 2021 onward (post-COVID). All sources tested live 2026-10-12.
 
 ---
 
@@ -24,7 +25,7 @@ FDIC survey are not collected for targeting. Language and household composition 
 
 ## 2. FDIC National Survey of Unbanked and Underbanked Households
 - **What it is:** the FDIC's survey of ~30,000 households, run every two years with the Census Bureau.
-- **What we collect:** unbanked and underbanked rates by income, household type, language, state and the Washington metro;
+- **What we collect:** unbanked and underbanked rates by income, household type, state and each sample metro;
   reasons for not having an account (minimum balances, distrust, fees); interest in opening one.
 - **Why it matters:** it's the only dataset that measures banking status. Applying its rates to the ACS counts gives an
   estimate of unbanked and underbanked households in each neighborhood. The reasons explain *why* people stay out of banks.

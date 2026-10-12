@@ -18,14 +18,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 import pandas as pd
 
-from common import SAMPLE_CBSA, SAMPLE_STATES, raw_dir, write_processed, write_provenance, _session
+from common import SAMPLE_CBSA, SAMPLE_NAME, SAMPLE_STATES, raw_dir, write_processed, write_provenance, _session
 
 API = "https://ei-app.app.cloud.gov/api"
 
 YEARS = ["2021", "2023"]
 GEOGRAPHIES = [("national", 0, 0, "United States")]
 GEOGRAPHIES += [("state", int(fips), 0, abbr) for fips, abbr in SAMPLE_STATES.items()]
-GEOGRAPHIES += [("msa", 0, int(SAMPLE_CBSA), "Washington-Arlington-Alexandria, DC-VA-MD-WV")]
+GEOGRAPHIES += [("msa", 0, int(SAMPLE_CBSA), SAMPLE_NAME)]
 
 # Banking status (unbanked / underbanked / fully banked); variable versions differ by year.
 BANK_STATUS = {"2021": "hbankstatv5", "2023": "hbankstatv6"}
@@ -93,7 +93,8 @@ def main():
                     "measure": r["colcategory"],
                     "category": r["colheader"],
                     "breakdown_var": row_var or "all",
-                    "breakdown": r["rowheader"] if row_var else "All households",
+                    # Breakdown queries also return the overall total, with no row label.
+                    "breakdown": (r["rowheader"] if row_var else None) or "All households",
                     "percent": r["percent"],
                     "households_000": r["share"],
                     "base_households_000": r["total"],

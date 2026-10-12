@@ -1,5 +1,6 @@
 """Shared helpers: paths, sample definition, HTTP with retries, and provenance records."""
 
+import argparse
 import datetime as dt
 import hashlib
 import json
@@ -9,15 +10,33 @@ from pathlib import Path
 
 import requests
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-PROCESSED = ROOT / "data" / "processed"
-REFERENCE = ROOT / "data" / "reference"
+# Each sample is one metro (CBSA). Pick with `--sample <name>` or the DAPA_SAMPLE env var; default dc.
+SAMPLES = {
+    "dc": {
+        "cbsa": "47900",
+        "name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+        "states": {"11": "DC", "24": "MD", "51": "VA", "54": "WV"},
+    },
+    "houston": {
+        "cbsa": "26420",
+        "name": "Houston-Pasadena-The Woodlands, TX",
+        "states": {"48": "TX"},
+    },
+}
 
-# Sample: Washington-Arlington-Alexandria, DC-VA-MD-WV metro (2023 OMB delineation).
-SAMPLE_CBSA = "47900"
-SAMPLE_STATES = {"11": "DC", "24": "MD", "51": "VA", "54": "WV"}
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument("--sample", choices=SAMPLES, default=os.environ.get("DAPA_SAMPLE", "dc"))
+SAMPLE = _parser.parse_known_args()[0].sample
+SAMPLE_CBSA = SAMPLES[SAMPLE]["cbsa"]
+SAMPLE_STATES = SAMPLES[SAMPLE]["states"]
+SAMPLE_NAME = SAMPLES[SAMPLE]["name"]
 START_YEAR = 2021  # post-COVID window
+
+ROOT = Path(__file__).resolve().parent.parent
+RAW = ROOT / "data" / "raw" / SAMPLE
+SHARED_RAW = ROOT / "data" / "raw" / "shared"  # national files reused by every sample
+PROCESSED = ROOT / "data" / "processed" / SAMPLE
+REFERENCE = ROOT / "data" / "reference"
 
 TODAY = dt.date.today().isoformat()
 
@@ -41,8 +60,9 @@ def get(url, params=None, stream=False, timeout=120, retries=5):
             time.sleep(2 ** attempt)
 
 
-def raw_dir(source):
-    path = RAW / source / TODAY
+def raw_dir(source, shared=False):
+    """Folder for today's raw downloads; shared=True for national files every sample reuses."""
+    path = (SHARED_RAW if shared else RAW) / source / TODAY
     path.mkdir(parents=True, exist_ok=True)
     return path
 
@@ -68,7 +88,7 @@ def write_processed(df, name):
     PROCESSED.mkdir(parents=True, exist_ok=True)
     df.to_parquet(PROCESSED / f"{name}.parquet", index=False)
     df.to_csv(PROCESSED / f"{name}.csv", index=False)
-    print(f"  wrote data/processed/{name} ({len(df):,} rows)")
+    print(f"  wrote data/processed/{SAMPLE}/{name} ({len(df):,} rows)")
 
 
 def sample_counties():

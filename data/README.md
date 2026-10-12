@@ -1,11 +1,24 @@
 # Collected data
 
 **Purpose:** find real local-bank branches in or near underserved communities, so Mastercard can show each bank
-evidence from its own market. **Sample:** Washington DC metro (CBSA 47900, 23 counties in DC/MD/VA/WV). **Period:** 2021+.
+evidence from its own market. **Period:** 2021+.
 
-- `raw/` (git-ignored) holds each source exactly as downloaded, next to a `.provenance.json` (URL, parameters, timestamp, row count, SHA-256).
-- `processed/` holds clean, typed tables as `.parquet` (for Fabric) and `.csv` (for inspection).
-- Rebuild by running the scripts in `scripts/` in this order: `fetch_geography` → `fetch_fdic` → `fetch_fdic_survey` → `fetch_hmda` → `fetch_cfpb` → `fetch_acs`.
+## Samples
+Each metro has its own folders, with the same table names in each.
+
+| Sample | Metro | Counties | Why |
+|---|---|---|---|
+| `dc` | Washington-Arlington-Alexandria (CBSA 47900) | 23 (DC/MD/VA/WV) | First test sample. Low-need comparison: 1.5% unbanked (2023) |
+| `houston` | Houston-Pasadena-The Woodlands (CBSA 26420) | 10 (TX) | Showcase: 9.4% unbanked, about 307k households; 234 local-bank branches. Texas has the most unbanked households of any state |
+
+- `processed/<sample>/` holds clean, typed tables as `.parquet` (for Fabric) and `.csv` (for inspection).
+- `raw/<sample>/` (git-ignored) holds each source exactly as downloaded, next to a `.provenance.json` (URL, parameters, timestamp, row count, SHA-256).
+- `raw/shared/` holds national files every sample reuses (CFPB bulk export, Census delineation and ZIP crosswalk, HMDA lender panels).
+- Rebuild a sample by running the scripts in `scripts/` with `--sample <name>`, in this order:
+  `fetch_geography` → `fetch_fdic` → `fetch_fdic_survey` → `fetch_hmda` → `fetch_cfpb` → `fetch_acs`.
+  Add a new metro by adding an entry to `SAMPLES` in `scripts/common.py`.
+
+The figures in the sections below are for the `dc` sample.
 
 Keys that join everything: **`tract_geoid`** (11-digit census tract), **`county_fips`**, **`zip`/`zcta`**,
 **`cert`** (FDIC bank ID), **`fed_rssd`** (Fed bank ID), **`lei`** (HMDA lender ID), **`uninum`** (FDIC branch ID).
@@ -56,14 +69,16 @@ Keys that join everything: **`tract_geoid`** (11-digit census tract), **`county_
 - **Why it matters:** distrust is the #2 reason households stay unbanked. Complaints show where it concentrates and what goes wrong (fees, account closures, transfers).
 - **Read with care:** 84% are credit-reporting complaints, largely mass-filed through credit-repair services. Use **`product_group = banking_access`** (12,751 complaints: checking/savings, money transfer, prepaid) as the trust signal. ZIP-masked complaints (51,620) were dropped. Volumes rise sharply after 2023 nationally, so compare areas within a year, not across years.
 
-## 5. Census ACS 5-Year (2020–2024): *who lives in each neighborhood*: **pending a Census API key**
+## 5. Census ACS 5-Year (2020–2024): *who lives in each neighborhood*
 | Table | Grain | What's in it |
 |---|---|---|
 | `acs_tracts` | tract | Income brackets (B19001), median income (B19013), poverty ratio (C17002), household type (B11012), families with children (B11003), limited-English households (C16002), each with margin of error |
 | `acs_variables` | variable | Code → label dictionary for Power BI |
 
 - **Why it matters:** the only source covering every neighborhood. Combined with the FDIC survey rates, it gives the estimated underbanked households near each branch. Language and household type support outreach planning; they are not targeting criteria.
-- Run `scripts/fetch_acs.py` once `CENSUS_API_KEY` is in `.env`.
+- **Coverage:** 1,464 tracts, 2.37M households; 100% of HMDA 2025 tracts and 98% of target-branch tracts match.
+- **Read with care:** single income brackets are noisy per tract (92% of tracts have a coefficient of variation above 0.4 on the under-$10k bracket). Combine brackets or aggregate the tracts around a branch; margins of error are stored next to every estimate.
+- Requires `CENSUS_API_KEY` in `.env`.
 
 ## Geography helpers
 | Table | What's in it |

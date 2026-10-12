@@ -1,0 +1,480 @@
+year,geography_type,geography_code,geography_name,measure_var,measure,category,breakdown_var,breakdown,percent,households_000,base_households_000,respondents,respondents_base
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,all,All households,4.457298415138295,5906.685783500002,132517.17146510005,1180,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,all,All households,14.082644856568487,18661.922631399957,132517.17146510005,3982,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,all,All households,81.46005672829362,107948.56305020062,132517.17146510005,25272,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,All households,4.457298415138295,5906.685783500002,132517.17146510005,1180,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,14.082644856568487,18661.922631399957,132517.17146510005,3982,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,81.46005672829362,107948.56305020062,132517.17146510005,25272,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",19.760289404670754,2479.3331665999995,12547.048860599974,508,2817
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",19.22874864762926,2412.6404881,12547.048860599974,532,2817
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",61.01096194770022,7655.075205900004,12547.048860599974,1777,2817
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",9.160100008801741,1638.683958,17889.3675443,317,4165
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",18.941617444601444,3388.535563499998,17889.3675443,737,4165
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",71.89828254659696,12862.148022800027,17889.3675443,3111,4165
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",3.980593568296726,979.8999077,24616.929382199996,197,5734
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",17.27399877530938,4252.328080000002,24616.929382199996,902,5734
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",78.74540765639382,19384.701394499978,24616.929382199996,4635,5734
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$50,000 to $75,000",2.0558875847833122,504.9961693000001,24563.413536700064,93,5627
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",14.048822946550466,3450.870477400002,24563.413536700064,720,5627
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",83.89528946866612,20607.546890000038,24563.413536700064,4814,5627
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",0.5742348114200043,303.7725818999999,52900.41214130014,65,12091
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",9.749542231587698,5157.548022400003,52900.41214130014,1091,12091
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",89.67622295699208,47439.09153700002,52900.41214130014,10935,12091
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,All households,4.457298415138295,5906.685783500002,132517.17146510005,1180,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,14.082644856568487,18661.922631399957,132517.17146510005,3982,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,81.46005672829362,107948.56305020062,132517.17146510005,25272,30434
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,2.2429267185036412,540.5559661999997,24100.473802399985,108,5362
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,15.759388270291083,3798.0872414999985,24100.473802399985,799,5362
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,81.99768501120558,19761.83059470006,24100.473802399985,4455,5362
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,1.4755358165540333,544.2391313999999,36884.16948570019,108,8980
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,10.018180305598525,3695.122603299997,36884.16948570019,818,8980
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,88.50628387784683,32644.807750999968,36884.16948570019,8054,8980
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,14.891270695313258,909.6166059000003,6108.388091999997,161,1258
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,19.771030124652412,1207.6912498000004,6108.388091999997,243,1258
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,65.3376991800344,3991.0802363000016,6108.388091999997,854,1258
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,6.348241708508256,1061.674412,16723.912868299998,192,3482
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,21.062401704907113,3522.4577090999987,16723.912868299998,698,3482
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,72.5893565865845,12139.780747199977,16723.912868299998,2592,3482
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,4.903198098869178,1242.3544307000002,25337.634858900023,270,6019
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,11.656255259999512,2953.419396000004,25337.634858900023,666,6019
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,83.44054664113122,21141.861032199995,25337.634858900023,5083,6019
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,6.718223608237885,1558.0255946999994,23191.035094300056,333,5290
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,14.973894542350585,3472.601138300005,23191.035094300056,753,5290
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,78.30788184941126,18160.40836129999,23191.035094300056,4204,5290
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Other,29.272816303694434,50.21964260000001,171.55726349999998,8,43
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Other,7.311432430256735,12.5432934,171.55726349999998,5,43
+2021,national,US,United States,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Other,63.41575126604885,108.7943275,171.55726349999998,30,43
+2021,national,US,United States,hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,2.6419530666046844,3501.0414752999986,132517.17146510005,703,30434
+2021,national,US,United States,hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,97.35804693339529,129016.12998980001,132517.17146510005,29731,30434
+2021,national,US,United States,hbnkint,Interest in having bank account,Very interested,all,All households,10.725997236382378,633.5509538999997,5906.68578349999,117,1180
+2021,national,US,United States,hbnkint,Interest in having bank account,Somewhat interested,all,All households,16.531181210411532,976.4449303999996,5906.68578349999,193,1180
+2021,national,US,United States,hbnkint,Interest in having bank account,Not very interested,all,All households,19.126106502157427,1129.7190137,5906.68578349999,220,1180
+2021,national,US,United States,hbnkint,Interest in having bank account,Not at all interested,all,All households,53.6167150510488,3166.970885499999,5906.68578349999,650,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank locations are inconvenient,all,All households,4.375862605084187,258.4684544,5906.68578349999,51,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,5.985905209105163,353.56861200000003,5906.68578349999,71,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank account fees are too unpredictable,all,All households,1.4891402729718295,87.9588368,5906.68578349999,19,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Banks do not offer needed products and services,all,All households,2.3852330573189393,140.88822189999996,5906.68578349999,30,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,13.178126923128236,778.3905495000002,5906.68578349999,158,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,21.726087976184676,1283.291749800001,5906.68578349999,254,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,8.405145944733505,496.4655605999999,5906.68578349999,97,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,2.6614408445280437,157.20294800000002,5906.68578349999,28,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Problems with past banking or credit history,all,All households,5.307171097126647,313.4779207000001,5906.68578349999,63,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Other reason,all,All households,17.70043702714937,1045.5091975,5906.68578349999,221,1180
+2021,national,US,United States,hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,16.785449042669597,991.4637323000004,5906.68578349999,188,1180
+2021,national,US,United States,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,15.376173974533582,908.2222822000004,5906.68578349999,181,1180
+2021,national,US,United States,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,84.62382602546661,4998.463501300001,5906.68578349999,999,1180
+2021,national,US,United States,hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,29.45024464580957,1739.533413700001,5906.68578349999,333,1180
+2021,national,US,United States,hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,70.54975535419065,4167.152369800003,5906.68578349999,847,1180
+2021,national,US,United States,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,27.269082880613055,1610.6990418000007,5906.68578349999,312,1180
+2021,national,US,United States,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,72.7309171193871,4295.986741699998,5906.68578349999,868,1180
+2021,national,US,United States,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,19.21338261415921,1134.8741394000008,5906.68578349999,220,1180
+2021,national,US,United States,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,80.78661738584091,4771.811644099997,5906.68578349999,960,1180
+2021,national,US,United States,hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,32.99543403585561,1948.9366114000002,5906.68578349999,393,1180
+2021,national,US,United States,hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,67.00456596414458,3957.7491721,5906.68578349999,787,1180
+2021,national,US,United States,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,40.1086472200355,2369.091763300001,5906.68578349999,480,1180
+2021,national,US,United States,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,59.89135277996471,3537.5940202000015,5906.68578349999,700,1180
+2021,national,US,United States,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,34.11407127714202,2015.0109983000011,5906.68578349999,406,1180
+2021,national,US,United States,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,65.8859287228582,3891.6747852000017,5906.68578349999,774,1180
+2021,national,US,United States,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,11.615963971143263,686.1184925,5906.68578349999,126,1180
+2021,national,US,United States,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,88.38403602885685,5220.567290999998,5906.68578349999,1054,1180
+2021,national,US,United States,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,13.60291814987828,803.4816325000002,5906.68578349999,168,1180
+2021,national,US,United States,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,86.39708185012186,5103.204150999998,5906.68578349999,1012,1180
+2021,national,US,United States,hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,21.515930325092484,1270.878397700001,5906.68578349999,263,1180
+2021,national,US,United States,hunbnkr10v5,Why unbanked: Other reason,No,all,All households,78.4840696749077,4635.8073858,5906.68578349999,917,1180
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,all,All households,5.563210284909329,624.4975655000001,11225.489124400021,84,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,all,All households,18.376700869239468,2062.8745575000007,11225.489124400021,281,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,all,All households,76.06008884585104,8538.117001400002,11225.489124400021,1239,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,All households,5.563210284909329,624.4975655000001,11225.489124400021,84,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,18.376700869239468,2062.8745575000007,11225.489124400021,281,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,76.06008884585104,8538.117001400002,11225.489124400021,1239,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",20.9772055577201,236.55134470000004,1127.6589918,33,156
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",22.619175970286445,255.0671717,1127.6589918,34,156
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",56.40361847199345,636.0404753999999,1127.6589918,89,156
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",13.544950229476447,240.47166590000003,1775.3602768999988,30,246
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",19.288360782631646,342.43789539999995,1775.3602768999988,49,246
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",67.166688987892,1192.4507156000004,1775.3602768999988,167,246
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",4.297493899274968,75.44693059999999,1755.6029715999987,11,250
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",23.28464637579452,408.7859437,1755.6029715999987,56,250
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",72.4178597249306,1271.3700973000002,1755.6029715999987,183,250
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$50,000 to $75,000",2.1136031516795817,47.4540603,2245.1736155999993,6,317
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",22.103661679071458,496.26558010000014,2245.1736155999993,65,317
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",75.78273516924905,1701.4539752000012,2245.1736155999993,246,317
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",0.5686096275992565,24.573563999999998,4321.693268500002,4,635
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",12.96524144098913,560.3179666,4321.693268500002,77,635
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",86.46614893141152,3736.8017378999984,4321.693268500002,554,635
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,All households,5.563210284909329,624.4975655000001,11225.489124400021,84,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,18.376700869239468,2062.8745575000007,11225.489124400021,281,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,76.06008884585104,8538.117001400002,11225.489124400021,1239,1604
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,2.5806047916754427,60.29633080000001,2336.5193691999993,9,335
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,20.20493918959634,472.0923176999999,2336.5193691999993,66,335
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,77.21445601872824,1804.1307207,2336.5193691999993,260,335
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,1.9563528599381053,60.1645599,3075.3429573999997,9,465
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,15.637352229052567,480.90221049999997,3075.3429573999997,68,465
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,82.40629491100933,2534.2761869999995,3075.3429573999997,388,465
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,14.270492844043739,83.37437530000001,584.2431386999998,11,73
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,22.171739678147123,129.53686779999998,584.2431386999998,16,73
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,63.55776747780919,371.3318956000001,584.2431386999998,46,73
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,9.684746970862083,156.3723958,1614.6255164999998,19,218
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,20.604585880765743,332.6869011999999,1614.6255164999998,46,218
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,69.71066714837218,1125.5662195,1614.6255164999998,153,218
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,5.084748308505867,94.8622276,1865.6228753999994,13,274
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,14.677156161118118,273.8203828,1865.6228753999994,37,274
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,80.23809553037606,1496.9402650000004,1865.6228753999994,224,274
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,7.430372109428424,126.22061760000001,1698.7119318000002,17,232
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,22.00702017227097,373.8358774999999,1698.7119318000002,48,232
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,70.56260771830057,1198.6554366999997,1698.7119318000002,167,232
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Other,85.68861650512711,43.2070585,50.4233354,6,7
+2021,state,48,TX,hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Other,14.311383494872892,7.2162769,50.4233354,1,7
+2021,state,48,TX,hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,3.9650321101156405,445.0942482999999,11225.489124400021,61,1604
+2021,state,48,TX,hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,96.03496788988436,10780.394876100021,11225.489124400021,1543,1604
+2021,state,48,TX,hbnkint,Interest in having bank account,Very interested,all,All households,8.916417449188604,55.6828099,624.4975654999997,8,84
+2021,state,48,TX,hbnkint,Interest in having bank account,Somewhat interested,all,All households,14.463753550052875,90.32578879999998,624.4975654999997,12,84
+2021,state,48,TX,hbnkint,Interest in having bank account,Not very interested,all,All households,30.130333646592906,188.16320009999998,624.4975654999997,24,84
+2021,state,48,TX,hbnkint,Interest in having bank account,Not at all interested,all,All households,46.48949535416564,290.3257666999999,624.4975654999997,40,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank locations are inconvenient,all,All households,4.798084789331339,29.9639227,624.4975654999997,4,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,2.273651841802097,14.1989004,624.4975654999997,2,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank account fees are too unpredictable,all,All households,1.7480476471128863,10.916515,624.4975654999997,2,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Banks do not offer needed products and services,all,All households,3.003536784804329,18.7570141,624.4975654999997,3,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,19.519662915323256,121.8998197,624.4975654999997,17,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,22.013153100114057,137.4716052,624.4975654999997,18,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,5.474718107608061,34.1894813,624.4975654999997,4,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,7.943000379878986,49.603843999999995,624.4975654999997,7,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Problems with past banking or credit history,all,All households,4.591173798579046,28.6717686,624.4975654999997,3,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Other reason,all,All households,12.838988769444617,80.1791723,624.4975654999997,11,84
+2021,state,48,TX,hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,15.795981866001373,98.6455222,624.4975654999997,13,84
+2021,state,48,TX,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,85.22242184785587,532.2119496999998,624.4975654999997,71,84
+2021,state,48,TX,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,14.777578152144141,92.2856158,624.4975654999997,13,84
+2021,state,48,TX,hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,75.52364647288609,471.6433336,624.4975654999997,63,84
+2021,state,48,TX,hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,24.476353527113957,152.85423189999997,624.4975654999997,21,84
+2021,state,48,TX,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,72.83011906313031,454.8223205,624.4975654999997,61,84
+2021,state,48,TX,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,27.169880936869735,169.67524500000002,624.4975654999997,23,84
+2021,state,48,TX,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,77.47505949244571,483.82986039999986,624.4975654999997,65,84
+2021,state,48,TX,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,22.524940507554312,140.66770509999998,624.4975654999997,19,84
+2021,state,48,TX,hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,68.4266425054623,427.32271660000004,624.4975654999997,57,84
+2021,state,48,TX,hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,31.573357494537753,197.17484889999997,624.4975654999997,27,84
+2021,state,48,TX,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,63.4875364137829,396.4781193,624.4975654999997,53,84
+2021,state,48,TX,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,36.51246358621715,228.0194462,624.4975654999997,31,84
+2021,state,48,TX,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,63.946293414333596,399.3430456,624.4975654999997,53,84
+2021,state,48,TX,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,36.05370658566644,225.1545199,624.4975654999997,31,84
+2021,state,48,TX,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,79.3366410168976,495.4553916999997,624.4975654999997,67,84
+2021,state,48,TX,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,20.663358983102402,129.0421738,624.4975654999997,17,84
+2021,state,48,TX,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,89.16336832381134,556.8230644999998,624.4975654999997,76,84
+2021,state,48,TX,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,10.83663167618866,67.67450099999999,624.4975654999997,8,84
+2021,state,48,TX,hunbnkr10v5,Why unbanked: Other reason,No,all,All households,84.70620356645732,528.9881790999999,624.4975654999997,71,84
+2021,state,48,TX,hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,15.293796433542708,95.5093864,624.4975654999997,13,84
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,all,All households,8.115679613302278,233.38811240000004,2875.7679395999985,32,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,all,All households,17.370794371867277,499.54373540000006,2875.7679395999985,68,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,all,All households,74.51352601483048,2142.8360917999994,2875.7679395999985,306,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,All households,8.115679613302278,233.38811240000004,2875.7679395999985,32,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,17.370794371867277,499.54373540000006,2875.7679395999985,68,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,74.51352601483048,2142.8360917999994,2875.7679395999985,306,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",37.68690231405727,94.8679774,251.72665190000004,13,34
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",19.315407023057453,48.6220274,251.72665190000004,6,34
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",42.99769066288526,108.2366471,251.72665190000004,15,34
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",25.018022901289932,110.93183009999998,443.40766070000006,15,62
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",22.24992013991155,98.65785039999999,443.40766070000006,15,62
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",52.7320569587985,233.81798020000002,443.40766070000006,32,62
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",4.641408309512095,21.6010215,465.3980012,3,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",27.515887105189396,128.0583886,465.3980012,18,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",67.8427045852985,315.7385911,465.3980012,43,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",14.572020287670048,75.1946691,516.0208922,10,73
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",85.42797971232994,440.8262231,516.0208922,63,73
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",0.499266997998464,5.9872834,1199.2147336000005,1,173
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",12.425697894210723,149.0107999,1199.2147336000005,19,173
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",87.07503510779084,1044.2166503000008,1199.2147336000005,153,173
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,All households,8.115679613302278,233.38811240000004,2875.7679395999985,32,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,17.370794371867277,499.54373540000006,2875.7679395999985,68,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,74.51352601483048,2142.8360917999994,2875.7679395999985,306,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,3.2340524266381405,21.8759134,676.4242045000004,3,97
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,24.794380683637982,167.71519229999998,676.4242045000004,23,97
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,71.97156688972383,486.83309880000013,676.4242045000004,71,97
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,3.0652854866416037,21.797049,711.0936026999998,3,107
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,14.456071691502508,102.796201,711.0936026999998,14,107
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,82.47864282185591,586.5003527,711.0936026999998,90,107
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,19.16909587781573,35.3859173,184.59878090000004,5,22
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,9.703895395551875,17.9132726,184.59878090000004,2,22
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,71.12700872663237,131.299591,184.59878090000004,15,22
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,17.915536769375333,73.7584158,411.7008424,9,55
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,15.195580590825625,62.560333299999996,411.7008424,9,55
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,66.88888263979904,275.38209329999995,411.7008424,37,55
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,9.068332313537072,38.702541599999996,426.78786199999996,6,61
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,10.713614062435543,45.7244044,426.78786199999996,6,61
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,80.21805362402742,342.3609160000001,426.78786199999996,49,61
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,9.000781890167382,41.8682753,465.1626470999999,6,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,22.107177444514985,102.83433180000002,465.1626470999999,14,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv5,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,68.89204066531764,320.46003999999994,465.1626470999999,44,64
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,6.4914177646046705,186.6781109,2875.7679395999985,25,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,93.50858223539535,2689.089828699999,2875.7679395999985,381,406
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Very interested,all,All households,9.270792748397067,21.6369282,233.3881124,3,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Somewhat interested,all,All households,11.513922377479238,26.8721261,233.3881124,4,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Not very interested,all,All households,31.087076952596316,72.55354209999999,233.3881124,10,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Not at all interested,all,All households,48.12820792152737,112.32551600000001,233.3881124,15,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Bank locations are inconvenient,all,All households,3.7153557697654183,8.6711987,233.3881124,1,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,3.268654997699874,7.6286522,233.3881124,1,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,19.34908943545661,45.1584746,233.3881124,6,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,20.293973036134805,47.36372059999999,233.3881124,7,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,9.99414985628034,23.3251577,233.3881124,3,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,15.99349367718696,37.326913,233.3881124,5,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Other reason,all,All households,14.532065944246437,33.9161144,233.3881124,5,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,12.853217283229545,29.997881200000002,233.3881124,4,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,15.406447282273831,35.956816499999995,233.3881124,5,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,84.59355271772618,197.43129590000004,233.3881124,27,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,22.316069599438602,52.0830536,233.3881124,7,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,77.68393040056138,181.30505879999998,233.3881124,25,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,21.107530110860946,49.2624661,233.3881124,7,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,78.89246988913905,184.1256463,233.3881124,25,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,19.99543118118127,46.666959399999996,233.3881124,6,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,80.00456881881874,186.72115300000002,233.3881124,26,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,35.21741538366373,82.19326099999999,233.3881124,11,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,64.78258461633628,151.19485140000003,233.3881124,21,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,38.0191527269921,88.73218289999998,233.3881124,13,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,61.98084727300789,144.65592949999998,233.3881124,19,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,49.758442238465946,116.1302891,233.3881124,16,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,50.24155776153404,117.25782329999998,233.3881124,16,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,31.298970906797567,73.04807740000001,233.3881124,10,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,68.70102909320244,160.340035,233.3881124,22,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,5.560514229515658,12.9775792,233.3881124,2,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,94.43948577048434,220.4105332,233.3881124,30,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,14.532065944246437,33.9161144,233.3881124,5,32
+2021,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr10v5,Why unbanked: Other reason,No,all,All households,85.46793405575357,199.47199800000004,233.3881124,27,32
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,all,All households,4.218692179008929,5639.643596999997,133682.2730290998,1089,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,all,All households,14.181390630508838,18958.005342000004,133682.2730290998,3920,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,all,All households,81.59991719048199,109084.62409009947,133682.2730290998,24474,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,All households,4.218692179008929,5639.643596999997,133682.2730290998,1089,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,14.181390630508838,18958.005342000004,133682.2730290998,3920,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,81.59991719048199,109084.62409009947,133682.2730290998,24474,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",21.80796552867292,2394.9254863,10981.884042099999,464,2378
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",16.899359911153386,1855.8681092999982,10981.884042099999,384,2378
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",61.29267456017371,6731.090446500002,10981.884042099999,1530,2378
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",8.984935419546348,1367.794875099999,15223.202073599983,277,3461
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",18.81025581645473,2863.523253499998,15223.202073599983,590,3461
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",72.20480876399884,10991.883944999974,15223.202073599983,2594,3461
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",4.464250228045487,1013.3074426000001,22698.267140899956,194,5073
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",17.813171251801965,4043.281197000003,22698.267140899956,828,5073
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",77.72257852015262,17641.678501299968,22698.267140899956,4051,5073
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$50,000 to $75,000",1.759523960922761,420.37654359999993,23891.49297969995,80,5360
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",15.417277659582481,3683.417809699997,23891.49297969995,749,5360
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",82.82319837949504,19787.69862640002,23891.49297969995,4531,5360
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",0.7279651526551518,443.2392494,60887.42679279995,74,13211
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",10.695007681405341,6511.914972500009,60887.42679279995,1369,13211
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",88.57702716593951,53932.27257089995,60887.42679279995,11768,13211
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,All households,4.218692179008929,5639.643596999997,133682.2730290998,1089,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,14.181390630508838,18958.005342000004,133682.2730290998,3920,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,81.59991719048199,109084.62409009947,133682.2730290998,24474,29483
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,2.3239605894567186,568.2288629999998,24450.88206649997,106,5112
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,15.45653919323403,3779.2601696999986,24450.88206649997,751,5112
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,82.21950021730945,20103.393033800017,24450.88206649997,4255,5112
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,1.1839405790941238,445.4347510000001,37623.06646680009,96,8865
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,10.24873734415712,3855.8892629999964,37623.06646680009,853,8865
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,88.56732207674871,33321.74245280008,37623.06646680009,7916,8865
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,12.322683780126859,700.3043902999997,5683.05089050001,125,1117
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,20.91749434422908,1188.7518486,5683.05089050001,225,1117
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,66.75982187564387,3793.994651599999,5683.05089050001,767,1117
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,6.264172880623361,1054.7016146999995,16837.04512629996,187,3404
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,22.191893118843865,3736.459058799997,16837.04512629996,719,3404
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,71.54393400053307,12045.884452800014,16837.04512629996,2498,3404
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,5.267733420104516,1316.9717718000006,25000.72928470004,279,5785
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,11.8213317853438,2955.4191575000013,25000.72928470004,662,5785
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,82.91093479455142,20728.338355399974,25000.72928470004,4844,5785
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,6.3285689841533115,1506.6916251999996,23807.777539799976,286,5148
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,14.30914582306125,3406.6896054000026,23807.777539799976,704,5148
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,79.36228519278565,18894.396309200023,23807.777539799976,4158,5148
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Other,16.913449580643743,47.310581,279.72165450000006,10,52
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Other,12.704143003701557,35.536238999999995,279.72165450000006,6,52
+2023,national,US,United States,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Other,70.3824074156547,196.87483450000002,279.72165450000006,36,52
+2023,national,US,United States,hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,2.791320015173389,3731.5000437999997,133682.2730290998,712,29483
+2023,national,US,United States,hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,97.20867998482686,129950.77298530012,133682.2730290998,28771,29483
+2023,national,US,United States,hbnkint,Interest in having bank account,Very interested,all,All households,11.514018358277484,649.3495991000001,5639.643596999996,112,1089
+2023,national,US,United States,hbnkint,Interest in having bank account,Somewhat interested,all,All households,17.57187873409512,990.9913338999994,5639.643596999996,187,1089
+2023,national,US,United States,hbnkint,Interest in having bank account,Not very interested,all,All households,19.668710199879694,1109.2451554000002,5639.643596999996,210,1089
+2023,national,US,United States,hbnkint,Interest in having bank account,Not at all interested,all,All households,51.24539270774778,2890.057508600001,5639.643596999996,580,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank locations are inconvenient,all,All households,2.519795466784354,142.1074837,5639.643596999996,32,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,8.876600430323265,500.6086278,5639.643596999996,96,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Bank account fees are too unpredictable,all,All households,1.237318360633988,69.78034570000001,5639.643596999996,16,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Banks do not offer needed products and services,all,All households,1.6872077936027075,95.1525063,5639.643596999996,19,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,15.677979568963185,884.1821708999998,5639.643596999996,175,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,23.27968450166588,1312.8912364000003,5639.643596999996,243,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,5.106733564745158,288.00157249999995,5639.643596999996,56,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,5.138509817431648,289.7936399000001,5639.643596999996,49,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Problems with past banking or credit history,all,All households,3.3909012353498214,191.23474439999995,5639.643596999996,43,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Other reason,all,All households,18.072438918696452,1019.2211442999997,5639.643596999996,202,1089
+2023,national,US,United States,hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,15.012830341803616,846.6701251000002,5639.643596999996,158,1089
+2023,national,US,United States,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,16.28846510954441,918.6113795999997,5639.643596999996,173,1089
+2023,national,US,United States,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,83.71153489045574,4721.032217400005,5639.643596999996,916,1089
+2023,national,US,United States,hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,30.686263492263738,1730.5958941999993,5639.643596999996,335,1089
+2023,national,US,United States,hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,69.3137365077364,3909.0477028000037,5639.643596999996,754,1089
+2023,national,US,United States,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,29.269972350346762,1650.7221215000002,5639.643596999996,324,1089
+2023,national,US,United States,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,70.73002764965337,3988.9214755000025,5639.643596999996,765,1089
+2023,national,US,United States,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,19.979192461725358,1126.7552483999998,5639.643596999996,225,1089
+2023,national,US,United States,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,80.02080753827462,4512.888348599995,5639.643596999996,864,1089
+2023,national,US,United States,hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,36.03290753126648,2032.1275623999993,5639.643596999996,382,1089
+2023,national,US,United States,hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,63.96709246873355,3607.516034599998,5639.643596999996,707,1089
+2023,national,US,United States,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,42.33108141035604,2387.3221223,5639.643596999996,456,1089
+2023,national,US,United States,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,57.66891858964405,3252.3214747000006,5639.643596999996,633,1089
+2023,national,US,United States,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,33.92276605418267,1913.123103700001,5639.643596999996,370,1089
+2023,national,US,United States,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,66.07723394581744,3726.520493300001,5639.643596999996,719,1089
+2023,national,US,United States,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,13.024396874843875,734.5295644,5639.643596999996,135,1089
+2023,national,US,United States,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,86.97560312515624,4905.114032600002,5639.643596999996,954,1089
+2023,national,US,United States,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,12.30126452616684,693.7474772,5639.643596999996,139,1089
+2023,national,US,United States,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,87.6987354738333,4945.896119800003,5639.643596999996,950,1089
+2023,national,US,United States,hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,21.99612706838221,1240.5031718000002,5639.643596999996,243,1089
+2023,national,US,United States,hunbnkr10v5,Why unbanked: Other reason,No,all,All households,78.00387293161778,4399.140425199995,5639.643596999996,846,1089
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,all,All households,6.516481701430461,731.5187421000004,11225.670164000025,95,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,all,All households,18.484091002016697,2074.9630887000017,11225.670164000025,270,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,all,All households,74.9994272965526,8419.188333199996,11225.670164000025,1161,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,All households,6.516481701430461,731.5187421000004,11225.670164000025,95,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,18.484091002016697,2074.9630887000017,11225.670164000025,270,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,74.9994272965526,8419.188333199996,11225.670164000025,1161,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",28.433209920889574,287.15461999999997,1009.9268454000002,38,139
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",18.643517929798765,188.28589250000007,1009.9268454000002,25,139
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",52.92327214931165,534.4863329,1009.9268454000002,76,139
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",8.609527839078146,127.7645879,1483.9906472000005,18,207
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",26.246417579174057,389.4943820999998,1483.9906472000005,51,207
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",65.14405458174774,966.7316771999997,1483.9906472000005,138,207
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",9.714168812155947,204.49829609999998,2105.1548522,26,285
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",23.101762067135407,486.3278651,2105.1548522,64,285
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",67.1840691207087,1414.328691000001,2105.1548522,195,285
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$50,000 to $75,000",2.8557130436854905,52.736745,1846.7102329,6,246
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",22.767787826665923,420.4550676000001,1846.7102329,52,246
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",74.37649912964855,1373.5184202999992,1846.7102329,188,246
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",1.2419642099983488,59.3644931,4779.887586300005,7,649
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",12.351752436442002,590.3998813999997,4779.887586300005,78,649
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",86.40628335355956,4130.123211800001,4779.887586300005,564,649
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,All households,6.516481701430461,731.5187421000004,11225.670164000025,95,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,18.484091002016697,2074.9630887000017,11225.670164000025,270,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,74.9994272965526,8419.188333199996,11225.670164000025,1161,1526
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,5.87269491244788,140.0574302,2384.8919838000015,18,311
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,18.767758554281563,447.5907693000001,2384.8919838000015,58,311
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,75.35954653327049,1797.2437842999998,2384.8919838000015,235,311
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,2.373658894900521,71.1518398,2997.559588399998,11,435
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,15.250071987526399,457.12999509999975,2997.559588399998,65,435
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,82.37626911757306,2469.2777534999977,2997.559588399998,359,435
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,10.89589135208167,50.6843358,465.1692474000001,6,57
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,30.556896956210945,142.14128759999997,465.1692474000001,16,57
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,58.54721169170736,272.343624,465.1692474000001,35,57
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,10.755712355143793,179.63268469999997,1670.1142497,23,220
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,23.85680757897673,398.4359429,1670.1142497,51,220
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,65.38748006587946,1092.0456220999997,1670.1142497,146,220
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,7.846773830702905,147.2515738,1876.587460999999,20,264
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,15.865751641617745,297.7347059000001,1876.587460999999,39,264
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,76.28747452767932,1431.6011812999984,1876.587460999999,205,264
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,7.898562548185556,142.7408778,1807.1753807000007,17,236
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,18.367358887515852,331.9303879,1807.1753807000007,41,236
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,73.73407856429854,1332.5041149999997,1807.1753807000007,178,236
+2023,state,48,TX,hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Other,100.0,24.172252999999998,24.172252999999998,3,3
+2023,state,48,TX,hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,4.906999403621521,550.8435680000002,11225.670164000025,71,1526
+2023,state,48,TX,hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,95.09300059637833,10674.826596000008,11225.670164000025,1455,1526
+2023,state,48,TX,hbnkint,Interest in having bank account,Very interested,all,All households,13.39819540626367,98.01031049999999,731.5187421,13,95
+2023,state,48,TX,hbnkint,Interest in having bank account,Somewhat interested,all,All households,14.022323871775477,102.5759272,731.5187421,13,95
+2023,state,48,TX,hbnkint,Interest in having bank account,Not very interested,all,All households,27.55256409718173,201.55217030000003,731.5187421,26,95
+2023,state,48,TX,hbnkint,Interest in having bank account,Not at all interested,all,All households,45.026916624779126,329.3803341,731.5187421,43,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank locations are inconvenient,all,All households,2.6671908834473594,19.511001200000003,731.5187421,3,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,4.086181799551736,29.8911857,731.5187421,4,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Bank account fees are too unpredictable,all,All households,1.8872506752687888,13.8055924,731.5187421,2,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Banks do not offer needed products and services,all,All households,1.0788974151698634,7.8923368,731.5187421,1,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,13.71087406620255,100.29761350000001,731.5187421,12,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,23.924363659854883,175.0112041,731.5187421,24,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,5.226031323579399,38.2293986,731.5187421,5,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,10.468914805949167,76.58207390000001,731.5187421,10,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Problems with past banking or credit history,all,All households,2.9533444540299496,21.6042682,731.5187421,2,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Other reason,all,All households,14.881396529566782,108.86020469999998,731.5187421,13,95
+2023,state,48,TX,hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,19.11555438737952,139.83386300000004,731.5187421,19,95
+2023,state,48,TX,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,13.109242686620155,95.8965672,731.5187421,13,95
+2023,state,48,TX,hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,86.89075731337985,635.6221749000001,731.5187421,82,95
+2023,state,48,TX,hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,26.47294240801927,193.65453530000005,731.5187421,25,95
+2023,state,48,TX,hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,73.52705759198072,537.8642068,731.5187421,70,95
+2023,state,48,TX,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,27.512221057008514,201.2570534,731.5187421,28,95
+2023,state,48,TX,hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,72.48777894299148,530.2616887,731.5187421,67,95
+2023,state,48,TX,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,14.567271126107762,106.5623185,731.5187421,14,95
+2023,state,48,TX,hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,85.43272887389226,624.9564236000002,731.5187421,81,95
+2023,state,48,TX,hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,31.248955268565222,228.5919645,731.5187421,28,95
+2023,state,48,TX,hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,68.75104473143479,502.9267776000001,731.5187421,67,95
+2023,state,48,TX,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,46.32782739470428,338.89674019999995,731.5187421,45,95
+2023,state,48,TX,hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,53.67217260529572,392.62200190000004,731.5187421,50,95
+2023,state,48,TX,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,36.1229850162714,264.24640560000006,731.5187421,32,95
+2023,state,48,TX,hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,63.87701498372861,467.27233650000005,731.5187421,63,95
+2023,state,48,TX,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,20.146277602803195,147.37379649999997,731.5187421,19,95
+2023,state,48,TX,hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,79.85372239719682,584.1449456000001,731.5187421,76,95
+2023,state,48,TX,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,9.621985240998516,70.3866254,731.5187421,8,95
+2023,state,48,TX,hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,90.37801475900146,661.1321166999999,731.5187421,87,95
+2023,state,48,TX,hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,15.768923304528412,115.3526294,731.5187421,14,95
+2023,state,48,TX,hunbnkr10v5,Why unbanked: Other reason,No,all,All households,84.2310766954716,616.1661127000001,731.5187421,81,95
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,all,All households,17.071173725442826,559.5003812000001,3277.457017300002,69,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,all,All households,9.380505140942274,307.442024,3277.457017300002,39,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,all,All households,73.54832113361485,2410.5146121000002,3277.457017300002,331,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,All households,9.380505140942274,307.442024,3277.457017300002,39,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,All households,17.071173725442826,559.5003812000001,3277.457017300002,69,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,All households,73.54832113361485,2410.5146121000002,3277.457017300002,331,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"Less than $15,000",41.138954909544914,106.41330880000001,258.66799249999997,14,35
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"Less than $15,000",12.888815109198331,33.3392393,258.66799249999997,4,35
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"Less than $15,000",45.97222998125677,118.9154444,258.66799249999997,17,35
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$15,000 to $30,000",10.231568432351876,44.624635000000005,436.1465722000002,6,57
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$15,000 to $30,000",22.823548101703953,99.5441227,436.1465722000002,11,57
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$15,000 to $30,000",66.94488346594412,291.97781449999997,436.1465722000002,40,57
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$30,000 to $50,000",17.61221731605098,102.8431797,583.9309035000002,13,79
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$30,000 to $50,000",27.868465348314952,162.73258149999998,583.9309035000002,21,79
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$30,000 to $50,000",54.51931733563401,318.3551422999999,583.9309035000002,45,79
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"$50,000 to $75,000",1.5293774409180096,7.7491176,506.6844451000002,1,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"$50,000 to $75,000",19.543234839280835,99.02253100000001,506.6844451000002,13,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"$50,000 to $75,000",78.92738771980113,399.91279650000007,506.6844451000002,54,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhincome,"At least $75,000",3.070439054168816,45.8117829,1492.0271040000007,5,200
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhincome,"At least $75,000",11.049524922035193,164.86190670000002,1492.0271040000007,20,200
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhincome,"At least $75,000",85.880036023796,1281.3534144000007,1492.0271040000007,175,200
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,All households,9.380505140942274,307.442024,3277.457017300002,39,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,All households,17.071173725442826,559.5003812000001,3277.457017300002,69,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,All households,73.54832113361485,2410.5146121000002,3277.457017300002,331,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with one or more children,7.148050615808735,58.1121482,812.9789689999999,8,106
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with one or more children,14.965132400614417,121.66337910000001,812.9789689999999,14,106
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with one or more children,77.88681698357689,633.2034417000002,812.9789689999999,84,106
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Married couple with no children,2.6914613982661653,21.0248261,781.1676627999999,3,110
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Married couple with no children,11.273809131362828,88.06735129999998,781.1676627999999,12,110
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Married couple with no children,86.034729470371,672.0754853999999,781.1676627999999,95,110
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,26.48116383258302,22.2772554,84.1249106,2,10
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,17.425510108060667,14.6591948,84.1249106,2,10
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Single-parent household,56.09332605935631,47.1884604,84.1249106,6,10
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,14.947246541488058,78.59873970000001,525.8409265,10,70
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Unmarried female-householder or male-householder family: Other,29.864642914970972,157.04051499999997,525.8409265,20,70
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Unmarried female-householder or male-householder family: Other,55.18811054354096,290.2016718,525.8409265,40,70
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Female-householder nonfamily,14.335750213805165,68.4945998,477.7887364,9,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Female-householder nonfamily,8.397497856962874,40.1222989,477.7887364,5,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Female-householder nonfamily,77.26675192923197,369.1718377,477.7887364,54,68
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Unbanked,hhtypev3,Male-householder nonfamily,10.051378807133961,58.9344548,586.3320439,7,74
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Underbanked,hhtypev3,Male-householder nonfamily,23.527222080928468,137.9476421,586.3320439,16,74
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Male-householder nonfamily,66.42139911193757,389.44994700000007,586.3320439,51,74
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbankstatv6,Unbanked and underbanked,Banked: Fully banked,hhtypev3,Other,100.0,9.2237681,9.2237681,1,1
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkcashonly,Cash-only unbanked,Cash-only unbanked,all,All households,7.039680773298783,230.7225115,3277.457017300002,30,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkcashonly,Cash-only unbanked,Not cash-only unbanked,all,All households,92.96031922670115,3046.7345057999996,3277.457017300002,409,439
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Very interested,all,All households,16.524147817866304,50.8021745,307.442024,6,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Somewhat interested,all,All households,9.971241211969122,30.6557858,307.442024,4,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Not very interested,all,All households,28.882283867608148,88.79627809999998,307.442024,12,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hbnkint,Interest in having bank account,Not at all interested,all,All households,44.62232710255642,137.1877856,307.442024,17,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Bank account fees are too high,all,All households,2.248334111929994,6.9123239,307.442024,1,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Bank account fees are too unpredictable,all,All households,2.11664434007239,6.5074542,307.442024,1,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Banks do not offer needed products and services,all,All households,2.567097593658829,7.8923368,307.442024,1,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not trust banks,all,All households,12.750059634007613,39.1990414,307.442024,4,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not have enough money to meet minimum balance requirements,all,All households,19.634865694222725,60.3658285,307.442024,8,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Avoiding a bank gives more privacy,all,All households,4.859179856297068,14.9391609,307.442024,2,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Do not have personal identification required to open an account,all,All households,10.288187407977771,31.6302116,307.442024,4,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Problems with past banking or credit history,all,All households,2.6379707609523155,8.1102307,307.442024,1,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Other reason,all,All households,17.687635506849254,54.3792246,307.442024,7,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkrmv5,Main reason unbanked,Did not select a reason,all,All households,25.21002509403204,77.50621140000001,307.442024,10,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr1v5,Why unbanked: Bank locations are inconvenient,Yes,all,All households,12.834802798461931,39.4595775,307.442024,5,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr1v5,Why unbanked: Bank locations are inconvenient,No,all,All households,87.16519720153808,267.98244650000004,307.442024,34,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr2v5,Why unbanked: Bank account fees are too high,Yes,all,All households,9.779483757236779,30.0662428,307.442024,4,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr2v5,Why unbanked: Bank account fees are too high,No,all,All households,90.22051624276324,277.37578120000006,307.442024,35,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,Yes,all,All households,19.145119861688137,58.860144000000005,307.442024,8,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr3v5,Why unbanked: Bank account fees are too unpredictable,No,all,All households,80.85488013831187,248.58188,307.442024,31,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,Yes,all,All households,12.36806172600529,38.0246193,307.442024,5,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr4v5,Why unbanked: Banks do not offer needed products and services,No,all,All households,87.63193827399473,269.4174047000001,307.442024,34,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr5v5,Why unbanked: Do not trust banks,Yes,all,All households,24.839752453620324,76.3678377,307.442024,9,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr5v5,Why unbanked: Do not trust banks,No,all,All households,75.16024754637967,231.07418629999998,307.442024,30,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,Yes,all,All households,30.103603533393336,92.55112799999999,307.442024,12,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr6v5,Why unbanked: Do not have enough money to meet minimum balance requirements,No,all,All households,69.89639646660667,214.89089600000003,307.442024,27,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,Yes,all,All households,34.35051390372059,105.6079152,307.442024,13,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr7v5,Why unbanked: Avoiding a bank gives more privacy,No,all,All households,65.6494860962794,201.8341088,307.442024,26,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,Yes,all,All households,20.459480061190334,62.901039600000004,307.442024,8,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr8v5,Why unbanked: Do not have personal identification required to open an account,No,all,All households,79.54051993880967,244.5409844,307.442024,31,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr9v5,Why unbanked: Problems with past banking or credit history,Yes,all,All households,11.27854534941521,34.6749881,307.442024,4,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr9v5,Why unbanked: Problems with past banking or credit history,No,all,All households,88.7214546505848,272.76703590000005,307.442024,35,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr10v5,Why unbanked: Other reason,Yes,all,All households,17.687635506849254,54.37922460000001,307.442024,7,39
+2023,msa,26420,"Houston-Pasadena-The Woodlands, TX",hunbnkr10v5,Why unbanked: Other reason,No,all,All households,82.31236449315075,253.0627994,307.442024,32,39

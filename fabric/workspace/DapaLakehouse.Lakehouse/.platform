@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "DapaLakehouse",
+    "description": "Gold tables for the DAPA dashboards (bank tenant)."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "af3f3808-0069-5ff6-a9c0-beae3ae7aa70"
+  }
+}

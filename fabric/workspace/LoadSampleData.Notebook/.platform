@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Load Sample Data",
+    "description": "Builds the DAPA gold tables from synthetic sample data."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ff89b231-7b70-5b08-981f-16e373e42e0a"
+  }
+}

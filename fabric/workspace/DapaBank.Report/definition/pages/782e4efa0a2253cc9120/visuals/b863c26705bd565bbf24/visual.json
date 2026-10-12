@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "b863c26705bd565bbf24",
+  "position": {
+    "x": 220,
+    "y": 10,
+    "z": 1000,
+    "width": 200,
+    "height": 100,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_attendee"
+                    }
+                  },
+                  "Property": "Attendees"
+                }
+              },
+              "queryRef": "fact_attendee.Attendees",
+              "nativeQueryRef": "Attendees"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Attendees'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

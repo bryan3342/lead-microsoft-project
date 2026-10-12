@@ -1,0 +1,19 @@
+relationship 798e2e51-f9a0-5a9b-a457-fa550dd618c9
+	fromColumn: dim_branch.bank_id
+	toColumn: dim_bank.bank_id
+
+relationship 8ddd07d3-09de-5c3b-9f14-8eaa6ff63e97
+	fromColumn: dim_branch.tract_id
+	toColumn: dim_tract.tract_id
+
+relationship 122be4a5-4dfe-51c1-8f76-c254ab52c3a8
+	fromColumn: dim_event.bank_id
+	toColumn: dim_bank.bank_id
+
+relationship 8531bec9-364a-5514-a0b3-6a3a0166cd68
+	fromColumn: dim_event.tract_id
+	toColumn: dim_tract.tract_id
+
+relationship dc1aacf3-df54-5729-8f80-f7cb91ae48ec
+	fromColumn: fact_attendee.event_id
+	toColumn: dim_event.event_id

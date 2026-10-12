@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f47d882ae20e524bbf7c",
+  "position": {
+    "x": 10,
+    "y": 120,
+    "z": 6000,
+    "width": 300,
+    "height": 140,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "area"
+                }
+              },
+              "queryRef": "agg_playbook.area",
+              "nativeQueryRef": "area"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Area'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

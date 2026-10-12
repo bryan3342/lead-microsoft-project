@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c00022646ddf5460a3d3",
+  "position": {
+    "x": 430,
+    "y": 10,
+    "z": 2000,
+    "width": 200,
+    "height": 100,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "Active 90 Days"
+                }
+              },
+              "queryRef": "agg_playbook.Active 90 Days",
+              "nativeQueryRef": "Active 90 Days"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Active 90 Days'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

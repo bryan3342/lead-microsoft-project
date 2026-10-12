@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e28089f9787858a78db7",
+  "position": {
+    "x": 10,
+    "y": 120,
+    "z": 6000,
+    "width": 620,
+    "height": 290,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "pilot_arm"
+                }
+              },
+              "queryRef": "dim_tract.pilot_arm",
+              "nativeQueryRef": "pilot_arm"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Active Accounts per 1k Adults"
+                }
+              },
+              "queryRef": "dim_tract.Active Accounts per 1k Adults",
+              "nativeQueryRef": "Active Accounts per 1k Adults"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'New active accounts per 1k adults: pilot vs matched control'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

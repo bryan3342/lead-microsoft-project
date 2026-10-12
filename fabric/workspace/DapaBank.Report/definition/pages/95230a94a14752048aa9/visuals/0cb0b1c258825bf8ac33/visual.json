@@ -1,0 +1,131 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0cb0b1c258825bf8ac33",
+  "position": {
+    "x": 640,
+    "y": 120,
+    "z": 5000,
+    "width": 630,
+    "height": 290,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "azureMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "branch_id"
+                }
+              },
+              "queryRef": "dim_branch.branch_id",
+              "nativeQueryRef": "branch_id"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "latitude"
+                }
+              },
+              "queryRef": "dim_branch.latitude",
+              "nativeQueryRef": "latitude"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "longitude"
+                }
+              },
+              "queryRef": "dim_branch.longitude",
+              "nativeQueryRef": "longitude"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_bank"
+                    }
+                  },
+                  "Property": "bank_name"
+                }
+              },
+              "queryRef": "dim_bank.bank_name",
+              "nativeQueryRef": "bank_name"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "Branches"
+                }
+              },
+              "queryRef": "dim_branch.Branches",
+              "nativeQueryRef": "Branches"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Branch overlay by bank'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

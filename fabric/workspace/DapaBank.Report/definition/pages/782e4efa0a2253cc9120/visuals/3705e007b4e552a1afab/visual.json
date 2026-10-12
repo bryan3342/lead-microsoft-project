@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "3705e007b4e552a1afab",
+  "position": {
+    "x": 640,
+    "y": 120,
+    "z": 7000,
+    "width": 300,
+    "height": 140,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Lift vs Control"
+                }
+              },
+              "queryRef": "dim_tract.Lift vs Control",
+              "nativeQueryRef": "Lift vs Control"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lift vs control (per 1k adults)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

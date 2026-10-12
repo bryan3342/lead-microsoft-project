@@ -1,0 +1,46 @@
+/// Banks with branches in the metro. Only the tenant bank has event and outcome data.
+table dim_bank
+	lineageTag: 83c6a976-4451-528b-9400-512458e1eed8
+	sourceLineageTag: [dbo].[dim_bank]
+
+	column bank_id
+		dataType: string
+		lineageTag: 12846da8-d1be-56fa-af75-6c2acf1ca812
+		sourceLineageTag: bank_id
+		summarizeBy: none
+		sourceColumn: bank_id
+
+	column bank_name
+		dataType: string
+		lineageTag: 14e29ebf-ed17-553a-a3b3-9379c9e34f23
+		sourceLineageTag: bank_name
+		summarizeBy: none
+		sourceColumn: bank_name
+
+	column bank_type
+		dataType: string
+		lineageTag: d40f5860-fd8b-50f1-ba4b-d0274e42f493
+		sourceLineageTag: bank_type
+		summarizeBy: none
+		sourceColumn: bank_type
+
+	column total_assets_usd_bn
+		dataType: double
+		lineageTag: d768d52d-3e74-564a-8d5b-3792d7da8b68
+		sourceLineageTag: total_assets_usd_bn
+		summarizeBy: none
+		sourceColumn: total_assets_usd_bn
+
+	column is_tenant_bank
+		dataType: boolean
+		lineageTag: 9c513762-5a70-5213-a9a7-59d0001b15de
+		sourceLineageTag: is_tenant_bank
+		summarizeBy: none
+		sourceColumn: is_tenant_bank
+
+	partition dim_bank = entity
+		mode: directLake
+		source
+			entityName: dim_bank
+			schemaName: dbo
+			expressionSource: DatabaseQuery

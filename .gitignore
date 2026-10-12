@@ -6,3 +6,9 @@ data/raw/
 data/processed/hmda_loans.csv
 data/processed/complaints.csv
 .DS_Store
+
+# Fabric / Power BI
+sample-output/
+.pytest_cache/
+**/.pbi/localSettings.json
+**/.pbi/cache.abf

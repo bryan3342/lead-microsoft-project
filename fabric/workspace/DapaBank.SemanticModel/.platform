@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "DAPA Bank",
+    "description": "Bank-tenant model: opportunity map, pilot results and scenario view."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "82460397-621a-5c6b-8100-df9e4630ae72"
+  }
+}

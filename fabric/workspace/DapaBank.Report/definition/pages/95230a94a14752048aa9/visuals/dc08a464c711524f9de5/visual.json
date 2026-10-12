@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "dc08a464c711524f9de5",
+  "position": {
+    "x": 640,
+    "y": 420,
+    "z": 6000,
+    "width": 630,
+    "height": 290,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "tract_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "pilot_arm"
+                }
+              },
+              "queryRef": "dim_tract.pilot_arm",
+              "nativeQueryRef": "pilot_arm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "top_non_english_language"
+                }
+              },
+              "queryRef": "dim_tract.top_non_english_language",
+              "nativeQueryRef": "top_non_english_language"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Need Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Need Score",
+              "nativeQueryRef": "Avg Need Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Readiness Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Readiness Score",
+              "nativeQueryRef": "Avg Readiness Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Bank Fit Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Bank Fit Score",
+              "nativeQueryRef": "Avg Bank Fit Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Opportunity Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Opportunity Score",
+              "nativeQueryRef": "Avg Opportunity Score"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ranked tracts'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

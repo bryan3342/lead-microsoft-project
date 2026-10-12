@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f8a0b298c29e5240ae7b",
+  "position": {
+    "x": 220,
+    "y": 10,
+    "z": 1000,
+    "width": 200,
+    "height": 100,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Opportunity Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Opportunity Score",
+              "nativeQueryRef": "Avg Opportunity Score"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Avg Opportunity Score'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

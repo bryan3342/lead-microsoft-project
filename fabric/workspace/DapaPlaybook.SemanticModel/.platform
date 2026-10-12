@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "DAPA Playbook",
+    "description": "Mastercard view: de-identified aggregates only, never personal data."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "981269c7-4306-5542-b45d-8d13627c73e4"
+  }
+}

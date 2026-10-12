@@ -1,0 +1,65 @@
+/// Branch locations and deposits (FDIC Summary of Deposits shape).
+table dim_branch
+	lineageTag: 03f2be00-48be-528c-9f1a-e3c1660892fe
+	sourceLineageTag: [dbo].[dim_branch]
+
+	measure Branches = COUNTROWS(dim_branch)
+		formatString: #,0
+		displayFolder: Opportunity
+		lineageTag: 3fceac75-7b5b-5ed3-afc7-75988edfbb0d
+
+	measure 'Tenant Bank Branches' = CALCULATE([Branches], dim_bank[is_tenant_bank] = TRUE())
+		formatString: #,0
+		displayFolder: Opportunity
+		lineageTag: 29663cca-455f-5cd2-8898-a0144766b5ba
+
+	column branch_id
+		dataType: string
+		lineageTag: c76ac14a-f157-523e-997a-712d4a06f95b
+		sourceLineageTag: branch_id
+		summarizeBy: none
+		sourceColumn: branch_id
+
+	column bank_id
+		dataType: string
+		lineageTag: da9a489f-3647-5153-8c12-0302ae8dedba
+		sourceLineageTag: bank_id
+		summarizeBy: none
+		sourceColumn: bank_id
+
+	column tract_id
+		dataType: string
+		lineageTag: a6c02675-7c87-5e96-853a-422a6ce4fe80
+		sourceLineageTag: tract_id
+		summarizeBy: none
+		sourceColumn: tract_id
+
+	column latitude
+		dataType: double
+		dataCategory: Latitude
+		lineageTag: a4a3a25e-cf0c-5c4c-80c6-e1a811b54f32
+		sourceLineageTag: latitude
+		summarizeBy: none
+		sourceColumn: latitude
+
+	column longitude
+		dataType: double
+		dataCategory: Longitude
+		lineageTag: de53a0d8-e29e-5cc0-8f18-7d3afa32c494
+		sourceLineageTag: longitude
+		summarizeBy: none
+		sourceColumn: longitude
+
+	column deposits_usd_mm
+		dataType: double
+		lineageTag: 84cc9695-3ca0-55d2-9b5c-5bca5f7aae56
+		sourceLineageTag: deposits_usd_mm
+		summarizeBy: none
+		sourceColumn: deposits_usd_mm
+
+	partition dim_branch = entity
+		mode: directLake
+		source
+			entityName: dim_branch
+			schemaName: dbo
+			expressionSource: DatabaseQuery

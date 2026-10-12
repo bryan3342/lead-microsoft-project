@@ -1,0 +1,105 @@
+/// Community events run by the tenant bank.
+table dim_event
+	lineageTag: a81f49f2-a698-58eb-8300-702aa3a5edc6
+	sourceLineageTag: [dbo].[dim_event]
+
+	measure Events = COUNTROWS(dim_event)
+		formatString: #,0
+		displayFolder: Pilot
+		lineageTag: 48472aa7-d57b-5e1d-96f3-13602ffd94e9
+
+	measure 'Event Cost' = SUM(dim_event[cost_usd])
+		formatString: \$#,0
+		displayFolder: Pilot
+		lineageTag: 44262514-36e2-574e-afbf-a5b81aa613e3
+
+	measure 'Cost per Active Customer' = DIVIDE([Event Cost], [Active 90 Days])
+		formatString: \$#,0
+		displayFolder: Pilot
+		lineageTag: 9d0a1b92-b3c4-55ca-9183-cafa8c5ef650
+
+	column event_id
+		dataType: string
+		lineageTag: 619dcaa3-0cb0-5936-9361-8be171e2dd38
+		sourceLineageTag: event_id
+		summarizeBy: none
+		sourceColumn: event_id
+
+	column bank_id
+		dataType: string
+		lineageTag: a0370d5d-9f2f-5d58-a22f-4ea3faf0a1dc
+		sourceLineageTag: bank_id
+		summarizeBy: none
+		sourceColumn: bank_id
+
+	column tract_id
+		dataType: string
+		lineageTag: 8fc2ff08-e5b2-5887-8040-e9212cddcc96
+		sourceLineageTag: tract_id
+		summarizeBy: none
+		sourceColumn: tract_id
+
+	column event_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: cc69904c-9d42-5c6c-9330-f7d964aceaf8
+		sourceLineageTag: event_date
+		summarizeBy: none
+		sourceColumn: event_date
+
+	column event_type
+		dataType: string
+		lineageTag: 6d42d200-6558-56e4-b0e9-2addfe9a3d39
+		sourceLineageTag: event_type
+		summarizeBy: none
+		sourceColumn: event_type
+
+	column activities
+		dataType: string
+		lineageTag: 0e2508ef-c64e-5b41-8b95-b084cd5f3604
+		sourceLineageTag: activities
+		summarizeBy: none
+		sourceColumn: activities
+
+	column approach
+		dataType: string
+		lineageTag: 5e335f58-43b1-51af-828c-400f3d21811a
+		sourceLineageTag: approach
+		summarizeBy: none
+		sourceColumn: approach
+
+	column host_org_type
+		dataType: string
+		lineageTag: 0e9b8510-aa51-5c9e-94d9-e4b363fa421e
+		sourceLineageTag: host_org_type
+		summarizeBy: none
+		sourceColumn: host_org_type
+
+	column language
+		dataType: string
+		lineageTag: 413dd3fe-7a1b-5a61-b172-acfd56f03f08
+		sourceLineageTag: language
+		summarizeBy: none
+		sourceColumn: language
+
+	column product_focus
+		dataType: string
+		lineageTag: 6de980af-5136-5c36-9786-6333f1c6d839
+		sourceLineageTag: product_focus
+		summarizeBy: none
+		sourceColumn: product_focus
+
+	column cost_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: 00b57922-5053-5a9f-bdce-fe5b8e366d75
+		sourceLineageTag: cost_usd
+		summarizeBy: none
+		sourceColumn: cost_usd
+
+	partition dim_event = entity
+		mode: directLake
+		source
+			entityName: dim_event
+			schemaName: dbo
+			expressionSource: DatabaseQuery

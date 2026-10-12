@@ -1,0 +1,17 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+ref table dim_tract
+ref table dim_bank
+ref table dim_branch
+ref table dim_event
+ref table fact_attendee
+ref table scenario_ltv

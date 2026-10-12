@@ -1,0 +1,12 @@
+county_fips,county_name,state,cbsa,cbsa_title,metro_division,central_or_outlying,in_omb_2023_metro,has_fdic_metro_branches
+48085,Collin County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Central,True,True
+48113,Dallas County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Central,True,True
+48121,Denton County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Outlying,True,True
+48139,Ellis County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Central,True,True
+48231,Hunt County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Outlying,True,True
+48257,Kaufman County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Outlying,True,True
+48397,Rockwall County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Dallas-Plano-Irving, TX",Central,True,True
+48251,Johnson County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Fort Worth-Arlington-Grapevine, TX",Central,True,True
+48367,Parker County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Fort Worth-Arlington-Grapevine, TX",Outlying,True,True
+48439,Tarrant County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Fort Worth-Arlington-Grapevine, TX",Central,True,True
+48497,Wise County,Texas,19100,"Dallas-Fort Worth-Arlington, TX","Fort Worth-Arlington-Grapevine, TX",Outlying,True,True

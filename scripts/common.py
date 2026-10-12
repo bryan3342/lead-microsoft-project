@@ -22,6 +22,11 @@ SAMPLES = {
         "name": "Houston-Pasadena-The Woodlands, TX",
         "states": {"48": "TX"},
     },
+    "dallas": {
+        "cbsa": "19100",
+        "name": "Dallas-Fort Worth-Arlington, TX",
+        "states": {"48": "TX"},
+    },
 }
 
 _parser = argparse.ArgumentParser(add_help=False)

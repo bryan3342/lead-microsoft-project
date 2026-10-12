@@ -10,6 +10,7 @@ Each metro has its own folders, with the same table names in each.
 |---|---|---|---|
 | `dc` | Washington-Arlington-Alexandria (CBSA 47900) | 23 (DC/MD/VA/WV) | First test sample. Low-need comparison: 1.5% unbanked (2023) |
 | `houston` | Houston-Pasadena-The Woodlands (CBSA 26420) | 10 (TX) | Showcase: 9.4% unbanked, about 307k households; 234 local-bank branches. Texas has the most unbanked households of any state |
+| `dallas` | Dallas-Fort Worth-Arlington (CBSA 19100) | 11 (TX) | Second Texas metro: 4.7% unbanked (2023), about 111k households; 383 local-bank branches |
 
 - `processed/<sample>/` holds clean, typed tables as `.parquet` (for Fabric) and `.csv` (for inspection).
 - `raw/<sample>/` (git-ignored) holds each source exactly as downloaded, next to a `.provenance.json` (URL, parameters, timestamp, row count, SHA-256).

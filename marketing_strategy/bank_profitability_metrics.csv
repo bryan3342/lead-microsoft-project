@@ -1,0 +1,12 @@
+Metric,Traditional Banks (Low-Cost Accounts),Fintech (Chime Model),Fintech (Varo Model),Notes
+Revenue per Account per Year,"$112","$251","$349-400",Fintech achieves 2-3.5X traditional bank ARPU
+Cost to Serve per Account per Year,"$250-400",~$120 (digital only),~$130 (digital only),Low-cost accounts lose money for traditional banks
+Net Profit per Account per Year,"-$138 to -$288",~$131 (at profitability),~$220,Fintech breaks even/profitable; traditional banks lose
+Transaction Volume per Month,"10-15","54","High","Fintech drives 3.5-5X transaction volume; transaction margins 67%"
+Direct Deposit Adoption Rate,"39% (Bank On)","High (implied)","High (implied)",Creates cross-sell pathway to credit products
+Customer Acquisition Cost,"$200-400 (vendor range)","$12 (MoneyLion 2024)","~$20-30 (estimated)","Fintech reduced CAC 31% YoY (MoneyLion); much lower than traditional banks"
+Cross-Sell ROI,10X vs new customer acquisition,Implicit in ARPU,Implicit in ARPU,"McKinsey finding: +20% revenue, +30% profit uplift"
+Retention/Closure Rate,"15% annual (Bank On) / 31% (community banks)","High retention (implied)","High retention (implied)","Community banks struggle (31% vs 15%); fintech data not disclosed"
+Account Type,No-fee checking; loss leader for lifetime value,Fintech checking + savings + lending,Fintech checking + savings + credit,Traditional banks justify losses through cross-sell
+Market Scale,"400+ banks participating; 23M+ accounts","8.6-9.5M members (Q1 2025)","1M+ members (estimated)","Bank On standardization enabled scale; fintech profitability at scale"
+Key Finding,"Accounts unprofitable at unit level; justified through CRA compliance + cross-sell + fintech competition","First profitable quarter Q1 2025","Pre-profitability but CAC improving rapidly","Fintech model proves market can be profitable at scale; forces traditional bank response"

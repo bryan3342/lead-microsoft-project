@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Mortgage applications and outcomes per tract per year (HMDA).
+/// Mortgage applications and outcomes per tract per year (HMDA).
 table fact_tract_lending
 	lineageTag: 1076cdc0-ee55-55fe-9c37-5824d7e73af7
 	sourceLineageTag: [dbo].[fact_tract_lending]

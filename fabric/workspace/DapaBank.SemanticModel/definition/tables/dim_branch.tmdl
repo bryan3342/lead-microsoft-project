@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Bank branches with location and tract.
+/// Bank branches with location and tract.
 table dim_branch
 	lineageTag: 03f2be00-48be-528c-9f1a-e3c1660892fe
 	sourceLineageTag: [dbo].[dim_branch]

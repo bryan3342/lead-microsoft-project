@@ -30,7 +30,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SKELETON, no data loaded. Aggregated, de-identified results across banks. Groups under 10 attendees are suppressed (F10, N2).",
+                    "value": "Aggregated, de-identified results across banks. Groups under 10 attendees are suppressed (F10, N2).",
                     "textStyle": {
                       "fontSize": "14pt",
                       "fontWeight": "bold"

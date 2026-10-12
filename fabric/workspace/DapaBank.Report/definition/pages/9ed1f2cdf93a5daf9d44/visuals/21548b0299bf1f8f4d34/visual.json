@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "21548b0299bf1f8f4d34",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 6000,
+    "width": 620,
+    "height": 300,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "scenario_ltv.year",
+              "nativeQueryRef": "Year",
+              "displayName": "Year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV per Customer (Conservative)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV per Customer (Conservative)",
+              "nativeQueryRef": "Conservative",
+              "displayName": "Conservative"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV per Customer (Base)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV per Customer (Base)",
+              "nativeQueryRef": "Base",
+              "displayName": "Base"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV per Customer (Optimistic)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV per Customer (Optimistic)",
+              "nativeQueryRef": "Optimistic",
+              "displayName": "Optimistic"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "Acquisition Cost per Customer"
+                }
+              },
+              "queryRef": "scenario_ltv.Acquisition Cost per Customer",
+              "nativeQueryRef": "Acquisition cost",
+              "displayName": "Acquisition cost"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cumulative lifetime value per customer vs acquisition cost'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -65,7 +65,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Cost per active customer by event type'"
+                  "Value": "'Cost per active customer by event type'"
                 }
               }
             }

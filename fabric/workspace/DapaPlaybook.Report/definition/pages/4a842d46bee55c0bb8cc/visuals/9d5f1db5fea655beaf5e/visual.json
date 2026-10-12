@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Cost per Active Customer'"
+                  "Value": "'Cost per Active Customer'"
                 }
               }
             }

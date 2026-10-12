@@ -1,0 +1,168 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2e64d29af8c4a4001668",
+  "position": {
+    "x": 10,
+    "y": 485,
+    "z": 8000,
+    "width": 770,
+    "height": 225,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "Census tract",
+              "displayName": "Census tract"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Reachable Households"
+                }
+              },
+              "queryRef": "dim_tract.Est. Reachable Households",
+              "nativeQueryRef": "Reachable households",
+              "displayName": "Reachable households"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "Projected New Customers (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.Projected New Customers (Base)",
+              "nativeQueryRef": "New customers",
+              "displayName": "New customers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "Acquisition Spend (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.Acquisition Spend (Base)",
+              "nativeQueryRef": "Acquisition spend",
+              "displayName": "Acquisition spend"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Conservative)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Conservative)",
+              "nativeQueryRef": "Net value: conservative",
+              "displayName": "Net value: conservative"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Base)",
+              "nativeQueryRef": "Net value: base",
+              "displayName": "Net value: base"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Optimistic)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Optimistic)",
+              "nativeQueryRef": "Net value: optimistic",
+              "displayName": "Net value: optimistic"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "tract_ltv"
+                  }
+                },
+                "Property": "5-Year Net Value (Base)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Projected value by census tract'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

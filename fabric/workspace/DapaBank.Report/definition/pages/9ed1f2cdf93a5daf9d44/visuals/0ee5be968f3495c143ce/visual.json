@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0ee5be968f3495c143ce",
+  "position": {
+    "x": 790,
+    "y": 485,
+    "z": 9000,
+    "width": 480,
+    "height": 225,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ltv_assumptions"
+                    }
+                  },
+                  "Property": "description"
+                }
+              },
+              "queryRef": "ltv_assumptions.description",
+              "nativeQueryRef": "Input",
+              "displayName": "Input"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ltv_assumptions"
+                    }
+                  },
+                  "Property": "scenario"
+                }
+              },
+              "queryRef": "ltv_assumptions.scenario",
+              "nativeQueryRef": "Scenario",
+              "displayName": "Scenario"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ltv_assumptions"
+                    }
+                  },
+                  "Property": "value"
+                }
+              },
+              "queryRef": "ltv_assumptions.value",
+              "nativeQueryRef": "Value",
+              "displayName": "Value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ltv_assumptions"
+                    }
+                  },
+                  "Property": "unit"
+                }
+              },
+              "queryRef": "ltv_assumptions.unit",
+              "nativeQueryRef": "Unit",
+              "displayName": "Unit"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lifetime value model inputs'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

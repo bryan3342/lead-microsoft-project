@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "535cfb360b2642b9476e",
+  "position": {
+    "x": 1063,
+    "y": 75,
+    "z": 5000,
+    "width": 207,
+    "height": 90,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_branch_deposits"
+                    }
+                  },
+                  "Property": "Latest Branch Deposits ($000)"
+                }
+              },
+              "queryRef": "fact_branch_deposits.Latest Branch Deposits ($000)",
+              "nativeQueryRef": "Latest deposits ($000)",
+              "displayName": "Latest deposits ($000)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Latest deposits ($000)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

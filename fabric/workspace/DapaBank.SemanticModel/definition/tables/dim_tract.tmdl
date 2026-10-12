@@ -1,4 +1,4 @@
-/// PLACEHOLDER. One row per census tract: households, estimated unbanked households, scores, pilot arm.
+/// One row per census tract: households, estimated unbanked households, scores, pilot arm.
 table dim_tract
 	lineageTag: ec41c553-9460-577c-b407-cbe14b1a9dee
 	sourceLineageTag: [dbo].[dim_tract]
@@ -8,7 +8,7 @@ table dim_tract
 		displayFolder: Opportunity
 		lineageTag: 4ea9a505-5143-5df2-afff-f46fe46e2beb
 
-	measure Households = SUM(dim_tract[households])
+	measure 'Total Households' = SUM(dim_tract[households])
 		formatString: #,0
 		displayFolder: Community
 		lineageTag: 6a3e7c89-70be-5709-a889-11f03379c593
@@ -22,6 +22,16 @@ table dim_tract
 		formatString: #,0
 		displayFolder: Community
 		lineageTag: 004d0213-3aaa-522e-84cc-f835c8679df3
+
+	measure 'Est. Reachable Households' = [Est. Unbanked Households] + [Est. Underbanked Households]
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: aa747601-2321-5c86-b7c2-2027eff85662
+
+	measure 'Est. Unbanked Share' = DIVIDE([Est. Unbanked Households], [Total Households])
+		formatString: 0.0%
+		displayFolder: Community
+		lineageTag: aa537a3c-e60b-5294-9d88-347057f40be9
 
 	measure 'Avg Need Score' = AVERAGE(dim_tract[need_score])
 		formatString: 0.00

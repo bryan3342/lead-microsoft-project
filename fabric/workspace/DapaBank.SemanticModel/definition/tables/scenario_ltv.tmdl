@@ -1,22 +1,27 @@
-/// PLACEHOLDER. ASSUMPTION ranges for lifetime value per active account. Replace with model output, then actuals.
+/// Cumulative lifetime value per new customer by scenario and year, from the LTV model inputs.
 table scenario_ltv
 	lineageTag: 668ca843-6b69-5808-8980-29addb7bff8c
 	sourceLineageTag: [dbo].[scenario_ltv]
 
-	measure 'LTV Low (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Low")
+	measure 'LTV per Customer (Conservative)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Conservative")
 		formatString: \$#,0
-		displayFolder: Scenario
-		lineageTag: 4e59956c-7599-5457-a94d-5b10f418c027
+		displayFolder: Cost vs LTV
+		lineageTag: c4b838a7-1129-5704-a028-5969fac76888
 
-	measure 'LTV Base (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Base")
+	measure 'LTV per Customer (Base)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Base")
 		formatString: \$#,0
-		displayFolder: Scenario
-		lineageTag: 3e299f74-1682-576f-8e2b-a50fe0198c08
+		displayFolder: Cost vs LTV
+		lineageTag: 851395af-8f81-53d4-891c-f99607feb5ca
 
-	measure 'LTV High (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "High")
+	measure 'LTV per Customer (Optimistic)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Optimistic")
 		formatString: \$#,0
-		displayFolder: Scenario
-		lineageTag: 64080feb-f55e-52c9-b780-5f2b2daacf3f
+		displayFolder: Cost vs LTV
+		lineageTag: 86895e4d-87f3-5a1c-8d6b-212237ecd23a
+
+	measure 'Acquisition Cost per Customer' = AVERAGE(scenario_ltv[acquisition_cost_usd])
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: 86ff1d0f-8f17-50db-8aef-56c6480255d1
 
 	column scenario
 		dataType: string
@@ -40,6 +45,14 @@ table scenario_ltv
 		sourceLineageTag: cumulative_ltv_usd
 		summarizeBy: none
 		sourceColumn: cumulative_ltv_usd
+
+	column acquisition_cost_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: 869feb31-62f8-5bad-a007-d217e6c8df51
+		sourceLineageTag: acquisition_cost_usd
+		summarizeBy: none
+		sourceColumn: acquisition_cost_usd
 
 	column basis
 		dataType: string

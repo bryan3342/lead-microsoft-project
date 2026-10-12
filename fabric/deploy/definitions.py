@@ -32,8 +32,9 @@ def _folder_parts(folder: str, transform=None) -> list:
     return parts
 
 
-def notebook_definition(lakehouse_id: str, lakehouse_name: str, workspace_id: str) -> dict:
-    nb = json.loads((WORKSPACE_DIR / "CreateTables.Notebook" / "notebook-content.ipynb").read_text())
+def notebook_definition(lakehouse_id: str, lakehouse_name: str, workspace_id: str,
+                        folder: str = "CreateTables.Notebook") -> dict:
+    nb = json.loads((WORKSPACE_DIR / folder / "notebook-content.ipynb").read_text())
     nb["metadata"]["dependencies"] = {"lakehouse": {
         "default_lakehouse": lakehouse_id,
         "default_lakehouse_name": lakehouse_name,

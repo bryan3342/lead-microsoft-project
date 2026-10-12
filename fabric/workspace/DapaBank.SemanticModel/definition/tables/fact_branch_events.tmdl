@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Branch openings, closings, relocations and sales.
+/// Branch openings, closings, relocations and sales.
 table fact_branch_events
 	lineageTag: a660310d-9f7a-5c1e-96b9-88d004f4e556
 	sourceLineageTag: [dbo].[fact_branch_events]

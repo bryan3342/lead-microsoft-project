@@ -1,9 +1,9 @@
-/// PLACEHOLDER. Bank's new active accounts per tract per year, for pilot vs control (bank tenant only).
+/// Bank's new active accounts per tract per year, for pilot vs control (bank tenant only).
 table fact_tract_accounts
 	lineageTag: 86d479f4-9bb3-5593-9ecf-0b4792c0bcbb
 	sourceLineageTag: [dbo].[fact_tract_accounts]
 
-	measure 'New Active Accounts per 1k Households' = DIVIDE(SUM(fact_tract_accounts[new_active_accounts]), [Households]) * 1000
+	measure 'New Active Accounts per 1k Households' = DIVIDE(SUM(fact_tract_accounts[new_active_accounts]), [Total Households]) * 1000
 		formatString: 0.0
 		displayFolder: Pilot vs control
 		lineageTag: ff48c691-f615-5319-8669-c670cbe314ff

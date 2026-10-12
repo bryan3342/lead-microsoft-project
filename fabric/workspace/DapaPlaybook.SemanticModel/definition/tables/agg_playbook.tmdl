@@ -1,19 +1,19 @@
-/// PLACEHOLDER. De-identified aggregate for Mastercard. Groups under 10 attendees suppressed upstream.
+/// De-identified aggregate for Mastercard. Groups under 10 attendees suppressed upstream.
 table agg_playbook
 	lineageTag: fe91a6a5-27b3-50ca-a243-6ef1b30f1257
 	sourceLineageTag: [dbo].[agg_playbook]
 
-	measure Events = SUM(agg_playbook[events])
+	measure 'Total Events' = SUM(agg_playbook[events])
 		formatString: #,0
 		displayFolder: Results
 		lineageTag: 2537f319-a54e-57e8-b9c0-7acd3239244f
 
-	measure Registrations = SUM(agg_playbook[registrations])
+	measure 'Total Registrations' = SUM(agg_playbook[registrations])
 		formatString: #,0
 		displayFolder: Results
 		lineageTag: f01dd833-35db-589c-855f-b32019e2bd1c
 
-	measure Attendees = SUM(agg_playbook[attendees])
+	measure 'Total Attendees' = SUM(agg_playbook[attendees])
 		formatString: #,0
 		displayFolder: Results
 		lineageTag: 0782289c-da44-57a8-9644-9b9f1343b441
@@ -28,7 +28,7 @@ table agg_playbook
 		displayFolder: Results
 		lineageTag: 138fd390-2ed8-5ccf-a954-f194930d39ca
 
-	measure 'Attendance Rate' = DIVIDE([Attendees], [Registrations])
+	measure 'Attendance Rate' = DIVIDE([Total Attendees], [Total Registrations])
 		formatString: 0.0%
 		displayFolder: Rates
 		lineageTag: 39f9a957-e776-5ae3-a4bb-03114cff2ed3

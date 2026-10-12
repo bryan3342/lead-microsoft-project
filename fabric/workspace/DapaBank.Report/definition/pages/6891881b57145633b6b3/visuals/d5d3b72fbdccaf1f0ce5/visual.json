@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "d5d3b72fbdccaf1f0ce5",
+  "position": {
+    "x": 640,
+    "y": 175,
+    "z": 8000,
+    "width": 630,
+    "height": 260,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_year"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "dim_year.year",
+              "nativeQueryRef": "Year",
+              "displayName": "Year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_tract_lending"
+                    }
+                  },
+                  "Property": "Mortgage Denial Rate"
+                }
+              },
+              "queryRef": "fact_tract_lending.Mortgage Denial Rate",
+              "nativeQueryRef": "Mortgage Denial Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_tract_lending"
+                    }
+                  },
+                  "Property": "High-Cost Loan Share"
+                }
+              },
+              "queryRef": "fact_tract_lending.High-Cost Loan Share",
+              "nativeQueryRef": "High-Cost Loan Share"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mortgage denial rate and high-cost loan share by year'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/// Projected new customers, acquisition spend and 5-year net value per census tract and scenario.
+table tract_ltv
+	lineageTag: 54f935c9-0de7-5c1c-97f5-5a2dc0268b6e
+	sourceLineageTag: [dbo].[tract_ltv]
+
+	measure 'Projected New Customers (Conservative)' = CALCULATE(SUM(tract_ltv[new_customers]), tract_ltv[scenario] = "Conservative")
+		formatString: #,0
+		displayFolder: Cost vs LTV
+		lineageTag: 7bd04cb4-93ea-53fe-b571-842c3e7c0aa2
+
+	measure 'Acquisition Spend (Conservative)' = CALCULATE(SUM(tract_ltv[acquisition_spend_usd]), tract_ltv[scenario] = "Conservative")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: 53914f11-f8cb-5aa7-b743-b4e071399e64
+
+	measure '5-Year Net Value (Conservative)' = CALCULATE(SUM(tract_ltv[net_value_5yr_usd]), tract_ltv[scenario] = "Conservative")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: 6c09aaac-09de-5f5a-b96b-de5967b514c8
+
+	measure 'Projected New Customers (Base)' = CALCULATE(SUM(tract_ltv[new_customers]), tract_ltv[scenario] = "Base")
+		formatString: #,0
+		displayFolder: Cost vs LTV
+		lineageTag: 0603f91a-05d3-531e-81ca-88745c0dee82
+
+	measure 'Acquisition Spend (Base)' = CALCULATE(SUM(tract_ltv[acquisition_spend_usd]), tract_ltv[scenario] = "Base")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: 553c4195-acd1-54f4-b439-95d941141761
+
+	measure '5-Year Net Value (Base)' = CALCULATE(SUM(tract_ltv[net_value_5yr_usd]), tract_ltv[scenario] = "Base")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: c0356eef-2d72-5d6d-8193-bc88313d0976
+
+	measure 'Projected New Customers (Optimistic)' = CALCULATE(SUM(tract_ltv[new_customers]), tract_ltv[scenario] = "Optimistic")
+		formatString: #,0
+		displayFolder: Cost vs LTV
+		lineageTag: 23400cc5-a25e-5442-bcd1-50090ab29000
+
+	measure 'Acquisition Spend (Optimistic)' = CALCULATE(SUM(tract_ltv[acquisition_spend_usd]), tract_ltv[scenario] = "Optimistic")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: a128316e-32e9-50e3-a21e-c75dd832baee
+
+	measure '5-Year Net Value (Optimistic)' = CALCULATE(SUM(tract_ltv[net_value_5yr_usd]), tract_ltv[scenario] = "Optimistic")
+		formatString: \$#,0
+		displayFolder: Cost vs LTV
+		lineageTag: e5b7b862-7287-5b39-9cce-c52e79a6426e
+
+	column tract_geoid
+		dataType: string
+		lineageTag: edbf3d37-24a4-5a46-99bd-d695bde2f964
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column scenario
+		dataType: string
+		lineageTag: 5a59a24e-1a5e-5113-82cc-4bd5ab28eec4
+		sourceLineageTag: scenario
+		summarizeBy: none
+		sourceColumn: scenario
+
+	column reachable_households
+		dataType: double
+		formatString: #,0
+		lineageTag: 78621ba6-10e0-5e60-9df5-2019e4ad4482
+		sourceLineageTag: reachable_households
+		summarizeBy: none
+		sourceColumn: reachable_households
+
+	column new_customers
+		dataType: double
+		formatString: #,0
+		lineageTag: 5cf40585-85a8-547c-ac97-746b521436fa
+		sourceLineageTag: new_customers
+		summarizeBy: none
+		sourceColumn: new_customers
+
+	column acquisition_spend_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: 1f4ed5c4-bae7-5d16-8e5f-f319c421f154
+		sourceLineageTag: acquisition_spend_usd
+		summarizeBy: none
+		sourceColumn: acquisition_spend_usd
+
+	column net_value_5yr_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: 18bb4241-cee2-55a8-8a02-c27409f5eb16
+		sourceLineageTag: net_value_5yr_usd
+		summarizeBy: none
+		sourceColumn: net_value_5yr_usd
+
+	partition tract_ltv = entity
+		mode: directLake
+		source
+			entityName: tract_ltv
+			schemaName: dbo
+			expressionSource: DatabaseQuery

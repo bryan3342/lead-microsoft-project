@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Deposits per branch per year (FDIC Summary of Deposits, $000).
+/// Deposits per branch per year (FDIC Summary of Deposits, $000).
 table fact_branch_deposits
 	lineageTag: 7111a2c4-ed0b-56d0-b2fd-1e5b109bd38c
 	sourceLineageTag: [dbo].[fact_branch_deposits]
@@ -7,6 +7,11 @@ table fact_branch_deposits
 		formatString: #,0
 		displayFolder: Branches
 		lineageTag: 6a01319a-831c-5a4d-a0e5-e237c6796102
+
+	measure 'Latest Branch Deposits ($000)' = CALCULATE(SUM(fact_branch_deposits[branch_deposits_000]), fact_branch_deposits[year] = MAXX(ALL(fact_branch_deposits), fact_branch_deposits[year]))
+		formatString: #,0
+		displayFolder: Branches
+		lineageTag: 5fef6f99-f71d-5570-a695-a4b404aa78d9
 
 	column uninum
 		dataType: int64

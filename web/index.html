@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inclusion ROI Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e9eef3; --card: #fff; --ink: #142033; --muted: #5b6878; --line: #e3e8ee; --soft: #f1f4f7;
+    --blue: #0f5f8a; --accent: #e07b1f; --dark: #17212f;
+    --b0: #e6ebf1; --b1: #b9d3e3; --b2: #82aecb; --b3: #3f82ab; --b4: #2a6f9b; --b5: #0d4a6b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 "IBM Plex Sans", system-ui, sans-serif; }
+  main { max-width: 1640px; margin: 0 auto; padding: 22px 32px 40px; }
+  .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 600; letter-spacing: -0.01em; }
+  .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--blue); }
+  h1 { margin: 4px 0 2px; font-size: 38px; line-height: 1.15; }
+  h2 { margin: 6px 0 14px; font-size: 22px; }
+  .sub { color: var(--muted); font-size: 17px; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 18px; }
+  .controls { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+  .pills { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+  .pills button { font: inherit; font-weight: 500; padding: 8px 18px; border-radius: 999px; border: 1px solid #c9d2dc; background: #fff; color: var(--ink); cursor: pointer; }
+  .pills button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 600; }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .chip { font-size: 13px; padding: 5px 12px; border-radius: 7px; background: #d3e2ee; color: #0f4d70; }
+  .chip.dark { background: var(--dark); color: #fff; }
+  .card { background: var(--card); border-radius: 14px; padding: 22px 24px; }
+  .grid { display: grid; gap: 16px; margin-bottom: 16px; }
+  .kpis { grid-template-columns: repeat(5, 1fr); }
+  .two { grid-template-columns: 2.25fr 1fr; }
+  .kpi .label { color: var(--muted); font-size: 15px; min-height: 22px; }
+  .kpi .num { font-size: 33px; margin: 8px 0 6px; }
+  .kpi .note { color: var(--muted); font-size: 13px; }
+  .kpi.dark { background: var(--dark); color: #fff; }
+  .kpi.dark .label, .kpi.dark .note { color: #c8d2de; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  .aside { color: var(--muted); font-size: 13.5px; text-align: right; max-width: 520px; }
+  .legend { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14.5px; margin-top: 14px; flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 26px; height: 13px; border-radius: 2px; }
+  .legend .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); margin-left: 14px; }
+  .legend .dot.small { width: 8px; height: 8px; opacity: 0.75; }
+  .legend .dot.ring { background: #fff; border: 3px solid var(--accent); }
+  .map [data-tip] { cursor: default; }
+  .map rect[data-tip]:hover { stroke: var(--ink); stroke-width: 2; }
+  .map circle[data-tip]:hover { stroke: var(--ink); stroke-width: 2.5; opacity: 1; }
+  #tip { position: fixed; z-index: 10; display: none; pointer-events: none; max-width: 300px; background: var(--dark); color: #fff;
+         padding: 10px 13px; border-radius: 8px; font-size: 13.5px; line-height: 1.45; box-shadow: 0 4px 14px rgba(20, 32, 51, .3); }
+  #tip b { display: block; font-size: 14.5px; margin-bottom: 2px; }
+  #tip span { color: #c8d2de; }
+  .map { background: var(--soft); border-radius: 10px; padding: 10px; }
+  svg { display: block; width: 100%; height: auto; }
+  h3 { margin: 4px 0 10px; font-size: 14.5px; color: #34425a; }
+  .build { display: grid; grid-template-columns: auto 1fr auto; gap: 9px 14px; align-items: center; font-size: 14.5px; }
+  .build .bar { height: 15px; border-radius: 3px; background: var(--b3); }
+  .build .strong { font-weight: 700; }
+  .build .strong + div .bar { background: var(--b5); }
+  .build .cost .bar { background: var(--accent); }
+  .build .num { text-align: right; }
+  .fine { color: var(--muted); font-size: 13px; margin: 12px 0 18px; }
+  .bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: end; height: 190px; border-bottom: 1px solid var(--line); }
+  .bars div { text-align: center; }
+  .bars .col { background: var(--b2); border-radius: 4px 4px 0 0; margin-top: 6px; }
+  .bars .on .col { background: var(--blue); }
+  .barlabels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center; color: var(--muted); font-size: 13.5px; padding-top: 10px; }
+  .barlabels .on { color: var(--ink); font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; }
+  th { white-space: nowrap; text-align: left; font-size: 12.5px; letter-spacing: 0.07em; text-transform: uppercase; color: #34425a; padding: 12px 14px; border-bottom: 2px solid var(--line); }
+  td { padding: 15px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td:first-child { font-weight: 700; white-space: nowrap; }
+  td small { display: block; color: var(--muted); font-size: 12.5px; }
+  th:last-child, td:last-child { text-align: right; }
+  .key { display: flex; gap: 20px; color: #34425a; font-size: 14.5px; }
+  .key span::before { content: ""; display: inline-block; width: 22px; height: 3px; border-radius: 2px; background: var(--blue); vertical-align: middle; margin-right: 8px; }
+  .key span + span::before { background: var(--accent); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stat { background: var(--soft); border-radius: 8px; padding: 13px 16px; }
+  .stat .label { color: var(--muted); font-size: 13px; }
+  .stat .num { font-size: 20px; margin-top: 2px; }
+  .reasons { display: grid; grid-template-columns: 1fr 18px 1fr; gap: 10px 10px; font-size: 14.5px; margin-top: 4px; }
+  .reasons .to { color: var(--muted); }
+  .reasons b { font-weight: 600; }
+  footer { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-top: 6px; }
+  footer p { margin: 4px 0; }
+  @media (max-width: 1100px) { .kpis { grid-template-columns: repeat(2, 1fr); } .two { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<main id="app"><p class="sub">Loading data.json…</p></main>
+<div id="tip" role="tooltip"></div>
+<script>
+const SCENARIOS = ["Conservative", "Base", "Optimistic"];
+const BANDS = ["--b0", "--b1", "--b2", "--b3", "--b4", "--b5"];
+let data, scenario = "Base";
+
+const n = v => Math.round(v).toLocaleString("en-US");
+const compact = v => v >= 1e6 ? (v / 1e6).toFixed(v >= 1e7 ? 1 : 2) + "M" : v >= 1e3 ? Math.round(v / 1e3) + "K" : n(v);
+const usd = v => (v < 0 ? "−$" : "$") + n(Math.abs(v));
+const usdc = v => "$" + compact(v);
+const pct = v => Math.round(v * 100) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function map(m) {
+  const S = 40, G = 4, W = m.cols * S, H = m.rows * S;
+  const tile = new Map(m.tiles.map(t => [t.c + "," + t.r, t]));
+  const tip = html => `data-tip="${esc(html)}"`;
+  const branch = (b, role) => tip(`<b>${esc(b.bank)}</b>${esc(b.office)} · ${esc(b.city)}<br><span>${role}</span>`);
+  let out = "";
+  for (let r = 0; r < m.rows; r++) for (let c = 0; c < m.cols; c++) {
+    const t = tile.get(c + "," + r);
+    const label = t && tip(`<b>${esc(t.city)} area · ${esc(t.county)}</b>ZIP ${t.zips.join(", ")}<br>${n(t.reachable)} unbanked + underbanked households
+      <br><span>${t.tracts} census tract${t.tracts > 1 ? "s" : ""} · nearest local-bank branch ${t.miles_to_local_branch} mi</span>`);
+    out += `<rect x="${c * S + G / 2}" y="${r * S + G / 2}" width="${S - G}" height="${S - G}" rx="3" fill="var(${BANDS[t ? t.band : 0]})" ${label || ""}/>`;
+  }
+  out += m.local_branches.map(b => `<circle cx="${b.x * S}" cy="${b.y * S}" r="5" fill="var(--accent)" opacity="0.7" ${branch(b, "Local-bank branch")}/>`).join("");
+  out += m.control_branches.map(b => `<circle cx="${b.x * S}" cy="${b.y * S}" r="9" fill="#fff" stroke="var(--accent)" stroke-width="4" ${branch(b, "Proposed matched control branch")}/>`).join("");
+  out += m.pilot_branches.map(b => `<circle cx="${b.x * S}" cy="${b.y * S}" r="11" fill="var(--accent)" stroke="#fff" stroke-width="3" ${branch(b, "Proposed pilot branch")}/>`).join("");
+  const gx = (m.gap.c + 0.5) * S, gy = (m.gap.r + 0.5) * S, text = `high density, nearest local-bank branch ${m.gap.miles} mi away`;
+  const boxW = 122 + text.length * 7.6, left = Math.min(Math.max(gx - boxW / 2, 6), W - boxW - 6), top = gy > 90 ? gy - 66 : gy + 30;
+  out += `<rect x="${m.gap.c * S + 1}" y="${m.gap.r * S + 1}" width="${S - 2}" height="${S - 2}" rx="4" fill="none" stroke="#fff" stroke-width="3"/>
+    <rect x="${left}" y="${top}" width="${boxW}" height="38" rx="8" fill="#fff" filter="drop-shadow(0 2px 6px rgba(20,32,51,.25))"/>
+    <text x="${left + 14}" y="${top + 24}" font-size="15.5" fill="#142033"><tspan font-weight="700">Coverage gap:</tspan> ${esc(text)}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tile map of underserved household density with local-bank branches">${out}</svg>`;
+}
+
+function pilotChart(p) {
+  const W = 1000, H = 300, L = 10, R = 990, T = 50, B = 250, top = p.active.pilot * 1.08;
+  const y = v => B - (v / top) * (B - T), x = d => L + (d / 90) * (R - L);
+  const line = (final, power) => Array.from({ length: 31 }, (_, i) => `${x(i * 3).toFixed(1)},${y(final * Math.pow(i / 30, power)).toFixed(1)}`).join(" ");
+  const grid = [0, 0.5, 1].map(f => `<line x1="${L}" x2="${R}" y1="${y(top * f / 1.08)}" y2="${y(top * f / 1.08)}" stroke="var(--line)" stroke-width="1.5"/>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Projected cumulative active accounts, pilot versus control">${grid}
+    <polyline points="${line(p.active.control, 1.1)}" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="${line(p.active.pilot, 1.5)}" fill="none" stroke="var(--blue)" stroke-width="4" stroke-linecap="round"/>
+    <text x="${R - 60}" y="${y(p.active.pilot) - 16}" text-anchor="end" font-size="21" font-weight="700" fill="var(--blue)" class="num">${(p.opened.pilot / p.opened.control).toFixed(0)}× lift</text>
+    <text x="${L}" y="${H - 14}" font-size="18" fill="#5b6878">Day 0</text><text x="${(L + R) / 2}" y="${H - 14}" text-anchor="middle" font-size="18" fill="#5b6878">Day 45</text>
+    <text x="${R}" y="${H - 14}" text-anchor="end" font-size="18" fill="#5b6878">Day 90</text></svg>`;
+}
+
+function render() {
+  const d = data, s = d.scenarios[scenario], p = d.pilot, parts = Object.entries(s.components);
+  const widest = Math.max(...parts.map(([, v]) => Math.abs(v))), tallest = Math.max(...SCENARIOS.map(k => d.scenarios[k].ltv_net));
+  const crossSell = parts.find(([k]) => k.startsWith("Cross-sell"))[1], core = s.ltv_gross - crossSell;
+  document.getElementById("app").innerHTML = `
+  <header>
+    <div>
+      <div class="eyebrow">Mastercard Financial Inclusion · Issuer View</div>
+      <h1>Inclusion ROI Engine</h1>
+      <div class="sub">${esc(d.region.name)} (${d.region.counties} counties, ${n(d.region.tracts)} census tracts) · Modeled estimates</div>
+    </div>
+    <div class="controls">
+      <div class="pills">Scenario ${SCENARIOS.map(k => `<button aria-pressed="${k === scenario}" data-scenario="${k}">${k}</button>`).join("")}</div>
+      <div class="chips"><span class="chip">Microsoft Fabric</span><span class="chip">OneLake</span><span class="chip">Power BI</span><span class="chip dark">Data stays in bank's Azure tenant</span></div>
+    </div>
+  </header>
+
+  <section class="grid kpis">
+    <div class="card kpi"><div class="label">Unbanked + underbanked households in footprint</div><div class="num">~${n(Math.round(d.reachable_households / 1000) * 1000)}</div>
+      <div class="note">${compact(d.region.households)} households × ${pct(d.reachable_rate)} modeled rate</div></div>
+    <div class="card kpi"><div class="label">5-year LTV per new customer</div><div class="num">${usd(s.ltv_net)}</div><div class="note">Net of acquisition cost, discounted</div></div>
+    <div class="card kpi"><div class="label">Footprint opportunity value</div><div class="num">${usdc(s.footprint_value)}</div>
+      <div class="note">${compact(d.reachable_households)} × ${pct(s.adoption_rate)} adoption × ${usd(s.ltv_net)} LTV</div></div>
+    <div class="card kpi"><div class="label">90-day pilot spend</div><div class="num">${usdc(p.spend)}</div><div class="note">${p.branches} branches · co-funded by Mastercard</div></div>
+    <div class="card kpi dark"><div class="label">Projected return on pilot spend</div><div class="num">${s.pilot_return.toFixed(1)}×</div>
+      <div class="note">5-yr value of ${n(p.incremental_active)} incremental customers · payback ${s.pilot_payback_months ? "~" + s.pilot_payback_months + " months" : "beyond 5 years"}</div></div>
+  </section>
+
+  <section class="grid two">
+    <div class="card">
+      <div class="head"><div><div class="eyebrow">Layer 1 · Opportunity</div><h2>Underserved household density vs. branch coverage</h2></div>
+        <div class="aside">By census tract · ${d.map.tile_miles}-mile tiles · ${pct(d.map.share_of_reachable)} of the footprint shown</div></div>
+      <div class="map">${map(d.map)}</div>
+      <div class="legend">Lower ${BANDS.slice(1).map(b => `<i style="background:var(${b})"></i>`).join("")} Higher underserved density
+        <span class="dot small"></span> Local-bank branch <span class="dot"></span> Proposed pilot branch <span class="dot ring"></span> Matched control branch</div>
+    </div>
+    <div class="card">
+      <div class="eyebrow">Layer 1 · Business case</div><h2>5-year LTV per customer</h2>
+      <h3>Build-up (${scenario.toLowerCase()} scenario)</h3>
+      <div class="build">${parts.map(([k, v]) => `<div class="${k.startsWith("Cross") ? "strong" : ""}">${esc(k)}</div>
+        <div class="${v < 0 ? "cost" : ""}"><div class="bar" style="width:${Math.abs(v) / widest * 100}%"></div></div><div class="num">${usd(v)}</div>`).join("")}</div>
+      <p class="fine">Cross-sell (${pct(s.cross_sell_probability)} card or loan attach by year 3) adds ~${pct(crossSell / core)} on top of core account value.
+        Assumes ${pct(s.retention_rate)} annual retention, ${pct(s.discount_rate)} discount rate.</p>
+      <h3>By scenario</h3>
+      <div class="bars">${SCENARIOS.map(k => `<div class="${k === scenario ? "on" : ""}"><span class="num">${usd(d.scenarios[k].ltv_net)}</span>
+        <div class="col" style="height:${d.scenarios[k].ltv_net / tallest * 150}px"></div></div>`).join("")}</div>
+      <div class="barlabels">${SCENARIOS.map(k => `<div class="${k === scenario ? "on" : ""}">${k}</div>`).join("")}</div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-bottom:16px">
+    <div class="head"><div><div class="eyebrow">Layer 2 · What to buy, where</div><h2>Recommended product and campaign mix</h2></div>
+      <div class="aside">Example output · campaign playbook from a backend agent that compares what Mastercard usually runs for counties like this, based on the people who live there</div></div>
+    <table><thead><tr><th>Area</th><th>Top need</th><th>Entry product</th><th>Campaign</th><th>Channel</th><th>Projected LTV</th></tr></thead>
+      <tbody>${d.counties.map(c => `<tr><td>${esc(c.area)}</td><td>${esc(c.top_need)}<small>${c.times_metro.toFixed(2)}× metro</small></td><td>${esc(c.entry_product)}</td>
+        <td>${esc(c.campaign)}</td><td>${esc(c.channel)}</td><td class="num">${usdc(c.value[scenario])}</td></tr>`).join("")}</tbody></table>
+  </section>
+
+  <section class="grid two">
+    <div class="card">
+      <div class="head"><div><div class="eyebrow">Layer 3 · Proof</div><h2>90-day pilot: treated vs. control branches</h2></div>
+        <div class="key"><span>Pilot branches (${p.branches})</span><span>Matched control (${p.branches})</span></div></div>
+      <div class="sub">Projected cumulative new active accounts · candidate bank: ${esc(p.bank)}</div>
+      ${pilotChart(p)}
+      <div class="stats">
+        <div class="stat"><div class="label">Accounts opened</div><div class="num">${n(p.opened.pilot)} vs ${n(p.opened.control)}</div></div>
+        <div class="stat"><div class="label">90-day activation</div><div class="num">${pct(p.activation.pilot)} vs ${pct(p.activation.control)}</div></div>
+        <div class="stat"><div class="label">New deposits</div><div class="num">${usdc(p.new_deposits)}</div></div>
+        <div class="stat"><div class="label">Cost per incremental active</div><div class="num">${usd(p.cost_per_incremental_active)}</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="eyebrow">Trust layer · Bank to consumer</div><h2>Trust signals</h2>
+      <div class="tiles">${d.trust.signals.map(t => `<div class="stat"><div class="label">${esc(t.label)}</div><div class="num">${esc(t.value)}</div></div>`).join("")}</div>
+      <h3 style="margin-top:22px">Why people stay unbanked → our response</h3>
+      <div class="reasons">${d.trust.reasons.map(r => `<div>${esc(r.reason)} (${r.percent}%)</div><div class="to">→</div><div><b>${esc(r.response)}</b></div>`).join("")}</div>
+    </div>
+  </section>
+
+  <footer>
+    <div><p>Sources: Census ACS 5-year · FDIC National Survey of Unbanked and Underbanked Households · FDIC branch data · HMDA · CFPB complaints</p>
+      <p>Targeting by geography and financial behavior, never protected class (fair lending / ECOA)</p></div>
+    <div><p>% = main reason cited by unbanked households, FDIC ${d.region.survey_year} · Trust signals are observed public data</p>
+      <p>Household counts are estimates; LTV and pilot figures are modeled projections from the assumption files</p></div>
+  </footer>`;
+  document.querySelectorAll("[data-scenario]").forEach(b => b.onclick = () => { scenario = b.dataset.scenario; render(); });
+}
+
+const tipBox = document.getElementById("tip");
+document.addEventListener("mousemove", e => {
+  const el = e.target.closest ? e.target.closest("[data-tip]") : null;
+  if (!el) { tipBox.style.display = "none"; return; }
+  tipBox.innerHTML = el.dataset.tip;
+  tipBox.style.display = "block";
+  const w = tipBox.offsetWidth, h = tipBox.offsetHeight;
+  tipBox.style.left = Math.min(e.clientX + 16, innerWidth - w - 8) + "px";
+  tipBox.style.top = (e.clientY + 18 + h > innerHeight ? e.clientY - h - 12 : e.clientY + 18) + "px";
+});
+
+fetch("data.json").then(r => r.json()).then(j => { data = j; render(); })
+  .catch(() => { document.getElementById("app").innerHTML = '<p class="sub">Could not load data.json. Run <code>python3 web/fetch_data.py</code> first.</p>'; });
+</script>
+</body>
+</html>

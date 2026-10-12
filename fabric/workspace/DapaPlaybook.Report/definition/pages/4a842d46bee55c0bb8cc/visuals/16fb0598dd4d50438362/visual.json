@@ -23,10 +23,10 @@
                       "Entity": "agg_playbook"
                     }
                   },
-                  "Property": "Events"
+                  "Property": "Total Events"
                 }
               },
-              "queryRef": "agg_playbook.Events",
+              "queryRef": "agg_playbook.Total Events",
               "nativeQueryRef": "Events"
             }
           ]
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Events'"
+                  "Value": "'Events'"
                 }
               }
             }

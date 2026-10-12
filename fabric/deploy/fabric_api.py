@@ -13,10 +13,12 @@ import urllib.request
 ARM = "https://management.azure.com"
 FABRIC = "https://api.fabric.microsoft.com/v1"
 POWERBI = "https://api.powerbi.com/v1.0/myorg"
+ONELAKE = "https://onelake.dfs.fabric.microsoft.com"
 _AUDIENCE = {
     ARM: "https://management.azure.com",
     FABRIC: "https://api.fabric.microsoft.com",
     POWERBI: "https://analysis.windows.net/powerbi/api",
+    ONELAKE: "https://storage.azure.com",
 }
 TOKEN_TTL_SECONDS = 30 * 60  # az tokens last about an hour; refresh well before that
 
@@ -67,6 +69,30 @@ class Client:
                     continue
                 raise ApiError(e.code, url, text) from None
         raise ApiError(429, url, "still throttled after retries")
+
+    def upload(self, workspace_id: str, lakehouse_id: str, path: str, data: bytes):
+        """Write a file under the lakehouse's Files area, replacing any existing copy."""
+        url = f"{ONELAKE}/{workspace_id}/{lakehouse_id}/Files/{path}"
+        for method, query, body in (("PUT", "?resource=file", b""),
+                                    ("PATCH", "?action=append&position=0", data),
+                                    ("PATCH", f"?action=flush&position={len(data)}", b"")):
+            req = urllib.request.Request(url + query, data=body, method=method, headers={
+                "Authorization": f"Bearer {self._token(ONELAKE)}", "x-ms-version": "2023-11-03",
+                "Content-Type": "application/octet-stream"})
+            try:
+                urllib.request.urlopen(req, timeout=300).close()
+            except urllib.error.HTTPError as e:
+                raise ApiError(e.code, url, e.read().decode(errors="replace")) from None
+
+    def download(self, workspace_id: str, lakehouse_id: str, path: str) -> bytes:
+        """Read a file from the lakehouse's Files area."""
+        url = f"{ONELAKE}/{workspace_id}/{lakehouse_id}/Files/{path}"
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {self._token(ONELAKE)}", "x-ms-version": "2023-11-03"})
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as e:
+            raise ApiError(e.code, url, e.read().decode(errors="replace")) from None
 
     def get(self, url):
         return self.request("GET", url)[2]

@@ -93,10 +93,10 @@
                       "Entity": "agg_playbook"
                     }
                   },
-                  "Property": "Events"
+                  "Property": "Total Events"
                 }
               },
-              "queryRef": "agg_playbook.Events",
+              "queryRef": "agg_playbook.Total Events",
               "nativeQueryRef": "Events"
             },
             {
@@ -107,10 +107,10 @@
                       "Entity": "agg_playbook"
                     }
                   },
-                  "Property": "Attendees"
+                  "Property": "Total Attendees"
                 }
               },
-              "queryRef": "agg_playbook.Attendees",
+              "queryRef": "agg_playbook.Total Attendees",
               "nativeQueryRef": "Attendees"
             },
             {
@@ -187,7 +187,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: What worked, where'"
+                  "Value": "'What worked, where'"
                 }
               }
             }

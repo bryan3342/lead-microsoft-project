@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Community events run by the bank.
+/// Community events run by the bank.
 table dim_event
 	lineageTag: a81f49f2-a698-58eb-8300-702aa3a5edc6
 	sourceLineageTag: [dbo].[dim_event]

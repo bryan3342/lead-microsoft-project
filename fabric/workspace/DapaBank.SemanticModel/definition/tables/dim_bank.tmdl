@@ -1,4 +1,4 @@
-/// PLACEHOLDER. FDIC-insured banks. target_issuer marks local banks under $10B.
+/// FDIC-insured banks. target_issuer marks local banks under $10B.
 table dim_bank
 	lineageTag: 83c6a976-4451-528b-9400-512458e1eed8
 	sourceLineageTag: [dbo].[dim_bank]
@@ -51,6 +51,13 @@ table dim_bank
 		sourceLineageTag: is_tenant_bank
 		summarizeBy: none
 		sourceColumn: is_tenant_bank
+
+	column issuer_type
+		dataType: string
+		lineageTag: 2c377230-212f-57b0-9521-84ebd0029ae1
+		sourceLineageTag: issuer_type
+		summarizeBy: none
+		sourceColumn: issuer_type
 
 	partition dim_bank = entity
 		mode: directLake

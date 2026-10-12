@@ -69,6 +69,7 @@ To show the maps, a Fabric administrator also needs to turn on "Use Azure Maps v
    | `CAPACITY_ADMINS` | Your sign-in email, plus anyone else who should manage the capacity |
    | `WORKSPACE_NAME` | Any name, for example `DAPA Dev` |
    | `WORKSPACE_ADMINS` | Optional teammates' sign-in emails, comma-separated |
+   | `SAMPLE` | Optional metro to load, a folder under `data/processed` such as `houston`. Empty deploys the skeleton with no data. Change it and re-run `up` to switch metro. |
 
    If the team already has a Fabric capacity, put its name in `CAPACITY_NAME` and the script reuses it.
 

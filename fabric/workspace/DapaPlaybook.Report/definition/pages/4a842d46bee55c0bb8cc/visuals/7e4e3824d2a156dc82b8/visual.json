@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Avg Trust Lift'"
+                  "Value": "'Avg Trust Lift'"
                 }
               }
             }

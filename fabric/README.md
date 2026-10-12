@@ -46,14 +46,16 @@ flowchart LR
 
 ## Deploy to a Fabric workspace
 
-You need a Fabric capacity (trial is fine) and a workspace you administer.
+**Fastest path: one command against your Azure subscription.** Follow [deploy/RUNBOOK.md](deploy/RUNBOOK.md). It uses your Azure CLI sign-in to create a Fabric capacity in your resource group and a workspace on it. It loads the sample data, connects the models and prints a link to each dashboard. No manual connection editing is needed.
+
+**Alternative: Fabric Git integration.** Use this when the workspace should track a branch.
 
 1. In the workspace, open **Workspace settings > Git integration** and connect this repository. Set the branch and set the Git folder to `fabric/workspace`.
 2. Choose **Sync** so the six items appear in the workspace.
-3. Open **Load Sample Data**. Attach **DapaLakehouse** as the default lakehouse if it is not attached already, then choose **Run all**. It prints one line per table it writes.
+3. Open **Load Sample Data**. Attach **DapaLakehouse** as the default lakehouse if it is not attached already, then choose **Run all**.
 4. Open **DapaLakehouse**, switch to its **SQL analytics endpoint** and open **Settings**. Copy the SQL connection string, which is the host name ending in `datawarehouse.fabric.microsoft.com`. Copy the endpoint ID, which is the GUID in the browser address bar while the endpoint is open.
-5. In both `expressions.tmdl` files, replace `<SQL_ENDPOINT_HOST>` and `<SQL_ENDPOINT_ID>` with those two values. Land the change through a pull request, then choose **Update all** in the workspace's source control panel.
-6. Open each semantic model's settings and confirm it can refresh, then open the two reports.
+5. In both `expressions.tmdl` files, replace `<SQL_ENDPOINT_HOST>` and `<SQL_ENDPOINT_ID>` with those two values. Commit to the connected branch, then choose **Update all** in the workspace's source control panel.
+6. Refresh each semantic model, then open the two reports.
 
 ### Check on first open
 

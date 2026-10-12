@@ -12,3 +12,4 @@ sample-output/
 .pytest_cache/
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+fabric/deploy/config.env

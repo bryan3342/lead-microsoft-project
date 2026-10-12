@@ -1,0 +1,21 @@
+table,geography,breakdown,year,unbanked_rate_pct,ci90_low,ci90_high,note
+A.3,United States,All households,2019,5.4,,,
+A.3,United States,All households,2021,4.5,,,
+A.3,United States,All households,2023,4.2,4.0,4.5,
+A.3,Virginia,All households,2019,4.4,,,
+A.3,Virginia,All households,2021,1.8,,,
+A.3,Virginia,All households,2023,0.9,0.4,2.1,2023-2021 change not significant
+A.3,District of Columbia,All households,2019,8.0,,,
+A.3,District of Columbia,All households,2021,4.5,,,
+A.3,District of Columbia,All households,2023,7.2,5.3,9.8,2023-2021 change +2.7 significant at 10%
+A.3,Maryland,All households,2019,3.8,,,
+A.3,Maryland,All households,2021,5.0,,,
+A.3,Maryland,All households,2023,3.4,2.0,5.8,
+A.4,"Washington-Arlington-Alexandria, DC-VA-MD-WV MSA",All households,2019,3.2,,,MSA boundary changed 2013-2015
+A.4,"Washington-Arlington-Alexandria, DC-VA-MD-WV MSA",All households,2021,2.9,,,
+A.4,"Washington-Arlington-Alexandria, DC-VA-MD-WV MSA",All households,2023,1.5,1.0,2.3,
+A.2,United States,Income under $15k,2023,21.8,20.2,23.5,
+A.2,United States,Income $15k-$30k,2023,9.0,8.1,10.0,
+A.2,United States,Income $30k-$50k,2023,4.5,3.9,5.1,
+A.2,United States,Income $50k-$75k,2023,1.8,1.4,2.2,
+A.2,United States,Income $75k+,2023,0.7,0.6,0.9,

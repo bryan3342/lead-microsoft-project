@@ -9,8 +9,8 @@ bank's real branches. The output is a branch-by-branch evidence base for Masterc
 **Guardrail (SOW §4, §15):** target by place and need, never by race or ethnicity. Race/ethnicity fields in HMDA and the
 FDIC survey are not collected for targeting. Language and household composition are outreach context only.
 
-**Samples:** Washington DC metro (DC, MD, VA, WV), the first test sample; and Houston metro (TX), the showcase, with a much
-higher unbanked rate (9.4% vs 1.5% in 2023). **Period:** 2021 onward (post-COVID). All sources tested live 2026-10-12.
+**Samples:** Washington DC metro (DC, MD, VA, WV), the first test sample; Houston metro (TX), the showcase, with a much
+higher unbanked rate (9.4% vs 1.5% in 2023); and Dallas-Fort Worth metro (TX), at 4.7%. **Period:** 2021 onward (post-COVID). All sources tested live 2026-10-12.
 
 ---
 

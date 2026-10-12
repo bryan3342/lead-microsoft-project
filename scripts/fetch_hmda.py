@@ -45,6 +45,8 @@ def download_year(year, counties):
     url = match.group(1) if match else resp.url
     out = raw_dir("hmda") / f"hmda_{year}.csv.gz"
     with get(url, stream=True, timeout=600) as src, gzip.open(out, "wb") as dst:
+        # The server sometimes gzips the response itself; decode it so the file isn't compressed twice.
+        src.raw.decode_content = True
         shutil.copyfileobj(src.raw, dst)
     df = pd.read_csv(out, dtype=str, low_memory=False)
     write_provenance(out, url, {"api": API, **params}, rows=len(df))

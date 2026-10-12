@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "ffe9595f68ac2e7b8abb",
+  "position": {
+    "x": 1040,
+    "y": 75,
+    "z": 5000,
+    "width": 230,
+    "height": 90,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Base)",
+              "nativeQueryRef": "5-year net value",
+              "displayName": "5-year net value"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Projected 5-year net value'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

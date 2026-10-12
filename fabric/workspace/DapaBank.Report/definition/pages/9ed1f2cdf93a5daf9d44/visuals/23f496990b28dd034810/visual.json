@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "23f496990b28dd034810",
+  "position": {
+    "x": 320,
+    "y": 75,
+    "z": 2000,
+    "width": 230,
+    "height": 90,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Reachable Households"
+                }
+              },
+              "queryRef": "dim_tract.Est. Reachable Households",
+              "nativeQueryRef": "Est. Reachable Households"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Reachable households'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

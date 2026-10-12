@@ -28,6 +28,7 @@ This draws every page at Fabric's 1280 x 720 size, with each visual at its exact
 |---|---|---|
 | `DapaLakehouse.Lakehouse` | Lakehouse | Holds the gold tables inside the bank's tenant |
 | `CreateTables.Notebook` | Notebook | Creates every gold table empty. Never loads or overwrites data. |
+| `LoadPublicData.Notebook` | Notebook | Fills the public-data tables for one metro from `data/processed/<sample>/` and `data/assumptions/`, and computes 5-year lifetime value per tract. Deployed only when `SAMPLE` is set in `config.env`. |
 | `DapaBank.SemanticModel` | Semantic model (Direct Lake) | Bank-tenant star schema and measures |
 | `DapaBank.Report` | Report | Bank dashboard, six pages |
 | `DapaPlaybook.SemanticModel` | Semantic model (Direct Lake) | Reads only the de-identified aggregate |

@@ -107,22 +107,24 @@ def test_visual_fields_exist_in_bound_model(report):
 
 
 @pytest.mark.parametrize("report", reports())
-def test_every_data_visual_is_labeled_a_placeholder(report):
+def test_every_data_visual_has_a_title_and_none_says_placeholder(report):
     for v in (WORKSPACE / report).rglob("visual.json"):
-        vis = json.loads(v.read_text())["visual"]
+        text = v.read_text()
+        assert "PLACEHOLDER" not in text and "SKELETON" not in text, v
+        vis = json.loads(text)["visual"]
         if vis["visualType"] == "textbox":
             continue
         title = vis["visualContainerObjects"]["title"][0]["properties"]["text"]["expr"]["Literal"]["Value"]
-        assert title.startswith("'PLACEHOLDER: "), f"{v}: {title}"
+        assert len(title) > 2, v
 
 
 @pytest.mark.parametrize("report", reports())
-def test_every_page_has_a_skeleton_banner(report):
+def test_every_page_has_a_banner(report):
     for page in (WORKSPACE / report / "definition" / "pages").iterdir():
         if not page.is_dir():
             continue
-        texts = [json.dumps(json.loads(v.read_text())) for v in page.rglob("visual.json")]
-        assert any("SKELETON, no data loaded" in t for t in texts), page
+        types = [json.loads(v.read_text())["visual"]["visualType"] for v in page.rglob("visual.json")]
+        assert "textbox" in types, page
 
 
 @pytest.mark.parametrize("model", models())
@@ -177,3 +179,11 @@ def test_web_preview_places_every_visual_at_its_report_position(tmp_path):
         for v in (WORKSPACE / report).rglob("visual.json"):
             p = json.loads(v.read_text())["position"]
             assert f"left:{p['x']}px;top:{p['y']}px;width:{p['width']}px;height:{p['height']}px" in page, v
+
+
+@pytest.mark.parametrize("model", models())
+def test_no_measure_shares_a_name_with_a_column_in_its_table(model):
+    """Fabric refuses to import a model where a measure and a column in one table differ only by case."""
+    for table, spec in parse_model(model).items():
+        clash = {m.lower() for m in spec["measures"]} & {c.lower() for c in spec["columns"]}
+        assert not clash, f"{model}/{table}: {clash}"

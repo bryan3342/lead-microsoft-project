@@ -1,0 +1,6334 @@
+{
+ "region": {
+  "name": "Houston-Pasadena-The Woodlands, TX",
+  "counties": 10,
+  "tracts": 1615,
+  "households": 2661739,
+  "survey_year": 2023
+ },
+ "reachable_households": 704076,
+ "reachable_rate": 0.2645,
+ "unbanked_households": 249685,
+ "underbanked_households": 454391,
+ "scenarios": {
+  "Conservative": {
+   "retention_rate": 0.7,
+   "cross_sell_probability": 0.25,
+   "adoption_rate": 0.03,
+   "discount_rate": 0.08,
+   "components": {
+    "Debit interchange": 222,
+    "Deposit spread": 140,
+    "Fees (kept low)": 23,
+    "Cross-sell by yr 3": 78,
+    "Acquisition cost": -150
+   },
+   "ltv_gross": 463,
+   "ltv_net": 313,
+   "new_customers": 21122,
+   "footprint_value": 6614024,
+   "pilot_return": 1.63,
+   "pilot_payback_months": 28
+  },
+  "Base": {
+   "retention_rate": 0.8,
+   "cross_sell_probability": 0.4,
+   "adoption_rate": 0.06,
+   "discount_rate": 0.08,
+   "components": {
+    "Debit interchange": 264,
+    "Deposit spread": 166,
+    "Fees (kept low)": 28,
+    "Cross-sell by yr 3": 181,
+    "Acquisition cost": -150
+   },
+   "ltv_gross": 639,
+   "ltv_net": 489,
+   "new_customers": 42245,
+   "footprint_value": 20669011,
+   "pilot_return": 2.24,
+   "pilot_payback_months": 25
+  },
+  "Optimistic": {
+   "retention_rate": 0.88,
+   "cross_sell_probability": 0.55,
+   "adoption_rate": 0.09,
+   "discount_rate": 0.08,
+   "components": {
+    "Debit interchange": 305,
+    "Deposit spread": 192,
+    "Fees (kept low)": 32,
+    "Cross-sell by yr 3": 326,
+    "Acquisition cost": -150
+   },
+   "ltv_gross": 855,
+   "ltv_net": 705,
+   "new_customers": 63367,
+   "footprint_value": 44685060,
+   "pilot_return": 3.0,
+   "pilot_payback_months": 24
+  }
+ },
+ "map": {
+  "cols": 32,
+  "rows": 18,
+  "tile_miles": 3.5,
+  "share_of_reachable": 0.923,
+  "tiles": [
+   {
+    "c": 1,
+    "r": 4,
+    "band": 1,
+    "city": "Bellville",
+    "county": "Austin County",
+    "zips": [
+     "77418"
+    ],
+    "reachable": 434,
+    "tracts": 1,
+    "miles_to_local_branch": 5.0
+   },
+   {
+    "c": 1,
+    "r": 7,
+    "band": 1,
+    "city": "Bellville",
+    "county": "Austin County",
+    "zips": [
+     "77474"
+    ],
+    "reachable": 324,
+    "tracts": 1,
+    "miles_to_local_branch": 5.3
+   },
+   {
+    "c": 1,
+    "r": 9,
+    "band": 2,
+    "city": "Sealy",
+    "county": "Austin County",
+    "zips": [
+     "77474"
+    ],
+    "reachable": 554,
+    "tracts": 1,
+    "miles_to_local_branch": 6.0
+   },
+   {
+    "c": 2,
+    "r": 6,
+    "band": 1,
+    "city": "Bellville",
+    "county": "Austin County",
+    "zips": [
+     "77418"
+    ],
+    "reachable": 513,
+    "tracts": 1,
+    "miles_to_local_branch": 3.7
+   },
+   {
+    "c": 3,
+    "r": 8,
+    "band": 1,
+    "city": "Sealy",
+    "county": "Austin County",
+    "zips": [
+     "77474"
+    ],
+    "reachable": 342,
+    "tracts": 1,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 4,
+    "r": 1,
+    "band": 1,
+    "city": "Hempstead",
+    "county": "Waller County",
+    "zips": [
+     "77445"
+    ],
+    "reachable": 303,
+    "tracts": 1,
+    "miles_to_local_branch": 18.4
+   },
+   {
+    "c": 4,
+    "r": 5,
+    "band": 2,
+    "city": "Hempstead",
+    "county": "Waller County",
+    "zips": [
+     "77445"
+    ],
+    "reachable": 534,
+    "tracts": 1,
+    "miles_to_local_branch": 10.2
+   },
+   {
+    "c": 4,
+    "r": 9,
+    "band": 1,
+    "city": "Sealy",
+    "county": "Austin County",
+    "zips": [
+     "77474"
+    ],
+    "reachable": 424,
+    "tracts": 1,
+    "miles_to_local_branch": 4.2
+   },
+   {
+    "c": 4,
+    "r": 11,
+    "band": 1,
+    "city": "Wallis",
+    "county": "Austin County",
+    "zips": [
+     "77485"
+    ],
+    "reachable": 374,
+    "tracts": 1,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 5,
+    "r": 3,
+    "band": 1,
+    "city": "Hempstead",
+    "county": "Waller County",
+    "zips": [
+     "77445"
+    ],
+    "reachable": 458,
+    "tracts": 1,
+    "miles_to_local_branch": 16.0
+   },
+   {
+    "c": 6,
+    "r": 2,
+    "band": 1,
+    "city": "Waller",
+    "county": "Waller County",
+    "zips": [
+     "77445"
+    ],
+    "reachable": 0,
+    "tracts": 1,
+    "miles_to_local_branch": 14.6
+   },
+   {
+    "c": 6,
+    "r": 3,
+    "band": 2,
+    "city": "Waller",
+    "county": "Waller County",
+    "zips": [
+     "77484"
+    ],
+    "reachable": 868,
+    "tracts": 1,
+    "miles_to_local_branch": 16.4
+   },
+   {
+    "c": 6,
+    "r": 4,
+    "band": 1,
+    "city": "Waller",
+    "county": "Waller County",
+    "zips": [
+     "77484"
+    ],
+    "reachable": 277,
+    "tracts": 1,
+    "miles_to_local_branch": 16.4
+   },
+   {
+    "c": 6,
+    "r": 6,
+    "band": 1,
+    "city": "Brookshire",
+    "county": "Waller County",
+    "zips": [
+     "77423"
+    ],
+    "reachable": 394,
+    "tracts": 1,
+    "miles_to_local_branch": 11.8
+   },
+   {
+    "c": 6,
+    "r": 9,
+    "band": 1,
+    "city": "Brookshire",
+    "county": "Waller County",
+    "zips": [
+     "77423"
+    ],
+    "reachable": 517,
+    "tracts": 1,
+    "miles_to_local_branch": 6.5
+   },
+   {
+    "c": 6,
+    "r": 14,
+    "band": 1,
+    "city": "Wallis",
+    "county": "Fort Bend County",
+    "zips": [
+     "77417"
+    ],
+    "reachable": 435,
+    "tracts": 1,
+    "miles_to_local_branch": 9.9
+   },
+   {
+    "c": 7,
+    "r": 10,
+    "band": 4,
+    "city": "Fulshear",
+    "county": "Fort Bend County",
+    "zips": [
+     "77441"
+    ],
+    "reachable": 2487,
+    "tracts": 1,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 7,
+    "r": 11,
+    "band": 2,
+    "city": "Fulshear",
+    "county": "Fort Bend County",
+    "zips": [
+     "77406"
+    ],
+    "reachable": 694,
+    "tracts": 1,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 7,
+    "r": 13,
+    "band": 1,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77471"
+    ],
+    "reachable": 207,
+    "tracts": 1,
+    "miles_to_local_branch": 6.4
+   },
+   {
+    "c": 8,
+    "r": 0,
+    "band": 1,
+    "city": "Magnolia",
+    "county": "Waller County",
+    "zips": [
+     "77484"
+    ],
+    "reachable": 418,
+    "tracts": 1,
+    "miles_to_local_branch": 6.0
+   },
+   {
+    "c": 8,
+    "r": 2,
+    "band": 1,
+    "city": "Waller",
+    "county": "Waller County",
+    "zips": [
+     "77447"
+    ],
+    "reachable": 205,
+    "tracts": 1,
+    "miles_to_local_branch": 9.0
+   },
+   {
+    "c": 8,
+    "r": 3,
+    "band": 3,
+    "city": "Waller",
+    "county": "Harris County",
+    "zips": [
+     "77484"
+    ],
+    "reachable": 1220,
+    "tracts": 1,
+    "miles_to_local_branch": 11.1
+   },
+   {
+    "c": 8,
+    "r": 5,
+    "band": 1,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77447"
+    ],
+    "reachable": 378,
+    "tracts": 1,
+    "miles_to_local_branch": 9.3
+   },
+   {
+    "c": 8,
+    "r": 8,
+    "band": 2,
+    "city": "Katy",
+    "county": "Waller County",
+    "zips": [
+     "77493"
+    ],
+    "reachable": 703,
+    "tracts": 1,
+    "miles_to_local_branch": 2.8
+   },
+   {
+    "c": 8,
+    "r": 9,
+    "band": 3,
+    "city": "Katy",
+    "county": "Fort Bend County",
+    "zips": [
+     "77494"
+    ],
+    "reachable": 1789,
+    "tracts": 2,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 8,
+    "r": 10,
+    "band": 2,
+    "city": "Katy",
+    "county": "Fort Bend County",
+    "zips": [
+     "77494"
+    ],
+    "reachable": 887,
+    "tracts": 2,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 8,
+    "r": 11,
+    "band": 2,
+    "city": "Fulshear",
+    "county": "Fort Bend County",
+    "zips": [
+     "77406"
+    ],
+    "reachable": 647,
+    "tracts": 1,
+    "miles_to_local_branch": 2.3
+   },
+   {
+    "c": 8,
+    "r": 13,
+    "band": 2,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77471"
+    ],
+    "reachable": 643,
+    "tracts": 1,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 8,
+    "r": 14,
+    "band": 2,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77471"
+    ],
+    "reachable": 586,
+    "tracts": 1,
+    "miles_to_local_branch": 4.2
+   },
+   {
+    "c": 8,
+    "r": 16,
+    "band": 1,
+    "city": "Needville",
+    "county": "Fort Bend County",
+    "zips": [
+     "77461"
+    ],
+    "reachable": 428,
+    "tracts": 1,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 8,
+    "r": 17,
+    "band": 1,
+    "city": "Needville",
+    "county": "Fort Bend County",
+    "zips": [
+     "77461"
+    ],
+    "reachable": 310,
+    "tracts": 1,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 9,
+    "r": 1,
+    "band": 2,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77355"
+    ],
+    "reachable": 825,
+    "tracts": 2,
+    "miles_to_local_branch": 4.2
+   },
+   {
+    "c": 9,
+    "r": 2,
+    "band": 1,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77355"
+    ],
+    "reachable": 341,
+    "tracts": 1,
+    "miles_to_local_branch": 7.2
+   },
+   {
+    "c": 9,
+    "r": 6,
+    "band": 2,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77433"
+    ],
+    "reachable": 823,
+    "tracts": 1,
+    "miles_to_local_branch": 6.0
+   },
+   {
+    "c": 9,
+    "r": 8,
+    "band": 5,
+    "city": "Katy",
+    "county": "Harris County",
+    "zips": [
+     "77493"
+    ],
+    "reachable": 4221,
+    "tracts": 4,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 9,
+    "r": 9,
+    "band": 4,
+    "city": "Katy",
+    "county": "Harris County",
+    "zips": [
+     "77494"
+    ],
+    "reachable": 2075,
+    "tracts": 4,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 9,
+    "r": 10,
+    "band": 5,
+    "city": "Katy",
+    "county": "Fort Bend County",
+    "zips": [
+     "77494",
+     "77406"
+    ],
+    "reachable": 4385,
+    "tracts": 8,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 9,
+    "r": 11,
+    "band": 2,
+    "city": "Richmond",
+    "county": "Fort Bend County",
+    "zips": [
+     "77406"
+    ],
+    "reachable": 687,
+    "tracts": 1,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 9,
+    "r": 12,
+    "band": 3,
+    "city": "Richmond",
+    "county": "Fort Bend County",
+    "zips": [
+     "77406",
+     "77469"
+    ],
+    "reachable": 1148,
+    "tracts": 2,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 9,
+    "r": 13,
+    "band": 4,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77471"
+    ],
+    "reachable": 3314,
+    "tracts": 5,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 9,
+    "r": 14,
+    "band": 2,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77469"
+    ],
+    "reachable": 640,
+    "tracts": 1,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 10,
+    "r": 0,
+    "band": 2,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77354"
+    ],
+    "reachable": 577,
+    "tracts": 1,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 10,
+    "r": 1,
+    "band": 1,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77355"
+    ],
+    "reachable": 346,
+    "tracts": 1,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 10,
+    "r": 2,
+    "band": 2,
+    "city": "Tomball",
+    "county": "Montgomery County",
+    "zips": [
+     "77355"
+    ],
+    "reachable": 647,
+    "tracts": 1,
+    "miles_to_local_branch": 6.2
+   },
+   {
+    "c": 10,
+    "r": 3,
+    "band": 2,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77377"
+    ],
+    "reachable": 563,
+    "tracts": 1,
+    "miles_to_local_branch": 6.2
+   },
+   {
+    "c": 10,
+    "r": 4,
+    "band": 3,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77433"
+    ],
+    "reachable": 1971,
+    "tracts": 4,
+    "miles_to_local_branch": 3.6
+   },
+   {
+    "c": 10,
+    "r": 5,
+    "band": 3,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77433",
+     "77429"
+    ],
+    "reachable": 1566,
+    "tracts": 2,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 10,
+    "r": 7,
+    "band": 5,
+    "city": "Katy",
+    "county": "Harris County",
+    "zips": [
+     "77449",
+     "77433"
+    ],
+    "reachable": 4318,
+    "tracts": 7,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 10,
+    "r": 8,
+    "band": 5,
+    "city": "Katy",
+    "county": "Harris County",
+    "zips": [
+     "77449",
+     "77084"
+    ],
+    "reachable": 5923,
+    "tracts": 14,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 10,
+    "r": 9,
+    "band": 5,
+    "city": "Katy",
+    "county": "Harris County",
+    "zips": [
+     "77450",
+     "77494",
+     "77094"
+    ],
+    "reachable": 4846,
+    "tracts": 14,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 10,
+    "r": 10,
+    "band": 4,
+    "city": "Katy",
+    "county": "Fort Bend County",
+    "zips": [
+     "77407",
+     "77450"
+    ],
+    "reachable": 3691,
+    "tracts": 7,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 10,
+    "r": 11,
+    "band": 4,
+    "city": "Richmond",
+    "county": "Fort Bend County",
+    "zips": [
+     "77407",
+     "77406"
+    ],
+    "reachable": 2283,
+    "tracts": 2,
+    "miles_to_local_branch": 0.2
+   },
+   {
+    "c": 10,
+    "r": 12,
+    "band": 3,
+    "city": "Richmond",
+    "county": "Fort Bend County",
+    "zips": [
+     "77406",
+     "77479"
+    ],
+    "reachable": 1181,
+    "tracts": 4,
+    "miles_to_local_branch": 3.3
+   },
+   {
+    "c": 10,
+    "r": 13,
+    "band": 3,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77469"
+    ],
+    "reachable": 1807,
+    "tracts": 2,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 10,
+    "r": 14,
+    "band": 3,
+    "city": "Rosenberg",
+    "county": "Fort Bend County",
+    "zips": [
+     "77469"
+    ],
+    "reachable": 1537,
+    "tracts": 1,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 10,
+    "r": 17,
+    "band": 2,
+    "city": "Needville",
+    "county": "Fort Bend County",
+    "zips": [
+     "77461"
+    ],
+    "reachable": 685,
+    "tracts": 1,
+    "miles_to_local_branch": 6.5
+   },
+   {
+    "c": 11,
+    "r": 1,
+    "band": 2,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77354",
+     "77355"
+    ],
+    "reachable": 590,
+    "tracts": 2,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 11,
+    "r": 2,
+    "band": 2,
+    "city": "Tomball",
+    "county": "Montgomery County",
+    "zips": [
+     "77355"
+    ],
+    "reachable": 567,
+    "tracts": 1,
+    "miles_to_local_branch": 3.1
+   },
+   {
+    "c": 11,
+    "r": 3,
+    "band": 1,
+    "city": "Tomball",
+    "county": "Harris County",
+    "zips": [
+     "77377"
+    ],
+    "reachable": 475,
+    "tracts": 1,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 11,
+    "r": 4,
+    "band": 3,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77429"
+    ],
+    "reachable": 1924,
+    "tracts": 3,
+    "miles_to_local_branch": 2.9
+   },
+   {
+    "c": 11,
+    "r": 5,
+    "band": 4,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77433",
+     "77429"
+    ],
+    "reachable": 2489,
+    "tracts": 4,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 11,
+    "r": 6,
+    "band": 4,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77095",
+     "77433"
+    ],
+    "reachable": 3893,
+    "tracts": 8,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 11,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77084",
+     "77449",
+     "77095"
+    ],
+    "reachable": 5242,
+    "tracts": 14,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 11,
+    "r": 8,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77084"
+    ],
+    "reachable": 2725,
+    "tracts": 6,
+    "miles_to_local_branch": 2.8
+   },
+   {
+    "c": 11,
+    "r": 9,
+    "band": 3,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77450",
+     "77084",
+     "77094"
+    ],
+    "reachable": 1123,
+    "tracts": 4,
+    "miles_to_local_branch": 2.2
+   },
+   {
+    "c": 11,
+    "r": 10,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77082",
+     "77083",
+     "77407"
+    ],
+    "reachable": 3398,
+    "tracts": 8,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 11,
+    "r": 11,
+    "band": 5,
+    "city": "Richmond",
+    "county": "Fort Bend County",
+    "zips": [
+     "77407",
+     "77498",
+     "77083"
+    ],
+    "reachable": 4331,
+    "tracts": 7,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 11,
+    "r": 12,
+    "band": 3,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77479",
+     "77498"
+    ],
+    "reachable": 1340,
+    "tracts": 4,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 11,
+    "r": 13,
+    "band": 3,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77479",
+     "77469"
+    ],
+    "reachable": 1121,
+    "tracts": 4,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 12,
+    "r": 0,
+    "band": 2,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77354"
+    ],
+    "reachable": 635,
+    "tracts": 2,
+    "miles_to_local_branch": 2.7
+   },
+   {
+    "c": 12,
+    "r": 1,
+    "band": 1,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77354"
+    ],
+    "reachable": 443,
+    "tracts": 1,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 12,
+    "r": 2,
+    "band": 2,
+    "city": "Tomball",
+    "county": "Harris County",
+    "zips": [
+     "77375"
+    ],
+    "reachable": 710,
+    "tracts": 2,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 12,
+    "r": 3,
+    "band": 2,
+    "city": "Tomball",
+    "county": "Harris County",
+    "zips": [
+     "77375"
+    ],
+    "reachable": 782,
+    "tracts": 2,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 12,
+    "r": 4,
+    "band": 4,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77377",
+     "77429"
+    ],
+    "reachable": 2225,
+    "tracts": 4,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 12,
+    "r": 5,
+    "band": 4,
+    "city": "Cypress",
+    "county": "Harris County",
+    "zips": [
+     "77429",
+     "77070",
+     "77065"
+    ],
+    "reachable": 2932,
+    "tracts": 8,
+    "miles_to_local_branch": 3.3
+   },
+   {
+    "c": 12,
+    "r": 6,
+    "band": 5,
+    "city": "Jersey Village",
+    "county": "Harris County",
+    "zips": [
+     "77065",
+     "77095"
+    ],
+    "reachable": 4711,
+    "tracts": 10,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 12,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77084",
+     "77041",
+     "77095"
+    ],
+    "reachable": 4664,
+    "tracts": 11,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 12,
+    "r": 8,
+    "band": 1,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77043"
+    ],
+    "reachable": 477,
+    "tracts": 1,
+    "miles_to_local_branch": 2.4
+   },
+   {
+    "c": 12,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77077",
+     "77079"
+    ],
+    "reachable": 7916,
+    "tracts": 19,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 12,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77082",
+     "77083",
+     "77072"
+    ],
+    "reachable": 9024,
+    "tracts": 19,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 12,
+    "r": 11,
+    "band": 5,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77498",
+     "77099",
+     "77083"
+    ],
+    "reachable": 4831,
+    "tracts": 13,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 12,
+    "r": 12,
+    "band": 4,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77479",
+     "77478",
+     "77498"
+    ],
+    "reachable": 2781,
+    "tracts": 7,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 12,
+    "r": 13,
+    "band": 3,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77479"
+    ],
+    "reachable": 1773,
+    "tracts": 5,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 12,
+    "r": 14,
+    "band": 2,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77469"
+    ],
+    "reachable": 564,
+    "tracts": 1,
+    "miles_to_local_branch": 4.7
+   },
+   {
+    "c": 12,
+    "r": 15,
+    "band": 2,
+    "city": "Sugar Land",
+    "county": "Fort Bend County",
+    "zips": [
+     "77469"
+    ],
+    "reachable": 538,
+    "tracts": 1,
+    "miles_to_local_branch": 7.6
+   },
+   {
+    "c": 13,
+    "r": 0,
+    "band": 3,
+    "city": "Magnolia",
+    "county": "Montgomery County",
+    "zips": [
+     "77382",
+     "77354"
+    ],
+    "reachable": 1949,
+    "tracts": 5,
+    "miles_to_local_branch": 0.5
+   },
+   {
+    "c": 13,
+    "r": 1,
+    "band": 2,
+    "city": "The Woodlands",
+    "county": "Montgomery County",
+    "zips": [
+     "77354"
+    ],
+    "reachable": 888,
+    "tracts": 2,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 13,
+    "r": 2,
+    "band": 4,
+    "city": "Tomball",
+    "county": "Harris County",
+    "zips": [
+     "77375",
+     "77389"
+    ],
+    "reachable": 1975,
+    "tracts": 2,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 13,
+    "r": 3,
+    "band": 4,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77375",
+     "77379"
+    ],
+    "reachable": 2548,
+    "tracts": 4,
+    "miles_to_local_branch": 2.7
+   },
+   {
+    "c": 13,
+    "r": 4,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77379",
+     "77375",
+     "77070"
+    ],
+    "reachable": 4131,
+    "tracts": 11,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 13,
+    "r": 5,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77070",
+     "77069",
+     "77429"
+    ],
+    "reachable": 5533,
+    "tracts": 10,
+    "miles_to_local_branch": 1.7
+   },
+   {
+    "c": 13,
+    "r": 6,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77064",
+     "77065",
+     "77040"
+    ],
+    "reachable": 4218,
+    "tracts": 11,
+    "miles_to_local_branch": 2.3
+   },
+   {
+    "c": 13,
+    "r": 7,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77041",
+     "77040"
+    ],
+    "reachable": 2046,
+    "tracts": 5,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 13,
+    "r": 8,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77043",
+     "77080",
+     "77041"
+    ],
+    "reachable": 4462,
+    "tracts": 10,
+    "miles_to_local_branch": 0.5
+   },
+   {
+    "c": 13,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77042",
+     "77024",
+     "77079"
+    ],
+    "reachable": 6469,
+    "tracts": 16,
+    "miles_to_local_branch": 1.2
+   },
+   {
+    "c": 13,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77042",
+     "77036",
+     "77072"
+    ],
+    "reachable": 12114,
+    "tracts": 29,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 13,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77099",
+     "77036",
+     "77477"
+    ],
+    "reachable": 10549,
+    "tracts": 25,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 13,
+    "r": 12,
+    "band": 5,
+    "city": "Stafford",
+    "county": "Fort Bend County",
+    "zips": [
+     "77477",
+     "77459",
+     "77478"
+    ],
+    "reachable": 4291,
+    "tracts": 9,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 13,
+    "r": 13,
+    "band": 3,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77459",
+     "77479"
+    ],
+    "reachable": 1119,
+    "tracts": 4,
+    "miles_to_local_branch": 0.1
+   },
+   {
+    "c": 13,
+    "r": 14,
+    "band": 3,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77459",
+     "77479"
+    ],
+    "reachable": 1705,
+    "tracts": 4,
+    "miles_to_local_branch": 3.1
+   },
+   {
+    "c": 14,
+    "r": 0,
+    "band": 3,
+    "city": "The Woodlands",
+    "county": "Montgomery County",
+    "zips": [
+     "77384",
+     "77381",
+     "77382"
+    ],
+    "reachable": 1740,
+    "tracts": 4,
+    "miles_to_local_branch": 1.2
+   },
+   {
+    "c": 14,
+    "r": 1,
+    "band": 4,
+    "city": "The Woodlands",
+    "county": "Montgomery County",
+    "zips": [
+     "77381",
+     "77389"
+    ],
+    "reachable": 2984,
+    "tracts": 7,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 14,
+    "r": 2,
+    "band": 3,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77389",
+     "77380"
+    ],
+    "reachable": 1538,
+    "tracts": 3,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 14,
+    "r": 3,
+    "band": 4,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77379",
+     "77388"
+    ],
+    "reachable": 2774,
+    "tracts": 7,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 14,
+    "r": 4,
+    "band": 5,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77379",
+     "77069",
+     "77068"
+    ],
+    "reachable": 4395,
+    "tracts": 10,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 14,
+    "r": 5,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77066",
+     "77014",
+     "77069"
+    ],
+    "reachable": 4021,
+    "tracts": 10,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 14,
+    "r": 6,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77086",
+     "77064",
+     "77040"
+    ],
+    "reachable": 4451,
+    "tracts": 11,
+    "miles_to_local_branch": 1.2
+   },
+   {
+    "c": 14,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77040",
+     "77092",
+     "77088"
+    ],
+    "reachable": 5202,
+    "tracts": 10,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 14,
+    "r": 8,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77080",
+     "77055",
+     "77092"
+    ],
+    "reachable": 5734,
+    "tracts": 17,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 14,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77057",
+     "77063",
+     "77024"
+    ],
+    "reachable": 7957,
+    "tracts": 23,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 14,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77081",
+     "77063",
+     "77036"
+    ],
+    "reachable": 15068,
+    "tracts": 36,
+    "miles_to_local_branch": 0.2
+   },
+   {
+    "c": 14,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77096",
+     "77071",
+     "77074"
+    ],
+    "reachable": 11180,
+    "tracts": 28,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 14,
+    "r": 12,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77489",
+     "77035",
+     "77085"
+    ],
+    "reachable": 4476,
+    "tracts": 8,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 14,
+    "r": 13,
+    "band": 4,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77459",
+     "77489",
+     "77545"
+    ],
+    "reachable": 3249,
+    "tracts": 7,
+    "miles_to_local_branch": 2.2
+   },
+   {
+    "c": 14,
+    "r": 14,
+    "band": 2,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77459",
+     "77545"
+    ],
+    "reachable": 742,
+    "tracts": 2,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 14,
+    "r": 15,
+    "band": 3,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77459",
+     "77583"
+    ],
+    "reachable": 1536,
+    "tracts": 3,
+    "miles_to_local_branch": 4.8
+   },
+   {
+    "c": 14,
+    "r": 16,
+    "band": 2,
+    "city": "Missouri City",
+    "county": "Brazoria County",
+    "zips": [
+     "77583"
+    ],
+    "reachable": 759,
+    "tracts": 1,
+    "miles_to_local_branch": 8.2
+   },
+   {
+    "c": 15,
+    "r": 0,
+    "band": 3,
+    "city": "The Woodlands",
+    "county": "Montgomery County",
+    "zips": [
+     "77384",
+     "77385"
+    ],
+    "reachable": 1613,
+    "tracts": 3,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 15,
+    "r": 1,
+    "band": 4,
+    "city": "The Woodlands",
+    "county": "Montgomery County",
+    "zips": [
+     "77380",
+     "77381",
+     "77385"
+    ],
+    "reachable": 2754,
+    "tracts": 5,
+    "miles_to_local_branch": 0.4
+   },
+   {
+    "c": 15,
+    "r": 2,
+    "band": 4,
+    "city": "Spring",
+    "county": "Montgomery County",
+    "zips": [
+     "77380",
+     "77386",
+     "77389"
+    ],
+    "reachable": 3886,
+    "tracts": 6,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 15,
+    "r": 3,
+    "band": 4,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77388",
+     "77373"
+    ],
+    "reachable": 2763,
+    "tracts": 7,
+    "miles_to_local_branch": 0.2
+   },
+   {
+    "c": 15,
+    "r": 4,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77090",
+     "77014",
+     "77073"
+    ],
+    "reachable": 5925,
+    "tracts": 13,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 15,
+    "r": 5,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77067",
+     "77014",
+     "77090"
+    ],
+    "reachable": 7390,
+    "tracts": 16,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 15,
+    "r": 6,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77038",
+     "77088"
+    ],
+    "reachable": 3902,
+    "tracts": 8,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 15,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77088",
+     "77091",
+     "77092"
+    ],
+    "reachable": 6119,
+    "tracts": 11,
+    "miles_to_local_branch": 2.2
+   },
+   {
+    "c": 15,
+    "r": 8,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77092",
+     "77018",
+     "77008"
+    ],
+    "reachable": 6653,
+    "tracts": 18,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 15,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77056",
+     "77027",
+     "77024"
+    ],
+    "reachable": 5406,
+    "tracts": 15,
+    "miles_to_local_branch": 0.6
+   },
+   {
+    "c": 15,
+    "r": 10,
+    "band": 5,
+    "city": "Bellaire",
+    "county": "Harris County",
+    "zips": [
+     "77027",
+     "77025",
+     "77005"
+    ],
+    "reachable": 9811,
+    "tracts": 28,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 15,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77025",
+     "77035",
+     "77045"
+    ],
+    "reachable": 4969,
+    "tracts": 13,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 15,
+    "r": 12,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77053",
+     "77045",
+     "77085"
+    ],
+    "reachable": 4504,
+    "tracts": 8,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 15,
+    "r": 13,
+    "band": 4,
+    "city": "Pearland",
+    "county": "Fort Bend County",
+    "zips": [
+     "77053",
+     "77584"
+    ],
+    "reachable": 2161,
+    "tracts": 6,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 15,
+    "r": 14,
+    "band": 3,
+    "city": "Missouri City",
+    "county": "Fort Bend County",
+    "zips": [
+     "77545",
+     "77583"
+    ],
+    "reachable": 1794,
+    "tracts": 5,
+    "miles_to_local_branch": 4.3
+   },
+   {
+    "c": 16,
+    "r": 0,
+    "band": 1,
+    "city": "Conroe",
+    "county": "Montgomery County",
+    "zips": [
+     "77302"
+    ],
+    "reachable": 449,
+    "tracts": 1,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 16,
+    "r": 1,
+    "band": 3,
+    "city": "Spring",
+    "county": "Montgomery County",
+    "zips": [
+     "77385",
+     "77386"
+    ],
+    "reachable": 1934,
+    "tracts": 4,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 16,
+    "r": 2,
+    "band": 4,
+    "city": "Spring",
+    "county": "Montgomery County",
+    "zips": [
+     "77386"
+    ],
+    "reachable": 2210,
+    "tracts": 4,
+    "miles_to_local_branch": 0.3
+   },
+   {
+    "c": 16,
+    "r": 3,
+    "band": 4,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77373"
+    ],
+    "reachable": 3777,
+    "tracts": 7,
+    "miles_to_local_branch": 2.3
+   },
+   {
+    "c": 16,
+    "r": 4,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77073",
+     "77338",
+     "77373"
+    ],
+    "reachable": 2189,
+    "tracts": 5,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 16,
+    "r": 5,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77060",
+     "77073"
+    ],
+    "reachable": 4802,
+    "tracts": 10,
+    "miles_to_local_branch": 3.5
+   },
+   {
+    "c": 16,
+    "r": 6,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77060",
+     "77037",
+     "77088"
+    ],
+    "reachable": 3765,
+    "tracts": 11,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 16,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77076",
+     "77091",
+     "77037"
+    ],
+    "reachable": 6160,
+    "tracts": 14,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 16,
+    "r": 8,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77022",
+     "77008",
+     "77009"
+    ],
+    "reachable": 8497,
+    "tracts": 20,
+    "miles_to_local_branch": 1.2
+   },
+   {
+    "c": 16,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77007",
+     "77019",
+     "77006"
+    ],
+    "reachable": 12223,
+    "tracts": 31,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 16,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77004",
+     "77030",
+     "77006"
+    ],
+    "reachable": 10685,
+    "tracts": 29,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 16,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77051",
+     "77054",
+     "77021"
+    ],
+    "reachable": 6734,
+    "tracts": 12,
+    "miles_to_local_branch": 3.5
+   },
+   {
+    "c": 16,
+    "r": 12,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77047",
+     "77045"
+    ],
+    "reachable": 3233,
+    "tracts": 5,
+    "miles_to_local_branch": 2.4
+   },
+   {
+    "c": 16,
+    "r": 13,
+    "band": 4,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77584"
+    ],
+    "reachable": 3124,
+    "tracts": 9,
+    "miles_to_local_branch": 1.1
+   },
+   {
+    "c": 16,
+    "r": 14,
+    "band": 3,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77578"
+    ],
+    "reachable": 1137,
+    "tracts": 3,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 16,
+    "r": 17,
+    "band": 2,
+    "city": "Manvel",
+    "county": "Brazoria County",
+    "zips": [
+     "77583"
+    ],
+    "reachable": 734,
+    "tracts": 1,
+    "miles_to_local_branch": 7.3
+   },
+   {
+    "c": 17,
+    "r": 0,
+    "band": 2,
+    "city": "Conroe",
+    "county": "Montgomery County",
+    "zips": [
+     "77302"
+    ],
+    "reachable": 640,
+    "tracts": 1,
+    "miles_to_local_branch": 5.5
+   },
+   {
+    "c": 17,
+    "r": 3,
+    "band": 2,
+    "city": "Spring",
+    "county": "Montgomery County",
+    "zips": [
+     "77386",
+     "77373"
+    ],
+    "reachable": 846,
+    "tracts": 2,
+    "miles_to_local_branch": 4.6
+   },
+   {
+    "c": 17,
+    "r": 4,
+    "band": 3,
+    "city": "Spring",
+    "county": "Harris County",
+    "zips": [
+     "77338",
+     "77373"
+    ],
+    "reachable": 1432,
+    "tracts": 3,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 17,
+    "r": 5,
+    "band": 1,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77032"
+    ],
+    "reachable": 213,
+    "tracts": 2,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 17,
+    "r": 6,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77039",
+     "77032"
+    ],
+    "reachable": 3364,
+    "tracts": 8,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 17,
+    "r": 7,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77093",
+     "77016"
+    ],
+    "reachable": 4943,
+    "tracts": 14,
+    "miles_to_local_branch": 0.3
+   },
+   {
+    "c": 17,
+    "r": 8,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77026",
+     "77093",
+     "77009"
+    ],
+    "reachable": 5206,
+    "tracts": 13,
+    "miles_to_local_branch": 2.8
+   },
+   {
+    "c": 17,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77020",
+     "77003",
+     "77009"
+    ],
+    "reachable": 6817,
+    "tracts": 16,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 17,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77023",
+     "77004",
+     "77021"
+    ],
+    "reachable": 7801,
+    "tracts": 18,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 17,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77033",
+     "77087",
+     "77048"
+    ],
+    "reachable": 7032,
+    "tracts": 14,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 17,
+    "r": 12,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77048",
+     "77047",
+     "77581"
+    ],
+    "reachable": 2480,
+    "tracts": 6,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 17,
+    "r": 13,
+    "band": 3,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77584",
+     "77581"
+    ],
+    "reachable": 1531,
+    "tracts": 5,
+    "miles_to_local_branch": 0.4
+   },
+   {
+    "c": 17,
+    "r": 14,
+    "band": 3,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77578",
+     "77584"
+    ],
+    "reachable": 1438,
+    "tracts": 3,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 17,
+    "r": 16,
+    "band": 1,
+    "city": "Manvel",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 358,
+    "tracts": 1,
+    "miles_to_local_branch": 3.9
+   },
+   {
+    "c": 17,
+    "r": 17,
+    "band": 1,
+    "city": "Alvin",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 465,
+    "tracts": 1,
+    "miles_to_local_branch": 6.7
+   },
+   {
+    "c": 18,
+    "r": 0,
+    "band": 2,
+    "city": "New Caney",
+    "county": "Montgomery County",
+    "zips": [
+     "77302",
+     "77306"
+    ],
+    "reachable": 949,
+    "tracts": 2,
+    "miles_to_local_branch": 5.6
+   },
+   {
+    "c": 18,
+    "r": 1,
+    "band": 2,
+    "city": "New Caney",
+    "county": "Montgomery County",
+    "zips": [
+     "77357",
+     "77365"
+    ],
+    "reachable": 851,
+    "tracts": 2,
+    "miles_to_local_branch": 3.3
+   },
+   {
+    "c": 18,
+    "r": 2,
+    "band": 4,
+    "city": "Porter",
+    "county": "Montgomery County",
+    "zips": [
+     "77365"
+    ],
+    "reachable": 2008,
+    "tracts": 3,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 18,
+    "r": 3,
+    "band": 2,
+    "city": "Kingwood",
+    "county": "Montgomery County",
+    "zips": [
+     "77365"
+    ],
+    "reachable": 659,
+    "tracts": 1,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 18,
+    "r": 4,
+    "band": 3,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77338"
+    ],
+    "reachable": 1326,
+    "tracts": 2,
+    "miles_to_local_branch": 0.6
+   },
+   {
+    "c": 18,
+    "r": 5,
+    "band": 4,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77396",
+     "77338"
+    ],
+    "reachable": 2792,
+    "tracts": 6,
+    "miles_to_local_branch": 2.4
+   },
+   {
+    "c": 18,
+    "r": 6,
+    "band": 3,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77396",
+     "77050",
+     "77032"
+    ],
+    "reachable": 1836,
+    "tracts": 4,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 18,
+    "r": 7,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77016",
+     "77078"
+    ],
+    "reachable": 2111,
+    "tracts": 4,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 18,
+    "r": 8,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77028",
+     "77026",
+     "77078"
+    ],
+    "reachable": 2997,
+    "tracts": 6,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 18,
+    "r": 9,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77029",
+     "77011",
+     "77020"
+    ],
+    "reachable": 2856,
+    "tracts": 8,
+    "miles_to_local_branch": 1.9
+   },
+   {
+    "c": 18,
+    "r": 10,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77012",
+     "77087",
+     "77017"
+    ],
+    "reachable": 4884,
+    "tracts": 12,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 18,
+    "r": 11,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77061",
+     "77017",
+     "77087"
+    ],
+    "reachable": 4854,
+    "tracts": 14,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 18,
+    "r": 12,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77075",
+     "77089"
+    ],
+    "reachable": 3213,
+    "tracts": 8,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 18,
+    "r": 13,
+    "band": 4,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77581",
+     "77584"
+    ],
+    "reachable": 2298,
+    "tracts": 8,
+    "miles_to_local_branch": 0.5
+   },
+   {
+    "c": 18,
+    "r": 14,
+    "band": 2,
+    "city": "Pearland",
+    "county": "Brazoria County",
+    "zips": [
+     "77584",
+     "77581",
+     "77511"
+    ],
+    "reachable": 813,
+    "tracts": 3,
+    "miles_to_local_branch": 2.9
+   },
+   {
+    "c": 18,
+    "r": 15,
+    "band": 2,
+    "city": "Alvin",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 731,
+    "tracts": 1,
+    "miles_to_local_branch": 3.5
+   },
+   {
+    "c": 18,
+    "r": 16,
+    "band": 3,
+    "city": "Alvin",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 1082,
+    "tracts": 2,
+    "miles_to_local_branch": 2.7
+   },
+   {
+    "c": 18,
+    "r": 17,
+    "band": 1,
+    "city": "Alvin",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 281,
+    "tracts": 1,
+    "miles_to_local_branch": 3.9
+   },
+   {
+    "c": 19,
+    "r": 0,
+    "band": 1,
+    "city": "Splendora",
+    "county": "Montgomery County",
+    "zips": [
+     "77372"
+    ],
+    "reachable": 478,
+    "tracts": 1,
+    "miles_to_local_branch": 3.5
+   },
+   {
+    "c": 19,
+    "r": 1,
+    "band": 2,
+    "city": "New Caney",
+    "county": "Montgomery County",
+    "zips": [
+     "77357"
+    ],
+    "reachable": 559,
+    "tracts": 1,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 19,
+    "r": 2,
+    "band": 2,
+    "city": "Porter",
+    "county": "Montgomery County",
+    "zips": [
+     "77365"
+    ],
+    "reachable": 534,
+    "tracts": 1,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 19,
+    "r": 3,
+    "band": 4,
+    "city": "Kingwood",
+    "county": "Harris County",
+    "zips": [
+     "77339",
+     "77365"
+    ],
+    "reachable": 3622,
+    "tracts": 6,
+    "miles_to_local_branch": 0.4
+   },
+   {
+    "c": 19,
+    "r": 4,
+    "band": 3,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77346",
+     "77338",
+     "77339"
+    ],
+    "reachable": 1598,
+    "tracts": 3,
+    "miles_to_local_branch": 2.7
+   },
+   {
+    "c": 19,
+    "r": 5,
+    "band": 5,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77346",
+     "77396",
+     "77338"
+    ],
+    "reachable": 4509,
+    "tracts": 8,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 19,
+    "r": 6,
+    "band": 3,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77396",
+     "77044"
+    ],
+    "reachable": 1474,
+    "tracts": 2,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 19,
+    "r": 7,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77044",
+     "77078"
+    ],
+    "reachable": 3414,
+    "tracts": 4,
+    "miles_to_local_branch": 4.5
+   },
+   {
+    "c": 19,
+    "r": 8,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77049",
+     "77015",
+     "77013"
+    ],
+    "reachable": 2112,
+    "tracts": 5,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 19,
+    "r": 9,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77015",
+     "77013",
+     "77029"
+    ],
+    "reachable": 4157,
+    "tracts": 11,
+    "miles_to_local_branch": 1.7
+   },
+   {
+    "c": 19,
+    "r": 10,
+    "band": 4,
+    "city": "Galena Park",
+    "county": "Harris County",
+    "zips": [
+     "77506",
+     "77017",
+     "77547"
+    ],
+    "reachable": 3525,
+    "tracts": 9,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 19,
+    "r": 11,
+    "band": 5,
+    "city": "South Houston",
+    "county": "Harris County",
+    "zips": [
+     "77587",
+     "77502",
+     "77034"
+    ],
+    "reachable": 6878,
+    "tracts": 16,
+    "miles_to_local_branch": 0.5
+   },
+   {
+    "c": 19,
+    "r": 12,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77089",
+     "77034",
+     "77075"
+    ],
+    "reachable": 6277,
+    "tracts": 14,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 19,
+    "r": 13,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77089",
+     "77581",
+     "77546"
+    ],
+    "reachable": 3310,
+    "tracts": 7,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 19,
+    "r": 14,
+    "band": 3,
+    "city": "Friendswood",
+    "county": "Galveston County",
+    "zips": [
+     "77546",
+     "77511"
+    ],
+    "reachable": 1306,
+    "tracts": 3,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 19,
+    "r": 15,
+    "band": 2,
+    "city": "Alvin",
+    "county": "Galveston County",
+    "zips": [
+     "77546",
+     "77511"
+    ],
+    "reachable": 832,
+    "tracts": 2,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 19,
+    "r": 16,
+    "band": 3,
+    "city": "Alvin",
+    "county": "Brazoria County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 1268,
+    "tracts": 2,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 20,
+    "r": 0,
+    "band": 2,
+    "city": "Splendora",
+    "county": "Montgomery County",
+    "zips": [
+     "77372"
+    ],
+    "reachable": 591,
+    "tracts": 1,
+    "miles_to_local_branch": 1.2
+   },
+   {
+    "c": 20,
+    "r": 1,
+    "band": 3,
+    "city": "New Caney",
+    "county": "Montgomery County",
+    "zips": [
+     "77357"
+    ],
+    "reachable": 1179,
+    "tracts": 2,
+    "miles_to_local_branch": 3.1
+   },
+   {
+    "c": 20,
+    "r": 2,
+    "band": 2,
+    "city": "New Caney",
+    "county": "Montgomery County",
+    "zips": [
+     "77357"
+    ],
+    "reachable": 948,
+    "tracts": 2,
+    "miles_to_local_branch": 4.2
+   },
+   {
+    "c": 20,
+    "r": 3,
+    "band": 3,
+    "city": "Kingwood",
+    "county": "Harris County",
+    "zips": [
+     "77345"
+    ],
+    "reachable": 1651,
+    "tracts": 5,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 20,
+    "r": 4,
+    "band": 3,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77346",
+     "77339"
+    ],
+    "reachable": 1774,
+    "tracts": 5,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 20,
+    "r": 5,
+    "band": 4,
+    "city": "Humble",
+    "county": "Harris County",
+    "zips": [
+     "77044",
+     "77346"
+    ],
+    "reachable": 2516,
+    "tracts": 5,
+    "miles_to_local_branch": 2.3
+   },
+   {
+    "c": 20,
+    "r": 6,
+    "band": 1,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77044"
+    ],
+    "reachable": 386,
+    "tracts": 1,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 20,
+    "r": 7,
+    "band": 2,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77049",
+     "77044"
+    ],
+    "reachable": 715,
+    "tracts": 2,
+    "miles_to_local_branch": 4.1
+   },
+   {
+    "c": 20,
+    "r": 8,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77015",
+     "77049",
+     "77530"
+    ],
+    "reachable": 3258,
+    "tracts": 9,
+    "miles_to_local_branch": 0.7
+   },
+   {
+    "c": 20,
+    "r": 9,
+    "band": 4,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77015",
+     "77530"
+    ],
+    "reachable": 2277,
+    "tracts": 5,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 20,
+    "r": 10,
+    "band": 3,
+    "city": "Pasadena",
+    "county": "Harris County",
+    "zips": [
+     "77503",
+     "77506"
+    ],
+    "reachable": 1784,
+    "tracts": 6,
+    "miles_to_local_branch": 2.5
+   },
+   {
+    "c": 20,
+    "r": 11,
+    "band": 5,
+    "city": "Pasadena",
+    "county": "Harris County",
+    "zips": [
+     "77503",
+     "77502",
+     "77505"
+    ],
+    "reachable": 4544,
+    "tracts": 11,
+    "miles_to_local_branch": 1.3
+   },
+   {
+    "c": 20,
+    "r": 12,
+    "band": 3,
+    "city": "Pasadena",
+    "county": "Harris County",
+    "zips": [
+     "77059",
+     "77504",
+     "77034"
+    ],
+    "reachable": 970,
+    "tracts": 3,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 20,
+    "r": 13,
+    "band": 4,
+    "city": "Friendswood",
+    "county": "Harris County",
+    "zips": [
+     "77598",
+     "77062",
+     "77546"
+    ],
+    "reachable": 3571,
+    "tracts": 8,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 20,
+    "r": 14,
+    "band": 4,
+    "city": "Friendswood",
+    "county": "Harris County",
+    "zips": [
+     "77546",
+     "77598",
+     "77573"
+    ],
+    "reachable": 2779,
+    "tracts": 8,
+    "miles_to_local_branch": 0.4
+   },
+   {
+    "c": 20,
+    "r": 15,
+    "band": 3,
+    "city": "League City",
+    "county": "Galveston County",
+    "zips": [
+     "77573",
+     "77511"
+    ],
+    "reachable": 1507,
+    "tracts": 5,
+    "miles_to_local_branch": 3.4
+   },
+   {
+    "c": 20,
+    "r": 16,
+    "band": 1,
+    "city": "Alvin",
+    "county": "Galveston County",
+    "zips": [
+     "77511"
+    ],
+    "reachable": 125,
+    "tracts": 1,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 20,
+    "r": 17,
+    "band": 1,
+    "city": "Santa Fe",
+    "county": "Galveston County",
+    "zips": [
+     "77517"
+    ],
+    "reachable": 269,
+    "tracts": 1,
+    "miles_to_local_branch": 4.3
+   },
+   {
+    "c": 21,
+    "r": 2,
+    "band": 2,
+    "city": "Cleveland",
+    "county": "Harris County",
+    "zips": [
+     "77336"
+    ],
+    "reachable": 573,
+    "tracts": 1,
+    "miles_to_local_branch": 4.4
+   },
+   {
+    "c": 21,
+    "r": 4,
+    "band": 2,
+    "city": "Huffman",
+    "county": "Harris County",
+    "zips": [
+     "77336"
+    ],
+    "reachable": 778,
+    "tracts": 2,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 21,
+    "r": 5,
+    "band": 1,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77532"
+    ],
+    "reachable": 353,
+    "tracts": 1,
+    "miles_to_local_branch": 4.8
+   },
+   {
+    "c": 21,
+    "r": 6,
+    "band": 3,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77532"
+    ],
+    "reachable": 1104,
+    "tracts": 2,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 21,
+    "r": 7,
+    "band": 1,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77049"
+    ],
+    "reachable": 308,
+    "tracts": 1,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 21,
+    "r": 8,
+    "band": 3,
+    "city": "Channelview",
+    "county": "Harris County",
+    "zips": [
+     "77530"
+    ],
+    "reachable": 1176,
+    "tracts": 2,
+    "miles_to_local_branch": 2.6
+   },
+   {
+    "c": 21,
+    "r": 9,
+    "band": 1,
+    "city": "Channelview",
+    "county": "Harris County",
+    "zips": [
+     "77015"
+    ],
+    "reachable": 492,
+    "tracts": 1,
+    "miles_to_local_branch": 1.7
+   },
+   {
+    "c": 21,
+    "r": 10,
+    "band": 3,
+    "city": "Deer Park",
+    "county": "Harris County",
+    "zips": [
+     "77536"
+    ],
+    "reachable": 1152,
+    "tracts": 3,
+    "miles_to_local_branch": 2.4
+   },
+   {
+    "c": 21,
+    "r": 11,
+    "band": 4,
+    "city": "La Porte",
+    "county": "Harris County",
+    "zips": [
+     "77536",
+     "77571",
+     "77505"
+    ],
+    "reachable": 3339,
+    "tracts": 6,
+    "miles_to_local_branch": 0.3
+   },
+   {
+    "c": 21,
+    "r": 12,
+    "band": 3,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77059"
+    ],
+    "reachable": 1164,
+    "tracts": 3,
+    "miles_to_local_branch": 3.5
+   },
+   {
+    "c": 21,
+    "r": 13,
+    "band": 5,
+    "city": "Houston",
+    "county": "Harris County",
+    "zips": [
+     "77058",
+     "77062",
+     "77598"
+    ],
+    "reachable": 3965,
+    "tracts": 11,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 21,
+    "r": 14,
+    "band": 4,
+    "city": "League City",
+    "county": "Galveston County",
+    "zips": [
+     "77573",
+     "77598"
+    ],
+    "reachable": 2276,
+    "tracts": 7,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 21,
+    "r": 15,
+    "band": 4,
+    "city": "Dickinson",
+    "county": "Galveston County",
+    "zips": [
+     "77573",
+     "77539"
+    ],
+    "reachable": 2103,
+    "tracts": 7,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 21,
+    "r": 16,
+    "band": 2,
+    "city": "Santa Fe",
+    "county": "Galveston County",
+    "zips": [
+     "77510",
+     "77539",
+     "77517"
+    ],
+    "reachable": 808,
+    "tracts": 3,
+    "miles_to_local_branch": 3.0
+   },
+   {
+    "c": 21,
+    "r": 17,
+    "band": 1,
+    "city": "Santa Fe",
+    "county": "Galveston County",
+    "zips": [
+     "77517"
+    ],
+    "reachable": 177,
+    "tracts": 1,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 22,
+    "r": 0,
+    "band": 3,
+    "city": "Cleveland",
+    "county": "Liberty County",
+    "zips": [
+     "77327"
+    ],
+    "reachable": 1320,
+    "tracts": 1,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 22,
+    "r": 5,
+    "band": 1,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77532"
+    ],
+    "reachable": 159,
+    "tracts": 1,
+    "miles_to_local_branch": 5.0
+   },
+   {
+    "c": 22,
+    "r": 6,
+    "band": 2,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77532"
+    ],
+    "reachable": 549,
+    "tracts": 1,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 22,
+    "r": 7,
+    "band": 2,
+    "city": "Crosby",
+    "county": "Harris County",
+    "zips": [
+     "77532"
+    ],
+    "reachable": 719,
+    "tracts": 1,
+    "miles_to_local_branch": 2.2
+   },
+   {
+    "c": 22,
+    "r": 8,
+    "band": 3,
+    "city": "Highlands",
+    "county": "Harris County",
+    "zips": [
+     "77562"
+    ],
+    "reachable": 1373,
+    "tracts": 3,
+    "miles_to_local_branch": 0.8
+   },
+   {
+    "c": 22,
+    "r": 9,
+    "band": 1,
+    "city": "Highlands",
+    "county": "Harris County",
+    "zips": [
+     "77520"
+    ],
+    "reachable": 274,
+    "tracts": 1,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 22,
+    "r": 10,
+    "band": 1,
+    "city": "Deer Park",
+    "county": "Harris County",
+    "zips": [
+     "77571"
+    ],
+    "reachable": 0,
+    "tracts": 1,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 22,
+    "r": 11,
+    "band": 3,
+    "city": "La Porte",
+    "county": "Harris County",
+    "zips": [
+     "77571"
+    ],
+    "reachable": 1149,
+    "tracts": 3,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 22,
+    "r": 12,
+    "band": 3,
+    "city": "La Porte",
+    "county": "Harris County",
+    "zips": [
+     "77586",
+     "77507",
+     "77571"
+    ],
+    "reachable": 1769,
+    "tracts": 4,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 22,
+    "r": 13,
+    "band": 4,
+    "city": "Seabrook",
+    "county": "Harris County",
+    "zips": [
+     "77586",
+     "77573",
+     "77565"
+    ],
+    "reachable": 2157,
+    "tracts": 5,
+    "miles_to_local_branch": 0.9
+   },
+   {
+    "c": 22,
+    "r": 14,
+    "band": 4,
+    "city": "League City",
+    "county": "Galveston County",
+    "zips": [
+     "77573",
+     "77565"
+    ],
+    "reachable": 2747,
+    "tracts": 10,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 22,
+    "r": 15,
+    "band": 3,
+    "city": "Dickinson",
+    "county": "Galveston County",
+    "zips": [
+     "77539"
+    ],
+    "reachable": 1551,
+    "tracts": 4,
+    "miles_to_local_branch": 0.4
+   },
+   {
+    "c": 22,
+    "r": 16,
+    "band": 3,
+    "city": "La Marque",
+    "county": "Galveston County",
+    "zips": [
+     "77510",
+     "77539"
+    ],
+    "reachable": 1497,
+    "tracts": 2,
+    "miles_to_local_branch": 1.1
+   },
+   {
+    "c": 22,
+    "r": 17,
+    "band": 2,
+    "city": "Hitchcock",
+    "county": "Galveston County",
+    "zips": [
+     "77563",
+     "77510"
+    ],
+    "reachable": 726,
+    "tracts": 2,
+    "miles_to_local_branch": 1.8
+   },
+   {
+    "c": 23,
+    "r": 2,
+    "band": 1,
+    "city": "Cleveland",
+    "county": "Liberty County",
+    "zips": [
+     "77535"
+    ],
+    "reachable": 227,
+    "tracts": 1,
+    "miles_to_local_branch": 4.9
+   },
+   {
+    "c": 23,
+    "r": 8,
+    "band": 3,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77521"
+    ],
+    "reachable": 1751,
+    "tracts": 3,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 23,
+    "r": 9,
+    "band": 4,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77521",
+     "77520"
+    ],
+    "reachable": 3864,
+    "tracts": 7,
+    "miles_to_local_branch": 0.6
+   },
+   {
+    "c": 23,
+    "r": 10,
+    "band": 3,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77520"
+    ],
+    "reachable": 1025,
+    "tracts": 3,
+    "miles_to_local_branch": 2.8
+   },
+   {
+    "c": 23,
+    "r": 11,
+    "band": 1,
+    "city": "La Porte",
+    "county": "Harris County",
+    "zips": [
+     "77571"
+    ],
+    "reachable": 366,
+    "tracts": 1,
+    "miles_to_local_branch": 5.6
+   },
+   {
+    "c": 23,
+    "r": 12,
+    "band": 1,
+    "city": "La Porte",
+    "county": "Harris County",
+    "zips": [
+     "77571"
+    ],
+    "reachable": 400,
+    "tracts": 1,
+    "miles_to_local_branch": 4.5
+   },
+   {
+    "c": 23,
+    "r": 14,
+    "band": 3,
+    "city": "Bacliff",
+    "county": "Galveston County",
+    "zips": [
+     "77518",
+     "77573",
+     "77539"
+    ],
+    "reachable": 1887,
+    "tracts": 6,
+    "miles_to_local_branch": 2.2
+   },
+   {
+    "c": 23,
+    "r": 15,
+    "band": 1,
+    "city": "Bacliff",
+    "county": "Galveston County",
+    "zips": [
+     "77539"
+    ],
+    "reachable": 496,
+    "tracts": 2,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 23,
+    "r": 16,
+    "band": 3,
+    "city": "Texas City",
+    "county": "Galveston County",
+    "zips": [
+     "77539",
+     "77591"
+    ],
+    "reachable": 1459,
+    "tracts": 2,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 23,
+    "r": 17,
+    "band": 4,
+    "city": "La Marque",
+    "county": "Galveston County",
+    "zips": [
+     "77568",
+     "77591",
+     "77563"
+    ],
+    "reachable": 2756,
+    "tracts": 6,
+    "miles_to_local_branch": 1.5
+   },
+   {
+    "c": 24,
+    "r": 1,
+    "band": 1,
+    "city": "Cleveland",
+    "county": "Liberty County",
+    "zips": [
+     "77535"
+    ],
+    "reachable": 407,
+    "tracts": 1,
+    "miles_to_local_branch": 7.3
+   },
+   {
+    "c": 24,
+    "r": 5,
+    "band": 2,
+    "city": "Dayton",
+    "county": "Liberty County",
+    "zips": [
+     "77535"
+    ],
+    "reachable": 611,
+    "tracts": 1,
+    "miles_to_local_branch": 5.1
+   },
+   {
+    "c": 24,
+    "r": 8,
+    "band": 1,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77521"
+    ],
+    "reachable": 476,
+    "tracts": 1,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 24,
+    "r": 9,
+    "band": 4,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77520",
+     "77521"
+    ],
+    "reachable": 1985,
+    "tracts": 3,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 24,
+    "r": 10,
+    "band": 2,
+    "city": "Baytown",
+    "county": "Harris County",
+    "zips": [
+     "77520",
+     "77523"
+    ],
+    "reachable": 812,
+    "tracts": 2,
+    "miles_to_local_branch": 2.1
+   },
+   {
+    "c": 24,
+    "r": 12,
+    "band": 1,
+    "city": "La Porte",
+    "county": "Chambers County",
+    "zips": [],
+    "reachable": 0,
+    "tracts": 1,
+    "miles_to_local_branch": 7.1
+   },
+   {
+    "c": 24,
+    "r": 15,
+    "band": 2,
+    "city": "Texas City",
+    "county": "Galveston County",
+    "zips": [
+     "77539"
+    ],
+    "reachable": 631,
+    "tracts": 1,
+    "miles_to_local_branch": 4.9
+   },
+   {
+    "c": 24,
+    "r": 16,
+    "band": 3,
+    "city": "Texas City",
+    "county": "Galveston County",
+    "zips": [
+     "77590"
+    ],
+    "reachable": 1646,
+    "tracts": 3,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 24,
+    "r": 17,
+    "band": 3,
+    "city": "Texas City",
+    "county": "Galveston County",
+    "zips": [
+     "77590"
+    ],
+    "reachable": 1127,
+    "tracts": 2,
+    "miles_to_local_branch": 2.0
+   },
+   {
+    "c": 25,
+    "r": 3,
+    "band": 2,
+    "city": "Dayton",
+    "county": "Liberty County",
+    "zips": [
+     "77535"
+    ],
+    "reachable": 651,
+    "tracts": 1,
+    "miles_to_local_branch": 1.6
+   },
+   {
+    "c": 25,
+    "r": 5,
+    "band": 2,
+    "city": "Dayton",
+    "county": "Liberty County",
+    "zips": [
+     "77535"
+    ],
+    "reachable": 629,
+    "tracts": 1,
+    "miles_to_local_branch": 4.9
+   },
+   {
+    "c": 25,
+    "r": 7,
+    "band": 2,
+    "city": "Baytown",
+    "county": "Chambers County",
+    "zips": [
+     "77523"
+    ],
+    "reachable": 883,
+    "tracts": 1,
+    "miles_to_local_branch": 1.0
+   },
+   {
+    "c": 25,
+    "r": 8,
+    "band": 2,
+    "city": "Baytown",
+    "county": "Chambers County",
+    "zips": [
+     "77523"
+    ],
+    "reachable": 783,
+    "tracts": 1,
+    "miles_to_local_branch": 1.4
+   },
+   {
+    "c": 25,
+    "r": 17,
+    "band": 1,
+    "city": "Texas City",
+    "county": "Galveston County",
+    "zips": [
+     "77590"
+    ],
+    "reachable": 419,
+    "tracts": 1,
+    "miles_to_local_branch": 4.0
+   },
+   {
+    "c": 26,
+    "r": 1,
+    "band": 1,
+    "city": "Liberty",
+    "county": "Liberty County",
+    "zips": [
+     "77575"
+    ],
+    "reachable": 247,
+    "tracts": 1,
+    "miles_to_local_branch": 4.6
+   },
+   {
+    "c": 26,
+    "r": 9,
+    "band": 3,
+    "city": "Baytown",
+    "county": "Chambers County",
+    "zips": [
+     "77523"
+    ],
+    "reachable": 1160,
+    "tracts": 1,
+    "miles_to_local_branch": 3.2
+   },
+   {
+    "c": 26,
+    "r": 17,
+    "band": 1,
+    "city": "Galveston",
+    "county": "Galveston County",
+    "zips": [
+     "77554"
+    ],
+    "reachable": 203,
+    "tracts": 1,
+    "miles_to_local_branch": 4.4
+   },
+   {
+    "c": 27,
+    "r": 4,
+    "band": 2,
+    "city": "Liberty",
+    "county": "Liberty County",
+    "zips": [
+     "77575"
+    ],
+    "reachable": 860,
+    "tracts": 1,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 27,
+    "r": 15,
+    "band": 1,
+    "city": "Port Bolivar",
+    "county": "Galveston County",
+    "zips": [
+     "77590"
+    ],
+    "reachable": 0,
+    "tracts": 1,
+    "miles_to_local_branch": 8.5
+   },
+   {
+    "c": 29,
+    "r": 8,
+    "band": 1,
+    "city": "Anahuac",
+    "county": "Chambers County",
+    "zips": [
+     "77514"
+    ],
+    "reachable": 351,
+    "tracts": 1,
+    "miles_to_local_branch": 3.8
+   },
+   {
+    "c": 30,
+    "r": 2,
+    "band": 1,
+    "city": "Liberty",
+    "county": "Liberty County",
+    "zips": [
+     "77538"
+    ],
+    "reachable": 316,
+    "tracts": 1,
+    "miles_to_local_branch": 9.6
+   },
+   {
+    "c": 30,
+    "r": 5,
+    "band": 2,
+    "city": "Liberty",
+    "county": "Liberty County",
+    "zips": [
+     "77538"
+    ],
+    "reachable": 636,
+    "tracts": 1,
+    "miles_to_local_branch": 13.7
+   },
+   {
+    "c": 30,
+    "r": 11,
+    "band": 1,
+    "city": "Anahuac",
+    "county": "Chambers County",
+    "zips": [
+     "77514"
+    ],
+    "reachable": 380,
+    "tracts": 1,
+    "miles_to_local_branch": 8.6
+   },
+   {
+    "c": 30,
+    "r": 15,
+    "band": 1,
+    "city": "Port Bolivar",
+    "county": "Galveston County",
+    "zips": [
+     "77650"
+    ],
+    "reachable": 508,
+    "tracts": 1,
+    "miles_to_local_branch": 1.9
+   }
+  ],
+  "local_branches": [
+   {
+    "x": 24.5,
+    "y": 16.92,
+    "bank": "Investar Bank, National Association",
+    "office": "Mainland Bank Branch",
+    "city": "Texas City"
+   },
+   {
+    "x": 3.22,
+    "y": 9.19,
+    "bank": "Citizens State Bank",
+    "office": "Citizens State Bank",
+    "city": "Sealy"
+   },
+   {
+    "x": 13.55,
+    "y": 8.18,
+    "bank": "Central Bank",
+    "office": "Central Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 22.3,
+    "y": 8.59,
+    "bank": "Woodforest National Bank",
+    "office": "0108 Highlands Branch",
+    "city": "Highlands"
+   },
+   {
+    "x": 18.16,
+    "y": 4.78,
+    "bank": "Plains State Bank",
+    "office": "Plains State Bank",
+    "city": "Humble"
+   },
+   {
+    "x": 18.35,
+    "y": 13.5,
+    "bank": "First Liberty Bank",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 19.33,
+    "y": 16.34,
+    "bank": "First Liberty Bank",
+    "office": "Alvin Branch",
+    "city": "Alvin"
+   },
+   {
+    "x": 22.94,
+    "y": 17.8,
+    "bank": "Texas First Bank",
+    "office": "First Texas Bank - Hitchcock Branch",
+    "city": "Hitchcock"
+   },
+   {
+    "x": 19.03,
+    "y": 9.35,
+    "bank": "Capital Bank",
+    "office": "Capital Bank",
+    "city": "Jacinto City"
+   },
+   {
+    "x": 4.84,
+    "y": 12.17,
+    "bank": "Wallis Bank",
+    "office": "Wallis Bank",
+    "city": "Wallis"
+   },
+   {
+    "x": 29.04,
+    "y": 9.5,
+    "bank": "Anahuac National Bank",
+    "office": "Anahuac National Bank",
+    "city": "Anahuac"
+   },
+   {
+    "x": 21.74,
+    "y": 17.33,
+    "bank": "Texas First Bank",
+    "office": "Santa Fe Branch",
+    "city": "Santa Fe"
+   },
+   {
+    "x": 15.41,
+    "y": 1.57,
+    "bank": "Woodforest National Bank",
+    "office": "Woodforest National Bank",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 17.09,
+    "y": 15.46,
+    "bank": "First Liberty Bank",
+    "office": "Manvel Branch",
+    "city": "Manvel"
+   },
+   {
+    "x": 24.28,
+    "y": 16.89,
+    "bank": "Texas First Bank",
+    "office": "Texas First Bank",
+    "city": "Texas City"
+   },
+   {
+    "x": 13.84,
+    "y": 7.77,
+    "bank": "First National Bank Texas",
+    "office": "Houston Banking Center - Rc 510",
+    "city": "Houston"
+   },
+   {
+    "x": 13.35,
+    "y": 5.04,
+    "bank": "Austin Bank, Texas National Association",
+    "office": "Chasewood Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.95,
+    "y": 11.53,
+    "bank": "Texas First Bank",
+    "office": "Pasadena Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 23.27,
+    "y": 16.83,
+    "bank": "The Moody National Bank",
+    "office": "Texas City Banking Center",
+    "city": "Texas City"
+   },
+   {
+    "x": 21.27,
+    "y": 13.67,
+    "bank": "The Moody National Bank",
+    "office": "Clear Lake Banking Center Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.98,
+    "y": 14.66,
+    "bank": "The Moody National Bank",
+    "office": "Friendswood Banking Center",
+    "city": "Friendswood"
+   },
+   {
+    "x": 19.61,
+    "y": 1.69,
+    "bank": "First National Bank Texas",
+    "office": "New Caney Banking Center - Rc 606",
+    "city": "New Caney"
+   },
+   {
+    "x": 19.65,
+    "y": 10.94,
+    "bank": "First National Bank Texas",
+    "office": "Pasadena Banking Center - Rc 627",
+    "city": "Pasadena"
+   },
+   {
+    "x": 10.11,
+    "y": 13.66,
+    "bank": "First National Bank Texas",
+    "office": "Richmond Banking Center - Rc 633",
+    "city": "Richmond"
+   },
+   {
+    "x": 16.13,
+    "y": 6.45,
+    "bank": "First National Bank Texas",
+    "office": "N. Houston W. Road Banking Center - Rc 629",
+    "city": "Houston"
+   },
+   {
+    "x": 13.35,
+    "y": 11.92,
+    "bank": "First National Bank Texas",
+    "office": "Stafford Banking Center - Rc 628",
+    "city": "Stafford"
+   },
+   {
+    "x": 25.26,
+    "y": 3.9,
+    "bank": "First Liberty Bank",
+    "office": "Dayton Branch",
+    "city": "Dayton"
+   },
+   {
+    "x": 15.46,
+    "y": 9.85,
+    "bank": "City Bank",
+    "office": "Bank Of Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.6,
+    "y": 9.79,
+    "bank": "Texas Gulf Bank, National Association",
+    "office": "Texas Gulf Bank, National Association",
+    "city": "Houston"
+   },
+   {
+    "x": 26.83,
+    "y": 3.64,
+    "bank": "First Liberty Bank",
+    "office": "First Liberty Bank",
+    "city": "Liberty"
+   },
+   {
+    "x": 16.48,
+    "y": 9.28,
+    "bank": "Central Bank",
+    "office": "Lower Heights Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.89,
+    "y": 8.78,
+    "bank": "Central Bank",
+    "office": "Heights",
+    "city": "Houston"
+   },
+   {
+    "x": 21.15,
+    "y": 9.17,
+    "bank": "Woodforest National Bank",
+    "office": "0107 Sheldon Branch",
+    "city": "Channelview"
+   },
+   {
+    "x": 17.8,
+    "y": 10.5,
+    "bank": "Woodforest National Bank",
+    "office": "0501 Gulf Freeway Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 22.66,
+    "y": 16.79,
+    "bank": "Texas First Bank",
+    "office": "Lamarque Branch",
+    "city": "La Marque"
+   },
+   {
+    "x": 20.47,
+    "y": 14.37,
+    "bank": "HomeTown Bank, National Association",
+    "office": "Friendswood Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 7.67,
+    "y": 10.98,
+    "bank": "Wallis Bank",
+    "office": "Fulshear Branch",
+    "city": "Fulshear"
+   },
+   {
+    "x": 13.27,
+    "y": 11.91,
+    "bank": "Wallis Bank",
+    "office": "Meadows Office",
+    "city": "Stafford"
+   },
+   {
+    "x": 20.02,
+    "y": 14.65,
+    "bank": "Texas First Bank",
+    "office": "West Parkwood Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 22.41,
+    "y": 15.6,
+    "bank": "Texas First Bank",
+    "office": "Dickinson Branch",
+    "city": "Dickinson"
+   },
+   {
+    "x": 21.65,
+    "y": 14.67,
+    "bank": "Texas First Bank",
+    "office": "League City Branch",
+    "city": "League City"
+   },
+   {
+    "x": 19.83,
+    "y": 9.01,
+    "bank": "Woodforest National Bank",
+    "office": "Normandy Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.66,
+    "y": 2.25,
+    "bank": "Woodforest National Bank",
+    "office": "0301 Rayford Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 15.36,
+    "y": 2.32,
+    "bank": "Woodforest National Bank",
+    "office": "Sawdust Wal-Mart Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 20.23,
+    "y": 9.44,
+    "bank": "Woodforest National Bank",
+    "office": "0105 I-10 Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.13,
+    "y": 2.01,
+    "bank": "Woodforest National Bank",
+    "office": "0309 Grogans Mill Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 20.5,
+    "y": 11.87,
+    "bank": "Woodforest National Bank",
+    "office": "Fairmont Wal-Mart Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 13.39,
+    "y": 0.38,
+    "bank": "Woodforest National Bank",
+    "office": "1488 Motorbank Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 10.26,
+    "y": 0.56,
+    "bank": "Woodforest National Bank",
+    "office": "0311 Magnolia Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 15.41,
+    "y": 1.57,
+    "bank": "Woodforest National Bank",
+    "office": "Town Center Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 22.65,
+    "y": 16.77,
+    "bank": "Woodforest National Bank",
+    "office": "0503 Texas City Wal-Mart Branch",
+    "city": "La Marque"
+   },
+   {
+    "x": 12.23,
+    "y": 3.02,
+    "bank": "Woodforest National Bank",
+    "office": "Tomball Medical Center Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 23.64,
+    "y": 8.76,
+    "bank": "Woodforest National Bank",
+    "office": "0109 Baytown Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 22.99,
+    "y": 14.04,
+    "bank": "Texas First Bank",
+    "office": "Kemah Branch",
+    "city": "Kemah"
+   },
+   {
+    "x": 15.48,
+    "y": 1.28,
+    "bank": "Woodforest National Bank",
+    "office": "Research Branch",
+    "city": "Conroe"
+   },
+   {
+    "x": 12.55,
+    "y": 12.85,
+    "bank": "Golden Bank, National Association",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 14.16,
+    "y": 12.74,
+    "bank": "Unity National Bank of Houston",
+    "office": "Missouri Branch",
+    "city": "Missouri City"
+   },
+   {
+    "x": 15.33,
+    "y": 9.98,
+    "bank": "Monet Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.25,
+    "y": 13.23,
+    "bank": "American First National Bank",
+    "office": "First Colony Branch",
+    "city": "Missouri City"
+   },
+   {
+    "x": 14.5,
+    "y": 10.43,
+    "bank": "American First National Bank",
+    "office": "Harwin Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.8,
+    "y": 10.72,
+    "bank": "Golden Bank, National Association",
+    "office": "Golden Bank, National Association",
+    "city": "Houston"
+   },
+   {
+    "x": 29.95,
+    "y": 15.49,
+    "bank": "Texas First Bank",
+    "office": "Crystal Beach Branch",
+    "city": "Port Bolivar"
+   },
+   {
+    "x": 16.87,
+    "y": 10.33,
+    "bank": "Unity National Bank of Houston",
+    "office": "Unity National Bank Of Houston",
+    "city": "Houston"
+   },
+   {
+    "x": 18.71,
+    "y": 13.32,
+    "bank": "Third Coast Bank",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 22.2,
+    "y": 14.0,
+    "bank": "The Moody National Bank",
+    "office": "South Shore Banking Center",
+    "city": "League City"
+   },
+   {
+    "x": 20.12,
+    "y": 8.73,
+    "bank": "Woodforest National Bank",
+    "office": "0004 Harris County Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.43,
+    "y": 3.32,
+    "bank": "Woodforest National Bank",
+    "office": "0404 Tomball Wal-Mart Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 16.67,
+    "y": 9.3,
+    "bank": "Wells Fargo Bank South Central, National Association",
+    "office": "Wells Fargo Bank South Central, National Association",
+    "city": "Houston"
+   },
+   {
+    "x": 14.28,
+    "y": 4.33,
+    "bank": "Woodforest National Bank",
+    "office": "0401 Louetta Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 23.88,
+    "y": 17.27,
+    "bank": "Texas First Bank",
+    "office": "Lamarque Branch",
+    "city": "La Marque"
+   },
+   {
+    "x": 14.04,
+    "y": 4.78,
+    "bank": "Austin Bank, Texas National Association",
+    "office": "Cypresswood Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 15.83,
+    "y": 3.51,
+    "bank": "Woodforest National Bank",
+    "office": "0402 Louetta Wal-Mart Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 20.46,
+    "y": 0.15,
+    "bank": "Southside Bank",
+    "office": "Splendora Branch",
+    "city": "Splendora"
+   },
+   {
+    "x": 26.9,
+    "y": 3.45,
+    "bank": "Texas First Bank",
+    "office": "Liberty Branch",
+    "city": "Liberty"
+   },
+   {
+    "x": 15.32,
+    "y": 0.61,
+    "bank": "Woodforest National Bank",
+    "office": "242 Wal-Mart Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 19.25,
+    "y": 2.67,
+    "bank": "Woodforest National Bank",
+    "office": "Porter Wal-Mart Branch",
+    "city": "Porter"
+   },
+   {
+    "x": 25.68,
+    "y": 7.71,
+    "bank": "Anahuac National Bank",
+    "office": "Barbers Hill Banking Center Branch",
+    "city": "Mont Belvieu"
+   },
+   {
+    "x": 12.11,
+    "y": 12.54,
+    "bank": "Woodforest National Bank",
+    "office": "0504 Sugarland Wal-Mart Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 9.35,
+    "y": 9.13,
+    "bank": "Woodforest National Bank",
+    "office": "0407 Katy Mills Wal-Mart Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 16.43,
+    "y": 7.72,
+    "bank": "Woodforest National Bank",
+    "office": "0120 Gallery Furniture Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.37,
+    "y": 16.24,
+    "bank": "Woodforest National Bank",
+    "office": "Alvin Wal-Mart Branch",
+    "city": "Alvin"
+   },
+   {
+    "x": 10.77,
+    "y": 9.02,
+    "bank": "Woodforest National Bank",
+    "office": "Fry Rd. Wal-Mart Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 15.29,
+    "y": 0.65,
+    "bank": "Woodforest National Bank",
+    "office": "0316 College Park Branch",
+    "city": "Conroe"
+   },
+   {
+    "x": 14.03,
+    "y": 1.18,
+    "bank": "Woodforest National Bank",
+    "office": "Sterling Ridge Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 12.23,
+    "y": 3.03,
+    "bank": "Woodforest National Bank",
+    "office": "0410 Tomball Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 12.85,
+    "y": 6.41,
+    "bank": "Woodforest National Bank",
+    "office": "Eldridge Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.11,
+    "y": 7.92,
+    "bank": "Woodforest National Bank",
+    "office": "0111 Ripple Market Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 23.74,
+    "y": 9.28,
+    "bank": "Woodforest National Bank",
+    "office": "0110 Baytown Wal-Mart Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 9.35,
+    "y": 13.64,
+    "bank": "NewFirst National Bank",
+    "office": "Rosenberg Branch",
+    "city": "Rosenberg"
+   },
+   {
+    "x": 20.54,
+    "y": 13.77,
+    "bank": "Woodforest National Bank",
+    "office": "0507 Webster Wal-Mart Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 13.44,
+    "y": 13.34,
+    "bank": "Woodforest National Bank",
+    "office": "0118 Missouri City Wal-Mart Branch",
+    "city": "Missouri City"
+   },
+   {
+    "x": 13.04,
+    "y": 10.14,
+    "bank": "Woodforest National Bank",
+    "office": "0115 Andrau Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 22.98,
+    "y": 14.11,
+    "bank": "Woodforest National Bank",
+    "office": "0117 Kemah Wal-Mart Branch",
+    "city": "Kemah"
+   },
+   {
+    "x": 14.42,
+    "y": 10.1,
+    "bank": "Woodforest National Bank",
+    "office": "0124 Westheimer Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.06,
+    "y": 7.97,
+    "bank": "First National Bank Texas",
+    "office": "Houston Antoine Banking Center - Rc 834",
+    "city": "Houston"
+   },
+   {
+    "x": 23.78,
+    "y": 9.59,
+    "bank": "Texas First Bank",
+    "office": "Rollingbrook Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 20.73,
+    "y": 11.8,
+    "bank": "The Moody National Bank",
+    "office": "Pasadena Banking Center",
+    "city": "Pasadena"
+   },
+   {
+    "x": 23.64,
+    "y": 8.95,
+    "bank": "First National Bank Texas",
+    "office": "Baytown Banking Center Rc845 Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 19.19,
+    "y": 2.15,
+    "bank": "First National Bank Texas",
+    "office": "Kroger - Valleny Ranch Banking Center - Rc 848",
+    "city": "New Caney"
+   },
+   {
+    "x": 17.57,
+    "y": 13.58,
+    "bank": "First National Bank Texas",
+    "office": "Pearland Banking Center - Rc 831",
+    "city": "Pearland"
+   },
+   {
+    "x": 15.29,
+    "y": 6.0,
+    "bank": "First National Bank Texas",
+    "office": "Food Town Sam Houston Pkwy Banking Ctr - Rc 843",
+    "city": "Houston"
+   },
+   {
+    "x": 19.16,
+    "y": 13.84,
+    "bank": "Capital Bank",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 20.43,
+    "y": 8.69,
+    "bank": "Woodforest National Bank",
+    "office": "0123 Wallisville Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.24,
+    "y": 4.89,
+    "bank": "Woodforest National Bank",
+    "office": "0207 Atascocita Wal-Mart Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 14.98,
+    "y": 6.59,
+    "bank": "Woodforest National Bank",
+    "office": "Tomball Kroger Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 11.99,
+    "y": 7.27,
+    "bank": "Woodforest National Bank",
+    "office": "0409 Copperfield Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.58,
+    "y": 3.42,
+    "bank": "Woodforest National Bank",
+    "office": "0206 Kingwood Market Branch",
+    "city": "Kingwood"
+   },
+   {
+    "x": 12.11,
+    "y": 10.39,
+    "bank": "Woodforest National Bank",
+    "office": "0116 Beechnut Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.77,
+    "y": 11.79,
+    "bank": "Capital Bank",
+    "office": "Fairmont Parkway Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 18.38,
+    "y": 4.63,
+    "bank": "Woodforest National Bank",
+    "office": "0209 Humble Walmart Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 13.46,
+    "y": 0.35,
+    "bank": "Woodforest National Bank",
+    "office": "0314 Fm 1488 Kroger Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 22.18,
+    "y": 6.95,
+    "bank": "Woodforest National Bank",
+    "office": "0126 Crosby Branch",
+    "city": "Crosby"
+   },
+   {
+    "x": 14.25,
+    "y": 3.31,
+    "bank": "Woodforest National Bank",
+    "office": "0413  Fm Plaza Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 22.15,
+    "y": 6.9,
+    "bank": "Woodforest National Bank",
+    "office": "0217 Crosby Wal-Mart Branch",
+    "city": "Crosby"
+   },
+   {
+    "x": 14.4,
+    "y": 3.26,
+    "bank": "Woodforest National Bank",
+    "office": "0415 Kuykendahl Wal-Mart Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 11.19,
+    "y": 5.29,
+    "bank": "Woodforest National Bank",
+    "office": "0414 Cypress Wal-Mart Branch",
+    "city": "Cypress"
+   },
+   {
+    "x": 14.9,
+    "y": 4.84,
+    "bank": "Woodforest National Bank",
+    "office": "0416 Bammel Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.7,
+    "y": 11.32,
+    "bank": "Woodforest National Bank",
+    "office": "0128 Hillcroft Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.57,
+    "y": 11.47,
+    "bank": "Woodforest National Bank",
+    "office": "0113 Spencer Wal-Mart Branch",
+    "city": "La Porte"
+   },
+   {
+    "x": 13.49,
+    "y": 13.53,
+    "bank": "First National Bank Texas",
+    "office": "Missouri City Banking Center - Rc 334",
+    "city": "Missouri City"
+   },
+   {
+    "x": 12.17,
+    "y": 11.24,
+    "bank": "First National Bank Texas",
+    "office": "Providence Banking Center - Rc 347",
+    "city": "Houston"
+   },
+   {
+    "x": 20.54,
+    "y": 9.01,
+    "bank": "First National Bank Texas",
+    "office": "Beltway 8 Banking Center - Rc 351",
+    "city": "Houston"
+   },
+   {
+    "x": 15.77,
+    "y": 8.23,
+    "bank": "First National Bank Texas",
+    "office": "West 43Rd Banking Center - Rc 356",
+    "city": "Houston"
+   },
+   {
+    "x": 13.84,
+    "y": 10.08,
+    "bank": "First National Bank Texas",
+    "office": "Westheimer Banking Center - Rc 363",
+    "city": "Houston"
+   },
+   {
+    "x": 12.34,
+    "y": 6.78,
+    "bank": "First National Bank Texas",
+    "office": "Easton Commons Banking Center - Rc  374",
+    "city": "Houston"
+   },
+   {
+    "x": 18.42,
+    "y": 4.67,
+    "bank": "First National Bank Texas",
+    "office": "Humble Banking Center Rc 388",
+    "city": "Humble"
+   },
+   {
+    "x": 15.76,
+    "y": 4.41,
+    "bank": "First National Bank Texas",
+    "office": "Fm 1960 West Banking Center - Rc 395",
+    "city": "Houston"
+   },
+   {
+    "x": 19.83,
+    "y": 9.01,
+    "bank": "First National Bank Texas",
+    "office": "Normandy Banki Ng Center - Rc 431",
+    "city": "Houston"
+   },
+   {
+    "x": 24.13,
+    "y": 10.0,
+    "bank": "First National Bank Texas",
+    "office": "Alexander Banking Center - Rc 474",
+    "city": "Baytown"
+   },
+   {
+    "x": 15.25,
+    "y": 11.42,
+    "bank": "First National Bank Texas",
+    "office": "South Post Oak Banking Center - Rc 513",
+    "city": "Houston"
+   },
+   {
+    "x": 17.89,
+    "y": 6.73,
+    "bank": "First National Bank Texas",
+    "office": "Aldine Mail Banking Center - Rc 852 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.34,
+    "y": 11.58,
+    "bank": "First National Bank Texas",
+    "office": "Telephone Road Banking Center - Rc 849",
+    "city": "South Houston"
+   },
+   {
+    "x": 23.68,
+    "y": 9.54,
+    "bank": "Capital Bank",
+    "office": "Garth Road Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 18.26,
+    "y": 4.69,
+    "bank": "Citizens Bank",
+    "office": "Humble Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 12.92,
+    "y": 13.04,
+    "bank": "Southwestern National Bank",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 13.02,
+    "y": 4.5,
+    "bank": "Woodforest National Bank",
+    "office": "0417 Tomball Parkway Wal-Mart Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 19.24,
+    "y": 13.86,
+    "bank": "Woodforest National Bank",
+    "office": "0129 Pearland Wal-Mart Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 15.33,
+    "y": 1.25,
+    "bank": "Woodforest National Bank",
+    "office": "0323 Research Plaza Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 20.23,
+    "y": 4.85,
+    "bank": "Woodforest National Bank",
+    "office": "0210 Atascocita Plaza Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 16.88,
+    "y": 15.36,
+    "bank": "First State Bank",
+    "office": "Manvel Branch",
+    "city": "Manvel"
+   },
+   {
+    "x": 12.59,
+    "y": 9.22,
+    "bank": "The Moody National Bank",
+    "office": "Moody National Bank - West Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.4,
+    "y": 14.71,
+    "bank": "HomeTown Bank, National Association",
+    "office": "Hometown Bank Of League City",
+    "city": "League City"
+   },
+   {
+    "x": 13.94,
+    "y": 10.02,
+    "bank": "Lone Star Bank",
+    "office": "Lone Star Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 13.56,
+    "y": 11.22,
+    "bank": "Woodforest National Bank",
+    "office": "0132 Elmsworth Walmart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 18.39,
+    "y": 13.34,
+    "bank": "Woodforest National Bank",
+    "office": "0130 Main Street Walmart",
+    "city": "Pearland"
+   },
+   {
+    "x": 19.18,
+    "y": 12.19,
+    "bank": "Woodforest National Bank",
+    "office": "0133 Almeda Walmart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.01,
+    "y": 9.15,
+    "bank": "Texas First Bank",
+    "office": "Preferred Bank Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.58,
+    "y": 11.2,
+    "bank": "Capital Bank",
+    "office": "Deer Park Branch",
+    "city": "Deer Park"
+   },
+   {
+    "x": 19.26,
+    "y": 16.68,
+    "bank": "Texas Advantage Community Bank, National Association",
+    "office": "Texas Advantage Community Bank, National Association",
+    "city": "Alvin"
+   },
+   {
+    "x": 13.09,
+    "y": 1.01,
+    "bank": "Woodforest National Bank",
+    "office": "Woodlands West Wal-Mart Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 27.2,
+    "y": 3.29,
+    "bank": "Woodforest National Bank",
+    "office": "0771 Liberty Wal-Mart Branch",
+    "city": "Liberty"
+   },
+   {
+    "x": 13.39,
+    "y": 0.4,
+    "bank": "Woodforest National Bank",
+    "office": "1488 Woodforest Plaza Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 18.35,
+    "y": 13.52,
+    "bank": "Texas First Bank",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 14.61,
+    "y": 10.45,
+    "bank": "Hanmi Bank",
+    "office": "Houston Hillcroft Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.57,
+    "y": 12.74,
+    "bank": "First National Bank Texas",
+    "office": "Sabo Road Banking Center - Rc 672 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 17.6,
+    "y": 10.94,
+    "bank": "First National Bank Texas",
+    "office": "Mykawa Banking Center -  Rc 674 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 1.57,
+    "y": 5.95,
+    "bank": "Austin County State Bank",
+    "office": "Austin County State Bank",
+    "city": "Bellville"
+   },
+   {
+    "x": 8.75,
+    "y": 16.81,
+    "bank": "NewFirst National Bank",
+    "office": "Needville Branch",
+    "city": "Needville"
+   },
+   {
+    "x": 12.43,
+    "y": 12.76,
+    "bank": "NewFirst National Bank",
+    "office": "Creekbend Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 14.46,
+    "y": 7.73,
+    "bank": "Woodforest National Bank",
+    "office": "Northwest Freeway Wal-Mart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.83,
+    "y": 15.4,
+    "bank": "The Moody National Bank",
+    "office": "Moody National Bank Victory Lakes Branch",
+    "city": "Dickinson"
+   },
+   {
+    "x": 15.08,
+    "y": 3.82,
+    "bank": "Woodforest National Bank",
+    "office": "0322 Louetta And Ella Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 3.29,
+    "y": 9.65,
+    "bank": "Woodforest National Bank",
+    "office": "0134 Sealy Walmart Branch",
+    "city": "Sealy"
+   },
+   {
+    "x": 14.25,
+    "y": 8.94,
+    "bank": "American First National Bank",
+    "office": "Long Point Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 18.71,
+    "y": 4.63,
+    "bank": "Third Coast Bank",
+    "office": "Third Coast Bank",
+    "city": "Humble"
+   },
+   {
+    "x": 19.33,
+    "y": 16.1,
+    "bank": "HomeTown Bank, National Association",
+    "office": "Hometown Bank Of Alvin Branch",
+    "city": "Alvin"
+   },
+   {
+    "x": 15.37,
+    "y": 11.01,
+    "bank": "Texas First Bank",
+    "office": "Beechnut Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.26,
+    "y": 4.43,
+    "bank": "Texas First Bank",
+    "office": "Spring Office",
+    "city": "Spring"
+   },
+   {
+    "x": 18.91,
+    "y": 6.08,
+    "bank": "Woodforest National Bank",
+    "office": "0357 Redstone Wal-Mart Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 11.42,
+    "y": 6.88,
+    "bank": "Woodforest National Bank",
+    "office": "0321 Barker Cypress Texas Branch",
+    "city": "Cypress"
+   },
+   {
+    "x": 21.74,
+    "y": 15.4,
+    "bank": "Woodforest National Bank",
+    "office": "0131 League City Wal-Mart Branch",
+    "city": "League City"
+   },
+   {
+    "x": 19.15,
+    "y": 3.8,
+    "bank": "The MINT National Bank",
+    "office": "The Mint National Bank",
+    "city": "Kingwood"
+   },
+   {
+    "x": 16.7,
+    "y": 10.23,
+    "bank": "Liberty Bank and Trust Company",
+    "office": "Liberty Bank And Trust Company Loan Production Office",
+    "city": "Houston"
+   },
+   {
+    "x": 12.16,
+    "y": 12.48,
+    "bank": "The Moody National Bank",
+    "office": "Sugarland Banking Center",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 22.76,
+    "y": 13.58,
+    "bank": "The Moody National Bank",
+    "office": "Seabrook Branch",
+    "city": "Seabrook"
+   },
+   {
+    "x": 18.86,
+    "y": 13.76,
+    "bank": "Texas Advantage Community Bank, National Association",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 12.16,
+    "y": 7.03,
+    "bank": "Lone Star Bank",
+    "office": "Copperfield Office Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 10.87,
+    "y": 7.59,
+    "bank": "Woodforest National Bank",
+    "office": "0359 Katy Texas Walmart Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 16.23,
+    "y": 2.32,
+    "bank": "Woodforest National Bank",
+    "office": "Spring Kroger Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 15.46,
+    "y": 9.81,
+    "bank": "Central Bank",
+    "office": "Post Oak Place Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 16.53,
+    "y": 13.19,
+    "bank": "Woodforest National Bank",
+    "office": "Pearland Tx Walmart Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 9.86,
+    "y": 11.0,
+    "bank": "Woodforest National Bank",
+    "office": "0329 Richmond Texas Branch",
+    "city": "Richmond"
+   },
+   {
+    "x": 10.27,
+    "y": 9.54,
+    "bank": "American First National Bank",
+    "office": "Katy Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 14.44,
+    "y": 10.43,
+    "bank": "Golden Bank, National Association",
+    "office": "Harwin Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.75,
+    "y": 4.12,
+    "bank": "First Liberty Bank",
+    "office": "Huffman Branch",
+    "city": "Huffman"
+   },
+   {
+    "x": 15.1,
+    "y": 0.69,
+    "bank": "Citizens Bank",
+    "office": "The Woodlands Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 15.74,
+    "y": 10.16,
+    "bank": "CIBC National Trust Company",
+    "office": "Cibc National Trust Company Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.57,
+    "y": 1.24,
+    "bank": "Texas First Bank",
+    "office": "Woodlands Office",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 14.59,
+    "y": 7.91,
+    "bank": "Gulf Coast Bank and Trust Company",
+    "office": "Houston Loan Production Office",
+    "city": "Houston"
+   },
+   {
+    "x": 15.87,
+    "y": 10.05,
+    "bank": "Plains State Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 10.22,
+    "y": 13.95,
+    "bank": "b1BANK",
+    "office": "Rosenberg Branch",
+    "city": "Rosenberg"
+   },
+   {
+    "x": 14.83,
+    "y": 4.93,
+    "bank": "Plains State Bank",
+    "office": "Plains State Bank Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.78,
+    "y": 10.46,
+    "bank": "b1BANK",
+    "office": "West University Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.95,
+    "y": 5.59,
+    "bank": "First National Bank Texas",
+    "office": "Joe V'S Houston Banking Center - Rc 446 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 10.51,
+    "y": 11.55,
+    "bank": "ValueBank Texas",
+    "office": "Valuebank Texas",
+    "city": "Richmond"
+   },
+   {
+    "x": 19.96,
+    "y": 14.35,
+    "bank": "Texas Gulf Bank, National Association",
+    "office": "Friendswood Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 16.75,
+    "y": 8.21,
+    "bank": "Woodforest National Bank",
+    "office": "0535 Houston Texas Walmart Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.87,
+    "y": 14.26,
+    "bank": "HomeTown Bank, National Association",
+    "office": "Friendswood Downtown Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 21.71,
+    "y": 13.81,
+    "bank": "b1BANK",
+    "office": "Tcb-Nasa Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.37,
+    "y": 9.83,
+    "bank": "Third Coast Bank",
+    "office": "Galleria Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.75,
+    "y": 6.41,
+    "bank": "Wallis Bank",
+    "office": "Northwest Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.11,
+    "y": 8.66,
+    "bank": "First National Bank Texas",
+    "office": "Uvalde Banking Center - Rc 443 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.9,
+    "y": 8.18,
+    "bank": "First National Bank Texas",
+    "office": "Joe V'S Lockfieldbanking Center - Rc 317",
+    "city": "Houston"
+   },
+   {
+    "x": 13.8,
+    "y": 8.38,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Kempwood Banking Center - Rc 570",
+    "city": "Houston"
+   },
+   {
+    "x": 12.06,
+    "y": 7.86,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Bearcreek Banking Center - Rc 429",
+    "city": "Houston"
+   },
+   {
+    "x": 10.86,
+    "y": 9.02,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Fry Rd Banking Center - Rc 423",
+    "city": "Houston"
+   },
+   {
+    "x": 23.73,
+    "y": 9.6,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Baytown Joe V'S Banking Center - Rc318",
+    "city": "Baytown"
+   },
+   {
+    "x": 16.99,
+    "y": 9.61,
+    "bank": "The Bank of New York Mellon Trust Company, National Association",
+    "office": "Houston Trust Office Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.85,
+    "y": 6.54,
+    "bank": "Woodforest National Bank",
+    "office": "Tomball Parkway Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.05,
+    "y": 14.62,
+    "bank": "Home Bank, National Association",
+    "office": "Branch 2 Branch",
+    "city": "Friendswood"
+   },
+   {
+    "x": 14.32,
+    "y": 14.12,
+    "bank": "Woodforest National Bank",
+    "office": "0360 Missouri City Texas Walmart Branch",
+    "city": "Missouri City"
+   },
+   {
+    "x": 14.39,
+    "y": 11.7,
+    "bank": "First National Bank Texas",
+    "office": "Joe V'S - Bellfort Banking Center - Rc 455",
+    "city": "Houston"
+   },
+   {
+    "x": 15.91,
+    "y": 9.95,
+    "bank": "Texas Gulf Bank, National Association",
+    "office": "Texas Gulf Bank, N.A. - Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 18.8,
+    "y": 13.63,
+    "bank": "HomeTown Bank, National Association",
+    "office": "Pearland Branch",
+    "city": "Pearland"
+   },
+   {
+    "x": 20.02,
+    "y": 9.37,
+    "bank": "Woodforest National Bank",
+    "office": "I 10 East Freeway Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.7,
+    "y": 2.2,
+    "bank": "Woodforest National Bank",
+    "office": "0324 The Preserve Traditional Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 16.33,
+    "y": 9.35,
+    "bank": "Woodforest National Bank",
+    "office": "Tx Houston Walmart 0616 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.49,
+    "y": 8.37,
+    "bank": "Wallis Bank",
+    "office": "Kempwood Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.66,
+    "y": 9.19,
+    "bank": "SouthTrust Bank, N.A.",
+    "office": "Town And Country Way Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.68,
+    "y": 10.18,
+    "bank": "Investar Bank, National Association",
+    "office": "Greenway Plaza Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.71,
+    "y": 12.63,
+    "bank": "Home Bank, National Association",
+    "office": "Texan Bk - Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 13.73,
+    "y": 10.71,
+    "bank": "Southwestern National Bank",
+    "office": "Southwestern National Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 13.6,
+    "y": 9.15,
+    "bank": "Texas Gulf Bank, National Association",
+    "office": "Citycentre Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.11,
+    "y": 13.06,
+    "bank": "Capital Bank",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 27.84,
+    "y": 1.68,
+    "bank": "First Liberty Bank",
+    "office": "Hardin Branch",
+    "city": "Liberty"
+   },
+   {
+    "x": 15.23,
+    "y": 10.35,
+    "bank": "Woodforest National Bank",
+    "office": "201 Tx Galleria Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.14,
+    "y": 9.57,
+    "bank": "Capital Bank",
+    "office": "Capital Bank - Eagle'S Trace",
+    "city": "Houston"
+   },
+   {
+    "x": 14.77,
+    "y": 10.69,
+    "bank": "First National Bank Texas",
+    "office": "Fiesta Bellaire - Rc 438 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 27.83,
+    "y": 1.62,
+    "bank": "Anahuac National Bank",
+    "office": "Hardin Bank Branch",
+    "city": "Liberty"
+   },
+   {
+    "x": 12.31,
+    "y": 3.08,
+    "bank": "Bank of England",
+    "office": "Bank Of England Mortgage",
+    "city": "Tomball"
+   },
+   {
+    "x": 25.92,
+    "y": 8.26,
+    "bank": "Anahuac National Bank",
+    "office": "Barbers Hill Bank Heb Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 3.21,
+    "y": 9.19,
+    "bank": "Lone Star Bank",
+    "office": "Sealy Branch",
+    "city": "Sealy"
+   },
+   {
+    "x": 25.09,
+    "y": 8.46,
+    "bank": "Woodforest National Bank",
+    "office": "0377  Tx  Baytown Retail Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 15.36,
+    "y": 11.28,
+    "bank": "Woodforest National Bank",
+    "office": "0157 Tx Houston-Post Oak Blvd Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 19.48,
+    "y": 1.83,
+    "bank": "Woodforest National Bank",
+    "office": "0219 Tx New Caney",
+    "city": "New Caney"
+   },
+   {
+    "x": 16.58,
+    "y": 2.52,
+    "bank": "Woodforest National Bank",
+    "office": "520 Tx Riley Fuzzel Rd",
+    "city": "Spring"
+   },
+   {
+    "x": 13.71,
+    "y": 2.14,
+    "bank": "Woodforest National Bank",
+    "office": "0135 Kykendahl",
+    "city": "Tomball"
+   },
+   {
+    "x": 15.06,
+    "y": 4.79,
+    "bank": "First National Bank Texas",
+    "office": "Cypress Creek Branch Rc486",
+    "city": "Houston"
+   },
+   {
+    "x": 20.75,
+    "y": 11.19,
+    "bank": "First National Bank Texas",
+    "office": "Joe V'S 9 - Red Bluff Rc487 Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 3.21,
+    "y": 9.21,
+    "bank": "Austin County State Bank",
+    "office": "Meyer Street Branch",
+    "city": "Sealy"
+   },
+   {
+    "x": 13.72,
+    "y": 10.65,
+    "bank": "Hanmi Bank",
+    "office": "Houston-Chinatown Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.66,
+    "y": 10.73,
+    "bank": "American First National Bank",
+    "office": "American First National Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 8.68,
+    "y": 10.85,
+    "bank": "Woodforest National Bank",
+    "office": "0176 Tx Fulshear Branch",
+    "city": "Richmond"
+   },
+   {
+    "x": 15.27,
+    "y": 9.58,
+    "bank": "Gulf Capital Bank",
+    "office": "Gulf Capital Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 13.59,
+    "y": 9.17,
+    "bank": "City Bank",
+    "office": "City Bank - City Centre Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 9.97,
+    "y": 8.44,
+    "bank": "Woodforest National Bank",
+    "office": "0172 Katy (Walmart) - Tx - Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 13.7,
+    "y": 10.67,
+    "bank": "Metro City Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.83,
+    "y": 9.31,
+    "bank": "SouthTrust Bank, N.A.",
+    "office": "East Houston Branch",
+    "city": "Channelview"
+   },
+   {
+    "x": 14.68,
+    "y": 9.68,
+    "bank": "Benchmark Bank",
+    "office": "Houston Woodway",
+    "city": "Houston"
+   },
+   {
+    "x": 15.23,
+    "y": 9.03,
+    "bank": "Woodforest National Bank",
+    "office": "Houston  Silber  (Walmart)  - Tx - Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.22,
+    "y": 8.87,
+    "bank": "PromiseOne Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.92,
+    "y": 13.04,
+    "bank": "American First National Bank",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 15.92,
+    "y": 0.67,
+    "bank": "First National Bank Texas",
+    "office": "Harpers Trace Rc366 Branch",
+    "city": "Conroe"
+   },
+   {
+    "x": 13.44,
+    "y": 8.89,
+    "bank": "b1BANK",
+    "office": "The Cannon Banking Center - Brittmoore Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.08,
+    "y": 12.19,
+    "bank": "Austin Capital Bank SSB",
+    "office": "Stafford Lpo",
+    "city": "Stafford"
+   },
+   {
+    "x": 16.17,
+    "y": 8.64,
+    "bank": "Agility Bank, National Association",
+    "office": "Agility Bank, National Association",
+    "city": "Houston"
+   },
+   {
+    "x": 25.11,
+    "y": 4.15,
+    "bank": "First Liberty Bank",
+    "office": "Dayton Mortgage Center Branch",
+    "city": "Dayton"
+   },
+   {
+    "x": 15.65,
+    "y": 9.97,
+    "bank": "Home Bank, National Association",
+    "office": "River Oaks Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.9,
+    "y": 12.37,
+    "bank": "Plains State Bank",
+    "office": "Plains State Bank - Sugarland Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 12.16,
+    "y": 12.7,
+    "bank": "Bank of the Orient",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 17.86,
+    "y": 10.48,
+    "bank": "Woodforest National Bank",
+    "office": "Houston - Wayside Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 9.93,
+    "y": 9.07,
+    "bank": "Capital Bank",
+    "office": "Capital Bank- Katy Banking Center Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 14.12,
+    "y": 11.05,
+    "bank": "State Bank of Texas",
+    "office": "State Bank Of Texas Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.29,
+    "y": 9.86,
+    "bank": "Southside Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 12.5,
+    "y": 12.87,
+    "bank": "Preferred Bank",
+    "office": "Houston Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 13.78,
+    "y": 1.92,
+    "bank": "Austin Bank, Texas National Association",
+    "office": "Creekside Park Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 13.97,
+    "y": 9.15,
+    "bank": "Texas Regional Bank",
+    "office": "Houston Memorial Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 9.58,
+    "y": 9.11,
+    "bank": "Texas Traditions Bank",
+    "office": "Texas Traditions Bank",
+    "city": "Katy"
+   },
+   {
+    "x": 25.9,
+    "y": 8.81,
+    "bank": "First Liberty Bank",
+    "office": "Mont Belvieu Branch",
+    "city": "Baytown"
+   },
+   {
+    "x": 20.28,
+    "y": 4.08,
+    "bank": "Third Coast Bank",
+    "office": "Kingwood Branch",
+    "city": "Kingwood"
+   },
+   {
+    "x": 15.23,
+    "y": 9.83,
+    "bank": "Vantage Bank Texas",
+    "office": "Houston Sage Plaza Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.27,
+    "y": 9.89,
+    "bank": "Susser Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.5,
+    "y": 8.94,
+    "bank": "Woodforest National Bank",
+    "office": "Westview (Walmart) - Tx Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 11.5,
+    "y": 0.34,
+    "bank": "Woodforest National Bank",
+    "office": "Tx Magnolia -  Heb Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 13.41,
+    "y": 4.88,
+    "bank": "Texas Regional Bank",
+    "office": "Cypress Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 14.66,
+    "y": 9.07,
+    "bank": "Integrity Bank SSB",
+    "office": "Integrity Bank Ssb",
+    "city": "Houston"
+   },
+   {
+    "x": 15.41,
+    "y": 9.77,
+    "bank": "Wallis Bank",
+    "office": "Galleria Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 10.28,
+    "y": 9.67,
+    "bank": "Woodforest National Bank",
+    "office": "Tx Katy Heb Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 20.54,
+    "y": 11.94,
+    "bank": "b1BANK",
+    "office": "Pasadena Banking Center Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 10.76,
+    "y": 8.15,
+    "bank": "First National Bank Texas",
+    "office": "Joe V#10 Clay Road Banking Center Rc304 Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 20.88,
+    "y": 13.96,
+    "bank": "Home Bank, National Association",
+    "office": "Baybrook Branch",
+    "city": "Webster"
+   },
+   {
+    "x": 9.31,
+    "y": 8.46,
+    "bank": "Woodforest National Bank",
+    "office": "Tx Katy Park Heb Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 12.78,
+    "y": 12.29,
+    "bank": "The First State Bank",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 19.7,
+    "y": 5.66,
+    "bank": "Woodforest National Bank",
+    "office": "Tx Humble Heb Branch",
+    "city": "Humble"
+   },
+   {
+    "x": 14.94,
+    "y": 10.02,
+    "bank": "Houston Bank & Trust",
+    "office": "Houston Bank & Trust",
+    "city": "Houston"
+   },
+   {
+    "x": 22.39,
+    "y": 1.6,
+    "bank": "First Liberty Bank",
+    "office": "Plum Grove Branch",
+    "city": "Cleveland"
+   },
+   {
+    "x": 15.31,
+    "y": 9.74,
+    "bank": "Grand Bank",
+    "office": "Houston Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 21.23,
+    "y": 13.7,
+    "bank": "Capital Bank",
+    "office": "Capital Bank - Clear Lake Banking Center Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 20.68,
+    "y": 11.82,
+    "bank": "Home Bank, National Association",
+    "office": "Pasadena Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 15.05,
+    "y": 1.3,
+    "bank": "Third Coast Bank",
+    "office": "Woodlands Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 10.22,
+    "y": 10.14,
+    "bank": "Yoakum Bank",
+    "office": "Katy Branch",
+    "city": "Katy"
+   },
+   {
+    "x": 11.98,
+    "y": 13.23,
+    "bank": "Wallis Bank",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 14.26,
+    "y": 0.25,
+    "bank": "Woodforest National Bank",
+    "office": "Tx North Woodlands Heb Branch",
+    "city": "The Woodlands"
+   },
+   {
+    "x": 12.82,
+    "y": 12.98,
+    "bank": "Bank of the Orient",
+    "office": "Sugar Land Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 15.6,
+    "y": 2.09,
+    "bank": "First State Bank of Texas",
+    "office": "The Woodlands Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 10.24,
+    "y": 13.97,
+    "bank": "Texas Regional Bank",
+    "office": "Rosenberg Branch",
+    "city": "Rosenberg"
+   },
+   {
+    "x": 20.49,
+    "y": 12.05,
+    "bank": "Wallis Bank",
+    "office": "Pasadena Branch",
+    "city": "Pasadena"
+   },
+   {
+    "x": 12.4,
+    "y": 3.19,
+    "bank": "First State Bank of Texas",
+    "office": "Tomball Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 19.28,
+    "y": 2.37,
+    "bank": "Citizens State Bank",
+    "office": "Valley Ranch Branch",
+    "city": "Porter"
+   },
+   {
+    "x": 17.81,
+    "y": 13.63,
+    "bank": "First Community Bank",
+    "office": "Pearland Branch Office",
+    "city": "Pearland"
+   },
+   {
+    "x": 12.78,
+    "y": 12.43,
+    "bank": "SouthTrust Bank, N.A.",
+    "office": "Fort Bend Branch",
+    "city": "Sugar Land"
+   },
+   {
+    "x": 18.93,
+    "y": 3.43,
+    "bank": "Woodforest National Bank",
+    "office": "0528 Tx Kingwood Heb Branch",
+    "city": "Kingwood"
+   },
+   {
+    "x": 21.2,
+    "y": 13.87,
+    "bank": "Texas Traditions Bank",
+    "office": "Texas Traditions Bank - Webster Branch",
+    "city": "Webster"
+   },
+   {
+    "x": 16.13,
+    "y": 6.58,
+    "bank": "First National Bank Texas",
+    "office": "North Freeway Joe V'S Banking Center Rc308 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.6,
+    "y": 9.86,
+    "bank": "One World Bank",
+    "office": "Briar Forest Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 11.62,
+    "y": 0.34,
+    "bank": "Texas Regional Bank",
+    "office": "Magnolia Branch",
+    "city": "Magnolia"
+   },
+   {
+    "x": 12.4,
+    "y": 3.26,
+    "bank": "Home Bank, National Association",
+    "office": "Tomball Branch",
+    "city": "Tomball"
+   },
+   {
+    "x": 15.36,
+    "y": 1.24,
+    "bank": "Southside Bank",
+    "office": "The Woodlands Branch",
+    "city": "Shenandoah"
+   },
+   {
+    "x": 16.98,
+    "y": 9.6,
+    "bank": "T Bank, National Association",
+    "office": "Southeast Texas Mobile Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 13.59,
+    "y": 10.71,
+    "bank": "Bank of the Orient",
+    "office": "Bellaire Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.02,
+    "y": 12.65,
+    "bank": "First National Bank Texas",
+    "office": "Heb Joe Vs Fugua Banking Center Rc321 Branch",
+    "city": "Houston"
+   },
+   {
+    "x": 15.49,
+    "y": 3.43,
+    "bank": "First National Bank Texas",
+    "office": "Heb Spring Market Banking Center Rc332 Branch",
+    "city": "Spring"
+   },
+   {
+    "x": 14.24,
+    "y": 8.92,
+    "bank": "Global One Bank",
+    "office": "Global One Bank",
+    "city": "Houston"
+   },
+   {
+    "x": 15.41,
+    "y": 9.66,
+    "bank": "Cornerstone Capital Bank, SSB",
+    "office": "Cornerstone Capital Bank, Ssb",
+    "city": "Houston"
+   }
+  ],
+  "pilot_branches": [
+   {
+    "x": 16.61,
+    "y": 8.07,
+    "bank": "First National Bank Texas",
+    "office": "Airline Drive Banking Center - Rc 675",
+    "city": "Houston"
+   },
+   {
+    "x": 19.64,
+    "y": 11.48,
+    "bank": "First National Bank Texas",
+    "office": "Pasadena Banking Center Rc-647",
+    "city": "South Houston"
+   },
+   {
+    "x": 16.13,
+    "y": 7.36,
+    "bank": "First National Bank Texas",
+    "office": "Joe V'S - Victory Banking Center- Rc 442",
+    "city": "Houston"
+   },
+   {
+    "x": 18.18,
+    "y": 10.84,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Gulfgate Banking Center - Rc 418",
+    "city": "Houston"
+   }
+  ],
+  "control_branches": [
+   {
+    "x": 17.52,
+    "y": 7.41,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Mi Tienda - Little York Banking Center - Rc 323",
+    "city": "Houston"
+   },
+   {
+    "x": 16.76,
+    "y": 10.53,
+    "bank": "First National Bank Texas",
+    "office": "Macgregor Branch Rc682",
+    "city": "Houston"
+   },
+   {
+    "x": 12.16,
+    "y": 10.69,
+    "bank": "First National Bank Texas",
+    "office": "Presidio Branch Rc484",
+    "city": "Houston"
+   },
+   {
+    "x": 13.58,
+    "y": 10.99,
+    "bank": "First National Bank Texas",
+    "office": "Heb - Beechnut Banking Center - Rc 424",
+    "city": "Houston"
+   }
+  ],
+  "gap": {
+   "c": 16,
+   "r": 5,
+   "miles": 3.5
+  }
+ },
+ "counties": [
+  {
+   "area": "Harris County",
+   "signal": "limited_english_share",
+   "times_metro": 1.25,
+   "top_need": "Language access",
+   "entry_product": "No-fee account with in-language onboarding",
+   "campaign": "Financial education series in the community's language",
+   "channel": "Community partners, in-language assistant",
+   "value": {
+    "Conservative": 4554294,
+    "Base": 14230349,
+    "Optimistic": 30774221
+   }
+  },
+  {
+   "area": "Fort Bend County",
+   "signal": "complaints_per_1k",
+   "times_metro": 1.35,
+   "top_need": "Trust and fees",
+   "entry_product": "No-fee no-minimum account",
+   "campaign": "Fee-transparency pledge with spend-and-get on first deposits",
+   "channel": "Trusted community partners",
+   "value": {
+    "Conservative": 621742,
+    "Base": 1942695,
+    "Optimistic": 4201228
+   }
+  },
+  {
+   "area": "Montgomery County",
+   "signal": "denial_rate",
+   "times_metro": 0.93,
+   "top_need": "Credit building",
+   "entry_product": "Secured card",
+   "campaign": "Credit-builder workshops",
+   "channel": "Branch events, SMS assistant",
+   "value": {
+    "Conservative": 558061,
+    "Base": 1743717,
+    "Optimistic": 3770922
+   }
+  },
+  {
+   "area": "Galveston County",
+   "signal": "unbanked_share",
+   "times_metro": 1.03,
+   "top_need": "First account",
+   "entry_product": "No-fee no-minimum account",
+   "campaign": "Spend-and-get on first deposits",
+   "channel": "Community partners, branch events",
+   "value": {
+    "Conservative": 351156,
+    "Base": 1097222,
+    "Optimistic": 2372827
+   }
+  }
+ ],
+ "pilot": {
+  "bank": "First National Bank Texas",
+  "branches": 4,
+  "spend": 120000,
+  "pilot_offices": [
+   "Airline Drive Banking Center - Rc 675",
+   "Pasadena Banking Center Rc-647",
+   "Joe V'S - Victory Banking Center- Rc 442",
+   "Heb - Gulfgate Banking Center - Rc 418"
+  ],
+  "control_offices": [
+   "Heb - Mi Tienda - Little York Banking Center - Rc 323",
+   "Macgregor Branch Rc682",
+   "Presidio Branch Rc484",
+   "Heb - Beechnut Banking Center - Rc 424"
+  ],
+  "catchment_miles": 3.0,
+  "lift": 3.0,
+  "catchment_households": {
+   "pilot": 54360,
+   "control": 73480
+  },
+  "opened": {
+   "pilot": 815,
+   "control": 272
+  },
+  "activation": {
+   "pilot": 0.7,
+   "control": 0.55
+  },
+  "active": {
+   "pilot": 571,
+   "control": 149
+  },
+  "incremental_active": 421,
+  "new_deposits": 827637,
+  "cost_per_incremental_active": 285
+ },
+ "trust": {
+  "signals": [
+   {
+    "label": "Mortgage denial rate (2025)",
+    "value": "20%"
+   },
+   {
+    "label": "Net branch closings since 2021",
+    "value": "82"
+   },
+   {
+    "label": "Banking complaints / 1K households",
+    "value": "4.8"
+   },
+   {
+    "label": "Limited-English households",
+    "value": "9%"
+   }
+  ],
+  "reasons": [
+   {
+    "reason": "Do not have enough money to meet minimum balance requirements",
+    "percent": 23,
+    "response": "No-fee, no-minimum entry account"
+   },
+   {
+    "reason": "Do not trust banks",
+    "percent": 16,
+    "response": "Trusted community partners"
+   },
+   {
+    "reason": "Bank account fees are too high",
+    "percent": 9,
+    "response": "Fee-transparency pledge"
+   },
+   {
+    "reason": "Do not have personal identification required to open an account",
+    "percent": 5,
+    "response": "Alternative ID accepted at onboarding"
+   },
+   {
+    "reason": "Avoiding a bank gives more privacy",
+    "percent": 5,
+    "response": "Plain-language data promise"
+   }
+  ]
+ }
+}

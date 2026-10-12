@@ -1,0 +1,19 @@
+parameter,scenario,value,unit,description,basis,source
+debit_spend_per_year,all,8650,USD,Debit card spend per active customer per year,Assumption,Team pitch model. Replace with a sourced figure.
+interchange_rate,all,0.011,share of spend,Debit interchange the issuing bank earns on that spend,Assumption,Team pitch model. Check against Federal Reserve Regulation II data for exempt issuers.
+avg_deposit_balance,all,2000,USD,Average deposit balance per active customer,Assumption,Team pitch model. Replace with a sourced figure.
+net_interest_margin,all,0.03,share of balance,Spread the bank earns on deposits,Assumption,Team pitch model. Check against the FDIC Quarterly Banking Profile for community banks.
+annual_fees,all,10,USD,Account fees per customer per year. Kept low: high fees undercut the trust story,Assumption,Team pitch model.
+cross_sell_annual_revenue,all,389,USD,Yearly revenue from a credit card or loan once a customer takes one,Assumption,Team pitch model. Replace with a sourced figure.
+cross_sell_start_year,all,3,year,First year the cross-sell revenue is counted,Assumption,Team pitch model.
+discount_rate,all,0.08,per year,Rate used to discount future revenue,Assumption,Team pitch model.
+acquisition_cost,all,150,USD,Campaign and onboarding cost per new customer,Assumption,Team pitch model. Replace with pilot actuals.
+retention_rate,conservative,0.70,per year,Share of customers still active a year later,Assumption,Team pitch model.
+retention_rate,base,0.80,per year,Share of customers still active a year later,Assumption,Team pitch model.
+retention_rate,optimistic,0.88,per year,Share of customers still active a year later,Assumption,Team pitch model.
+cross_sell_probability,conservative,0.25,share of customers,Share of customers holding a credit card or loan from the same bank by the cross-sell start year,Assumption,Team pitch model.
+cross_sell_probability,base,0.40,share of customers,Share of customers holding a credit card or loan from the same bank by the cross-sell start year,Assumption,Team pitch model.
+cross_sell_probability,optimistic,0.55,share of customers,Share of customers holding a credit card or loan from the same bank by the cross-sell start year,Assumption,Team pitch model.
+adoption_rate,conservative,0.03,share of reachable households,Share of estimated unbanked and underbanked households that open an account,Assumption,Team pitch model. Replace with pilot actuals.
+adoption_rate,base,0.06,share of reachable households,Share of estimated unbanked and underbanked households that open an account,Assumption,Team pitch model. Replace with pilot actuals.
+adoption_rate,optimistic,0.09,share of reachable households,Share of estimated unbanked and underbanked households that open an account,Assumption,Team pitch model. Replace with pilot actuals.

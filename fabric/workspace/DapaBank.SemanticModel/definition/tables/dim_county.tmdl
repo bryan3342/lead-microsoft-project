@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Counties in the pilot metro.
+/// Counties in the pilot metro.
 table dim_county
 	lineageTag: a83e4b14-9c02-597f-b222-f23fa2eb5136
 	sourceLineageTag: [dbo].[dim_county]

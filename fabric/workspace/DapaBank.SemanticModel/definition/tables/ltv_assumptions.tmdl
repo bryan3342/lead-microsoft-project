@@ -1,0 +1,61 @@
+/// Inputs to the lifetime value model, one row per parameter and scenario.
+table ltv_assumptions
+	lineageTag: dec3aedc-acf5-5966-9e3d-7e6083f934da
+	sourceLineageTag: [dbo].[ltv_assumptions]
+
+	column parameter
+		dataType: string
+		lineageTag: f3d31821-3949-5c51-8802-c3ff5be2eb25
+		sourceLineageTag: parameter
+		summarizeBy: none
+		sourceColumn: parameter
+
+	column scenario
+		dataType: string
+		lineageTag: ed41f122-0b11-5d63-8f3f-4d0226e1bdb6
+		sourceLineageTag: scenario
+		summarizeBy: none
+		sourceColumn: scenario
+
+	column value
+		dataType: double
+		formatString: #,0.###
+		lineageTag: 8dc0a15f-29bf-5796-9b5e-e967f7a84c74
+		sourceLineageTag: value
+		summarizeBy: none
+		sourceColumn: value
+
+	column unit
+		dataType: string
+		lineageTag: dcd7c80a-5da2-59b1-abe3-2059abe9c1b2
+		sourceLineageTag: unit
+		summarizeBy: none
+		sourceColumn: unit
+
+	column description
+		dataType: string
+		lineageTag: 96614c02-c7af-54c6-a518-a92d79540dfe
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+	column basis
+		dataType: string
+		lineageTag: a1128f5d-c441-53f0-a1e5-4da90246d384
+		sourceLineageTag: basis
+		summarizeBy: none
+		sourceColumn: basis
+
+	column source
+		dataType: string
+		lineageTag: b9a6b6a2-beab-52d2-b58a-fa84ec5ac03a
+		sourceLineageTag: source
+		summarizeBy: none
+		sourceColumn: source
+
+	partition ltv_assumptions = entity
+		mode: directLake
+		source
+			entityName: ltv_assumptions
+			schemaName: dbo
+			expressionSource: DatabaseQuery

@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Consumer complaints per tract per year by product group (CFPB, ZIP mapped to tract).
+/// Consumer complaints per tract per year by product group (CFPB, ZIP mapped to tract).
 table fact_tract_complaints
 	lineageTag: 71687ee9-eceb-5b10-a9c5-b33629ed6573
 	sourceLineageTag: [dbo].[fact_tract_complaints]
@@ -8,7 +8,7 @@ table fact_tract_complaints
 		displayFolder: Community
 		lineageTag: f6fc7fc7-c37f-5213-bb20-16a047901176
 
-	measure 'Complaints per 1k Households' = DIVIDE([Banking Access Complaints], [Households]) * 1000
+	measure 'Complaints per 1k Households' = DIVIDE([Banking Access Complaints], [Total Households]) * 1000
 		formatString: 0.0
 		displayFolder: Community
 		lineageTag: 5402610d-71b8-53ba-beb5-33fe71dd4a08

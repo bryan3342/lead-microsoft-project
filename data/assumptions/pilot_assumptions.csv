@@ -1,0 +1,9 @@
+parameter,value,unit,description,basis,source
+pilot_branches,4,branches,Branches that run the campaign; the same number of matched branches act as the control,Assumption,Team pitch model.
+spend_per_branch,30000,USD,Campaign spend per pilot branch over the 90 days,Assumption,Team pitch model.
+catchment_miles,3,miles,Tracts whose centre is within this distance of a branch count as its catchment,Assumption,Team pitch model.
+control_uptake_90d,0.005,share of reachable households,Share of catchment households that open an account in 90 days without a campaign,Assumption,Team pitch model. Replace with pilot actuals.
+pilot_lift,3,multiple,Accounts opened at pilot branches as a multiple of the control rate,Assumption,Team pitch model. Replace with pilot actuals.
+pilot_activation_rate,0.70,share of accounts,Pilot accounts still active at 90 days,Assumption,Team pitch model. Replace with pilot actuals.
+control_activation_rate,0.55,share of accounts,Control accounts still active at 90 days,Assumption,Team pitch model. Replace with pilot actuals.
+avg_opening_deposit,1450,USD,Average balance of an active new account at 90 days,Assumption,Team pitch model. Replace with pilot actuals.

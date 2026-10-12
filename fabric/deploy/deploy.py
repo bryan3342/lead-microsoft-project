@@ -24,6 +24,11 @@ REQUIRED = ["SUBSCRIPTION_ID", "RESOURCE_GROUP", "LOCATION", "CAPACITY_NAME", "C
             "CAPACITY_ADMINS", "WORKSPACE_NAME"]
 LAKEHOUSE = "DapaLakehouse.Lakehouse"
 NOTEBOOK = "CreateTables.Notebook"
+LOAD_NOTEBOOK = "LoadPublicData.Notebook"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+# Tables from data/processed/<SAMPLE>/ that the Load Public Data notebook reads.
+SAMPLE_TABLES = ["sample_counties", "acs_tracts", "tract_centroids", "fdic_survey_rates", "branches",
+                 "branch_deposits", "branch_events", "hmda_tract_year", "complaints_zip_year", "zcta_tract"]
 MODELS_AND_REPORTS = [("DapaBank.SemanticModel", "DapaBank.Report"),
                       ("DapaPlaybook.SemanticModel", "DapaPlaybook.Report")]
 
@@ -148,6 +153,35 @@ def ensure_item(api, ws, folder, definition=None):
     return item["id"]
 
 
+def data_files(cfg) -> list:
+    """Public data for the chosen metro, plus the assumption files. Empty when SAMPLE is not set."""
+    if not cfg.get("SAMPLE"):
+        return []
+    files = [DATA_DIR / "processed" / cfg["SAMPLE"] / f"{t}.csv" for t in SAMPLE_TABLES]
+    files += sorted((DATA_DIR / "assumptions").glob("*.csv"))
+    missing = [str(f) for f in files if not f.exists()]
+    if missing:
+        sys.exit(f"SAMPLE={cfg['SAMPLE']} is missing: {', '.join(missing)}")
+    return files
+
+
+def load_data(api, cfg, ws, lakehouse_id, lakehouse_name):
+    """Upload the metro's files to Files/dapa (replacing the previous metro's), then fill the tables."""
+    files = data_files(cfg)
+    if not files:
+        return print("\nSAMPLE not set in config.env: tables stay empty")
+    if cfg.get("NO_UPLOAD"):
+        print("\n--no-upload: reusing the files already in Files/dapa")
+    else:
+        step(f"Uploading {cfg['SAMPLE']} public data to the lakehouse (Files/dapa)")
+        for f in files:
+            api.upload(ws, lakehouse_id, f"dapa/{f.name}", f.read_bytes())
+            print(f"{f.name}: uploaded")
+    notebook_id = ensure_item(api, ws, LOAD_NOTEBOOK,
+                              defs.notebook_definition(lakehouse_id, lakehouse_name, ws, LOAD_NOTEBOOK))
+    run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name, "Load Public Data notebook to fill the tables")
+
+
 def sql_endpoint(api, ws, lakehouse_id):
     for _ in range(60):
         props = api.get(f"{FABRIC}/workspaces/{ws}/lakehouses/{lakehouse_id}")["properties"]
@@ -158,8 +192,9 @@ def sql_endpoint(api, ws, lakehouse_id):
     sys.exit("Lakehouse SQL endpoint did not finish provisioning.")
 
 
-def run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name):
-    step("Running Create Tables notebook to make the empty tables (a few minutes while Spark starts)")
+def run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name,
+                 title="Create Tables notebook to make the empty tables"):
+    step(f"Running {title} (a few minutes while Spark starts)")
     _, headers, _ = api.request("POST", f"{FABRIC}/workspaces/{ws}/items/{notebook_id}/jobs/instances?jobType=RunNotebook", {
         "executionData": {"configuration": {"defaultLakehouse": {
             "name": lakehouse_name, "id": lakehouse_id, "workspaceId": ws}}}})
@@ -202,7 +237,11 @@ def up(api, cfg):
     lakehouse_name = defs.item_meta(LAKEHOUSE)["displayName"]
     notebook_id = ensure_item(api, ws, NOTEBOOK, defs.notebook_definition(lakehouse_id, lakehouse_name, ws))
     host, endpoint_id = sql_endpoint(api, ws, lakehouse_id)
-    run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name)
+    if cfg.get("REPORTS_ONLY"):
+        print("\n--reports-only: tables left as they are")
+    else:
+        run_notebook(api, ws, notebook_id, lakehouse_id, lakehouse_name)
+        load_data(api, cfg, ws, lakehouse_id, lakehouse_name)
     try:
         api.fabric("POST", f"/workspaces/{ws}/sqlEndpoints/{endpoint_id}/refreshMetadata", {})
     except ApiError as e:
@@ -230,6 +269,8 @@ def dry_run(cfg):
     print(f"workspace {cfg['WORKSPACE_NAME']}, extra admins {split(cfg.get('WORKSPACE_ADMINS', ''))}")
     fake = "00000000-0000-0000-0000-000000000000"
     plan = [(LAKEHOUSE, None), (NOTEBOOK, defs.notebook_definition(fake, "DapaLakehouse", fake))]
+    if data_files(cfg):
+        plan.append((LOAD_NOTEBOOK, defs.notebook_definition(fake, "DapaLakehouse", fake, LOAD_NOTEBOOK)))
     for model_folder, report_folder in MODELS_AND_REPORTS:
         plan += [(model_folder, defs.semantic_model_definition(model_folder, "host.example", fake)),
                  (report_folder, defs.report_definition(report_folder, fake))]
@@ -237,16 +278,24 @@ def dry_run(cfg):
         meta = defs.item_meta(folder)
         parts = len(definition["parts"]) if definition else 0
         print(f"item      {meta['type']:<14} {meta['displayName']:<26} {parts} definition parts")
-    print("then: run the notebook, refresh both models, print report links")
+    for f in data_files(cfg):
+        print(f"upload    Files/dapa/{f.name} ({f.stat().st_size / 1024:,.0f} KB)")
+    print("then: run the notebooks, refresh both models, print report links")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", choices=["up", "status", "pause", "resume"])
     parser.add_argument("--dry-run", action="store_true", help="with up: print the plan only")
+    parser.add_argument("--no-upload", action="store_true",
+                        help="with up: reuse the data files already in the lakehouse instead of uploading them again")
+    parser.add_argument("--reports-only", action="store_true",
+                        help="with up: skip the notebooks and only republish the models and reports")
     parser.add_argument("--config", type=Path, default=CONFIG)
     args = parser.parse_args()
     cfg = load_config(args.config)
+    cfg["NO_UPLOAD"] = args.no_upload
+    cfg["REPORTS_ONLY"] = args.reports_only
     if args.dry_run:
         return dry_run(cfg)
 

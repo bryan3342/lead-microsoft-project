@@ -23,10 +23,10 @@
                       "Entity": "agg_playbook"
                     }
                   },
-                  "Property": "Attendees"
+                  "Property": "Total Attendees"
                 }
               },
-              "queryRef": "agg_playbook.Attendees",
+              "queryRef": "agg_playbook.Total Attendees",
               "nativeQueryRef": "Attendees"
             }
           ]
@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Attendees'"
+                  "Value": "'Attendees'"
                 }
               }
             }

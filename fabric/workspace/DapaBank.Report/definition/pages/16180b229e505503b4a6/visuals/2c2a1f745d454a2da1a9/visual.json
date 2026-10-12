@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2c2a1f745d454a2da1a9",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 6000,
+    "width": 760,
+    "height": 535,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_bank"
+                    }
+                  },
+                  "Property": "bank_name"
+                }
+              },
+              "queryRef": "dim_bank.bank_name",
+              "nativeQueryRef": "Bank",
+              "displayName": "Bank"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "office_name"
+                }
+              },
+              "queryRef": "dim_branch.office_name",
+              "nativeQueryRef": "Branch",
+              "displayName": "Branch"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "city"
+                }
+              },
+              "queryRef": "dim_branch.city",
+              "nativeQueryRef": "City",
+              "displayName": "City"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "Census tract",
+              "displayName": "Census tract"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "opportunity_score"
+                }
+              },
+              "queryRef": "dim_tract.opportunity_score",
+              "nativeQueryRef": "Tract opportunity score",
+              "displayName": "Tract opportunity score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_branch_deposits"
+                    }
+                  },
+                  "Property": "Latest Branch Deposits ($000)"
+                }
+              },
+              "queryRef": "fact_branch_deposits.Latest Branch Deposits ($000)",
+              "nativeQueryRef": "Latest deposits ($000)",
+              "displayName": "Latest deposits ($000)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_tract"
+                  }
+                },
+                "Property": "opportunity_score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Branches and the community around them'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

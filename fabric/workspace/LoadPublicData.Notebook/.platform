@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Load Public Data",
+    "description": "Fills the gold tables from the collected public data for one metro, and computes 5-year lifetime value per tract."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5d0c7a1e-3b42-5f6a-9c1d-7e2a4b8f6c30"
+  }
+}

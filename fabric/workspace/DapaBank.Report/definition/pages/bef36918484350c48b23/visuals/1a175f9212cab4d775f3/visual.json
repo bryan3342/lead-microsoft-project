@@ -1,0 +1,138 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1a175f9212cab4d775f3",
+  "position": {
+    "x": 640,
+    "y": 445,
+    "z": 10000,
+    "width": 630,
+    "height": 265,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "Census tract",
+              "displayName": "Census tract"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Unbanked Households"
+                }
+              },
+              "queryRef": "dim_tract.Est. Unbanked Households",
+              "nativeQueryRef": "Est. unbanked households",
+              "displayName": "Est. unbanked households"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Unbanked Share"
+                }
+              },
+              "queryRef": "dim_tract.Est. Unbanked Share",
+              "nativeQueryRef": "Unbanked share",
+              "displayName": "Unbanked share"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Opportunity Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Opportunity Score",
+              "nativeQueryRef": "Opportunity score",
+              "displayName": "Opportunity score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Base)",
+              "nativeQueryRef": "5-year net value",
+              "displayName": "5-year net value"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_tract"
+                  }
+                },
+                "Property": "Avg Opportunity Score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Highest-opportunity tracts'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -47,7 +47,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Active 90 Days'"
+                  "Value": "'Active 90 Days'"
                 }
               }
             }

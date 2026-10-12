@@ -65,7 +65,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PLACEHOLDER: Active rate by approach'"
+                  "Value": "'Active rate by approach'"
                 }
               }
             }

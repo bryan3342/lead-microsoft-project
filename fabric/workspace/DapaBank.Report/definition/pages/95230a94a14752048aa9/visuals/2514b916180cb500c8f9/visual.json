@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2514b916180cb500c8f9",
+  "position": {
+    "x": 640,
+    "y": 445,
+    "z": 8000,
+    "width": 630,
+    "height": 265,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "tract_name"
+                }
+              },
+              "queryRef": "dim_tract.tract_name",
+              "nativeQueryRef": "Census tract",
+              "displayName": "Census tract"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Unbanked Households"
+                }
+              },
+              "queryRef": "dim_tract.Est. Unbanked Households",
+              "nativeQueryRef": "Est. unbanked households",
+              "displayName": "Est. unbanked households"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Est. Unbanked Share"
+                }
+              },
+              "queryRef": "dim_tract.Est. Unbanked Share",
+              "nativeQueryRef": "Unbanked share",
+              "displayName": "Unbanked share"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Need Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Need Score",
+              "nativeQueryRef": "Need score",
+              "displayName": "Need score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Bank Fit Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Bank Fit Score",
+              "nativeQueryRef": "Bank fit score",
+              "displayName": "Bank fit score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_tract"
+                    }
+                  },
+                  "Property": "Avg Opportunity Score"
+                }
+              },
+              "queryRef": "dim_tract.Avg Opportunity Score",
+              "nativeQueryRef": "Opportunity score",
+              "displayName": "Opportunity score"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_tract"
+                  }
+                },
+                "Property": "Avg Opportunity Score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tracts ranked by opportunity score'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

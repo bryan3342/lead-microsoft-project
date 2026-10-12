@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "72e472fd83656beeaebf",
+  "position": {
+    "x": 645,
+    "y": 75,
+    "z": 4000,
+    "width": 202,
+    "height": 90,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "Target Issuer Branches"
+                }
+              },
+              "queryRef": "dim_branch.Target Issuer Branches",
+              "nativeQueryRef": "Local-bank branches",
+              "displayName": "Local-bank branches"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Local-bank branches'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

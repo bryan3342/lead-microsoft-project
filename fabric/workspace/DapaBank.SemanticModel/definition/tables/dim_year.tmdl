@@ -1,4 +1,4 @@
-/// PLACEHOLDER. Years shared by every yearly fact, for one year slicer.
+/// Years shared by every yearly fact, for one year slicer.
 table dim_year
 	lineageTag: 3e3009f1-70a9-5402-b2f1-5dd0f0eff837
 	sourceLineageTag: [dbo].[dim_year]

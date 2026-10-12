@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "64005c275baf61aef5b2",
+  "position": {
+    "x": 857,
+    "y": 75,
+    "z": 5000,
+    "width": 202,
+    "height": 90,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "Projected New Customers (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.Projected New Customers (Base)",
+              "nativeQueryRef": "Projected New Customers (Base)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Projected new customers'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

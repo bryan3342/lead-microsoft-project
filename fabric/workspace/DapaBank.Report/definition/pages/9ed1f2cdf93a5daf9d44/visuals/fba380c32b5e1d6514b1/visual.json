@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "fba380c32b5e1d6514b1",
+  "position": {
+    "x": 640,
+    "y": 175,
+    "z": 7000,
+    "width": 630,
+    "height": 300,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_county"
+                    }
+                  },
+                  "Property": "county_name"
+                }
+              },
+              "queryRef": "dim_county.county_name",
+              "nativeQueryRef": "County",
+              "displayName": "County"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Conservative)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Conservative)",
+              "nativeQueryRef": "Conservative",
+              "displayName": "Conservative"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Base)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Base)",
+              "nativeQueryRef": "Base",
+              "displayName": "Base"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tract_ltv"
+                    }
+                  },
+                  "Property": "5-Year Net Value (Optimistic)"
+                }
+              },
+              "queryRef": "tract_ltv.5-Year Net Value (Optimistic)",
+              "nativeQueryRef": "Optimistic",
+              "displayName": "Optimistic"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Projected 5-year net value by county and scenario'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

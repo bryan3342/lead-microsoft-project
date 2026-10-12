@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c32464ea2cd44a96c19b",
+  "position": {
+    "x": 780,
+    "y": 445,
+    "z": 8000,
+    "width": 490,
+    "height": 265,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_county"
+                    }
+                  },
+                  "Property": "county_name"
+                }
+              },
+              "queryRef": "dim_county.county_name",
+              "nativeQueryRef": "County",
+              "displayName": "County"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "Branches"
+                }
+              },
+              "queryRef": "dim_branch.Branches",
+              "nativeQueryRef": "All branches",
+              "displayName": "All branches"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "Target Issuer Branches"
+                }
+              },
+              "queryRef": "dim_branch.Target Issuer Branches",
+              "nativeQueryRef": "Local-bank branches",
+              "displayName": "Local-bank branches"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Branches by county'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

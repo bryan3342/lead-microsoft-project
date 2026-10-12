@@ -1,4 +1,4 @@
-/// PLACEHOLDER. One row per registration, keyed by referral code. Outcomes only where the attendee opted in.
+/// One row per registration, keyed by referral code. Outcomes only where the attendee opted in.
 table fact_attendee
 	lineageTag: bc776a3c-e9d0-56ad-80d5-92f5cdacbb1d
 	sourceLineageTag: [dbo].[fact_attendee]

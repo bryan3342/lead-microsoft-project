@@ -1,0 +1,8 @@
+.venv/
+.env
+__pycache__/
+data/raw/
+# Record-level CSV copies are too large for git; the .parquet versions are kept.
+data/processed/hmda_loans.csv
+data/processed/complaints.csv
+.DS_Store

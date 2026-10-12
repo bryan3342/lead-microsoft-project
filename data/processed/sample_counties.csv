@@ -1,0 +1,24 @@
+county_fips,county_name,state,cbsa,cbsa_title,metro_division,central_or_outlying
+51013,Arlington County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51043,Clarke County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51047,Culpeper County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51059,Fairfax County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51061,Fauquier County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51107,Loudoun County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51153,Prince William County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51157,Rappahannock County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51177,Spotsylvania County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51179,Stafford County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51187,Warren County,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51510,Alexandria city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51600,Fairfax city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51610,Falls Church city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51630,Fredericksburg city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+51683,Manassas city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+51685,Manassas Park city,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Central
+54037,Jefferson County,West Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Arlington-Alexandria-Reston, VA-WV",Outlying
+24021,Frederick County,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Frederick-Gaithersburg-Bethesda, MD",Outlying
+24031,Montgomery County,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Frederick-Gaithersburg-Bethesda, MD",Central
+11001,District of Columbia,District of Columbia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Washington, DC-MD",Central
+24017,Charles County,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Washington, DC-MD",Outlying
+24033,Prince George's County,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Washington, DC-MD",Central

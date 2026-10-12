@@ -1,0 +1,9 @@
+// Cloudflare Workers Builds deploys this folder as a static site (no build step).
+// In the dashboard: root directory `web`, deploy command `npx wrangler deploy`.
+{
+  "name": "lead-microsoft-project",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  }
+}

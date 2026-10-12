@@ -1,0 +1,7 @@
+# Keep source and config out of the public site; only index.html and data.json are served.
+wrangler.jsonc
+.assetsignore
+fetch_data.py
+README.md
+__pycache__
+.wrangler

@@ -89,6 +89,38 @@
   footer { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-top: 6px; }
   footer p { margin: 4px 0; }
   @media (max-width: 1100px) { .kpis { grid-template-columns: repeat(2, 1fr); } .two { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) {
+    main { padding: 16px 16px 32px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 19px; }
+    .sub { font-size: 15px; }
+    .grid > * { min-width: 0; }
+    .card { padding: 18px 16px; }
+    .controls { align-items: flex-start; width: 100%; }
+    .pills { font-size: 14px; gap: 6px; }
+    .pills button { padding: 6px 12px; }
+    .chips { justify-content: flex-start; gap: 6px; }
+    .kpis { gap: 12px; }
+    .kpi .label { font-size: 13px; }
+    .kpi .num { font-size: 24px; }
+    .kpi.dark { grid-column: 1 / -1; }
+    .head { flex-direction: column; gap: 0; }
+    .aside { text-align: left; margin-bottom: 12px; }
+    .key { flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
+    .build { font-size: 13.5px; gap: 8px 10px; }
+    .bars .num { font-size: 13px; }
+    .stat .num { font-size: 17px; }
+    .reasons { grid-template-columns: 1fr 14px 1fr; font-size: 13.5px; }
+    thead { display: none; }
+    table, tbody, tr, td { display: block; }
+    tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    tr:last-child { border-bottom: 0; }
+    td { padding: 4px 0; border: 0; text-align: right; }
+    td::before { content: attr(data-label); float: left; margin-right: 16px; color: var(--muted); font: 400 12.5px/1.9 "IBM Plex Sans", system-ui, sans-serif; letter-spacing: 0; }
+    td:first-child { font-size: 16px; padding-bottom: 6px; text-align: left; }
+    td:first-child::before { content: none; }
+    td small { display: inline; margin-left: 4px; }
+  }
 </style>
 </head>
 <body>
@@ -196,8 +228,8 @@ function render() {
     <div class="head"><div><div class="eyebrow">Layer 2 · What to buy, where</div><h2>Recommended product and campaign mix</h2></div>
       <div class="aside">Example output · campaign playbook from a backend agent that compares what Mastercard usually runs for counties like this, based on the people who live there</div></div>
     <table><thead><tr><th>Area</th><th>Top need</th><th>Entry product</th><th>Campaign</th><th>Channel</th><th>Projected LTV</th></tr></thead>
-      <tbody>${d.counties.map(c => `<tr><td>${esc(c.area)}</td><td>${esc(c.top_need)}<small>${c.times_metro.toFixed(2)}× metro</small></td><td>${esc(c.entry_product)}</td>
-        <td>${esc(c.campaign)}</td><td>${esc(c.channel)}</td><td class="num">${usdc(c.value[scenario])}</td></tr>`).join("")}</tbody></table>
+      <tbody>${d.counties.map(c => `<tr><td>${esc(c.area)}</td><td data-label="Top need">${esc(c.top_need)}<small>${c.times_metro.toFixed(2)}× metro</small></td><td data-label="Entry product">${esc(c.entry_product)}</td>
+        <td data-label="Campaign">${esc(c.campaign)}</td><td data-label="Channel">${esc(c.channel)}</td><td data-label="Projected LTV" class="num">${usdc(c.value[scenario])}</td></tr>`).join("")}</tbody></table>
   </section>
 
   <section class="grid two">

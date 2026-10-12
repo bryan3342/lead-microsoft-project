@@ -1,0 +1,56 @@
+/// PLACEHOLDER. ASSUMPTION ranges for lifetime value per active account. Replace with model output, then actuals.
+table scenario_ltv
+	lineageTag: 668ca843-6b69-5808-8980-29addb7bff8c
+	sourceLineageTag: [dbo].[scenario_ltv]
+
+	measure 'LTV Low (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Low")
+		formatString: \$#,0
+		displayFolder: Scenario
+		lineageTag: 4e59956c-7599-5457-a94d-5b10f418c027
+
+	measure 'LTV Base (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "Base")
+		formatString: \$#,0
+		displayFolder: Scenario
+		lineageTag: 3e299f74-1682-576f-8e2b-a50fe0198c08
+
+	measure 'LTV High (Assumption)' = CALCULATE(SUM(scenario_ltv[cumulative_ltv_usd]), scenario_ltv[scenario] = "High")
+		formatString: \$#,0
+		displayFolder: Scenario
+		lineageTag: 64080feb-f55e-52c9-b780-5f2b2daacf3f
+
+	column scenario
+		dataType: string
+		lineageTag: 249f95d7-7432-5265-894c-350e1fc929c8
+		sourceLineageTag: scenario
+		summarizeBy: none
+		sourceColumn: scenario
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 22789255-14e1-5719-89d5-cc684ceb5f15
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column cumulative_ltv_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: c6e45df4-ef70-5d28-8a71-05d3ab75dde4
+		sourceLineageTag: cumulative_ltv_usd
+		summarizeBy: none
+		sourceColumn: cumulative_ltv_usd
+
+	column basis
+		dataType: string
+		lineageTag: 9e4ffccc-f9d4-5948-b102-09075f507ec8
+		sourceLineageTag: basis
+		summarizeBy: none
+		sourceColumn: basis
+
+	partition scenario_ltv = entity
+		mode: directLake
+		source
+			entityName: scenario_ltv
+			schemaName: dbo
+			expressionSource: DatabaseQuery

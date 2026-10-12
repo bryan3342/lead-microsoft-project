@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4339e92334125a83b3fd",
+  "position": {
+    "x": 1060,
+    "y": 75,
+    "z": 6000,
+    "width": 200,
+    "height": 90,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_branch"
+                    }
+                  },
+                  "Property": "Target Issuer Branches"
+                }
+              },
+              "queryRef": "dim_branch.Target Issuer Branches",
+              "nativeQueryRef": "Target Issuer Branches"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Target Issuer Branches'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

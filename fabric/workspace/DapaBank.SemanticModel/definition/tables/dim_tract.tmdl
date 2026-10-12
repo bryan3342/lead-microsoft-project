@@ -1,0 +1,158 @@
+/// PLACEHOLDER. One row per census tract: households, estimated unbanked households, scores, pilot arm.
+table dim_tract
+	lineageTag: ec41c553-9460-577c-b407-cbe14b1a9dee
+	sourceLineageTag: [dbo].[dim_tract]
+
+	measure Tracts = COUNTROWS(dim_tract)
+		formatString: #,0
+		displayFolder: Opportunity
+		lineageTag: 4ea9a505-5143-5df2-afff-f46fe46e2beb
+
+	measure Households = SUM(dim_tract[households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 6a3e7c89-70be-5709-a889-11f03379c593
+
+	measure 'Est. Unbanked Households' = SUM(dim_tract[est_unbanked_households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 4134b365-440b-5435-94ac-2faa4c196494
+
+	measure 'Est. Underbanked Households' = SUM(dim_tract[est_underbanked_households])
+		formatString: #,0
+		displayFolder: Community
+		lineageTag: 004d0213-3aaa-522e-84cc-f835c8679df3
+
+	measure 'Avg Need Score' = AVERAGE(dim_tract[need_score])
+		formatString: 0.00
+		displayFolder: Opportunity
+		lineageTag: b81c2352-b770-5800-88f2-ba8524b9b5e1
+
+	measure 'Avg Readiness Score' = AVERAGE(dim_tract[readiness_score])
+		formatString: 0.00
+		displayFolder: Opportunity
+		lineageTag: 4ffba171-604c-5ec3-8957-0fa8dfaf6e83
+
+	measure 'Avg Bank Fit Score' = AVERAGE(dim_tract[bank_fit_score])
+		formatString: 0.00
+		displayFolder: Opportunity
+		lineageTag: c5ef73fa-ef44-531c-a8a6-67abeca12385
+
+	measure 'Avg Opportunity Score' = AVERAGE(dim_tract[opportunity_score])
+		formatString: 0.00
+		displayFolder: Opportunity
+		lineageTag: d053207b-40f8-5b0a-ba36-818dba2130c6
+
+	column tract_geoid
+		dataType: string
+		lineageTag: 27be3e81-ea4f-57f9-8978-c8eadcdaec75
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column county_fips
+		dataType: string
+		lineageTag: ae68bbaf-12f8-5e25-8d90-a91b96a72df7
+		sourceLineageTag: county_fips
+		summarizeBy: none
+		sourceColumn: county_fips
+
+	column tract_name
+		dataType: string
+		lineageTag: 9018d2bd-e9f3-5696-80ba-418e4e2f045c
+		sourceLineageTag: tract_name
+		summarizeBy: none
+		sourceColumn: tract_name
+
+	column latitude
+		dataType: double
+		dataCategory: Latitude
+		lineageTag: e973639e-ade0-5482-a9cf-7943ba3d812f
+		sourceLineageTag: latitude
+		summarizeBy: none
+		sourceColumn: latitude
+
+	column longitude
+		dataType: double
+		dataCategory: Longitude
+		lineageTag: e55b0cfa-bc29-5326-a815-7b8ed63172a8
+		sourceLineageTag: longitude
+		summarizeBy: none
+		sourceColumn: longitude
+
+	column households
+		dataType: int64
+		lineageTag: e4e6b698-55a1-5aef-993a-6196d42393bb
+		sourceLineageTag: households
+		summarizeBy: none
+		sourceColumn: households
+
+	column low_income_households
+		dataType: int64
+		lineageTag: 226c914b-7d93-518e-a051-b92567a1ccb8
+		sourceLineageTag: low_income_households
+		summarizeBy: none
+		sourceColumn: low_income_households
+
+	column limited_english_households
+		dataType: int64
+		lineageTag: cf693128-fad4-59bd-96ba-e2a900850226
+		sourceLineageTag: limited_english_households
+		summarizeBy: none
+		sourceColumn: limited_english_households
+
+	column est_unbanked_households
+		dataType: double
+		lineageTag: c220fb8f-8767-592a-b3d4-59f3f0ea7386
+		sourceLineageTag: est_unbanked_households
+		summarizeBy: none
+		sourceColumn: est_unbanked_households
+
+	column est_underbanked_households
+		dataType: double
+		lineageTag: aac8d3be-cd6e-594d-949a-fc65ae8d8454
+		sourceLineageTag: est_underbanked_households
+		summarizeBy: none
+		sourceColumn: est_underbanked_households
+
+	column need_score
+		dataType: double
+		lineageTag: 1690160f-dd47-5562-b548-a33a7b9afd5d
+		sourceLineageTag: need_score
+		summarizeBy: none
+		sourceColumn: need_score
+
+	column readiness_score
+		dataType: double
+		lineageTag: 9a1c73fd-5c75-5256-9ed2-be24628823eb
+		sourceLineageTag: readiness_score
+		summarizeBy: none
+		sourceColumn: readiness_score
+
+	column bank_fit_score
+		dataType: double
+		lineageTag: b3733ab0-c5ed-50d4-aaca-b6f16aa01f4c
+		sourceLineageTag: bank_fit_score
+		summarizeBy: none
+		sourceColumn: bank_fit_score
+
+	column opportunity_score
+		dataType: double
+		lineageTag: a585bc91-f4f7-50c9-925b-70b86547a15d
+		sourceLineageTag: opportunity_score
+		summarizeBy: none
+		sourceColumn: opportunity_score
+
+	column pilot_arm
+		dataType: string
+		lineageTag: 41926f3b-6ef9-558d-afd1-918dbea04c58
+		sourceLineageTag: pilot_arm
+		summarizeBy: none
+		sourceColumn: pilot_arm
+
+	partition dim_tract = entity
+		mode: directLake
+		source
+			entityName: dim_tract
+			schemaName: dbo
+			expressionSource: DatabaseQuery

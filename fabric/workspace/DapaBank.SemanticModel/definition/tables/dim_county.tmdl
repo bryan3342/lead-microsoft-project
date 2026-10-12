@@ -1,0 +1,32 @@
+/// PLACEHOLDER. Counties in the pilot metro.
+table dim_county
+	lineageTag: a83e4b14-9c02-597f-b222-f23fa2eb5136
+	sourceLineageTag: [dbo].[dim_county]
+
+	column county_fips
+		dataType: string
+		lineageTag: 4e59d9ca-bf0c-5f02-b798-a373476c5643
+		sourceLineageTag: county_fips
+		summarizeBy: none
+		sourceColumn: county_fips
+
+	column county_name
+		dataType: string
+		lineageTag: c5403aa7-7ffc-5c09-a9fd-128a88e9db60
+		sourceLineageTag: county_name
+		summarizeBy: none
+		sourceColumn: county_name
+
+	column state
+		dataType: string
+		lineageTag: 5c2cf815-5005-50aa-a88a-f4ed070b49c1
+		sourceLineageTag: state
+		summarizeBy: none
+		sourceColumn: state
+
+	partition dim_county = entity
+		mode: directLake
+		source
+			entityName: dim_county
+			schemaName: dbo
+			expressionSource: DatabaseQuery

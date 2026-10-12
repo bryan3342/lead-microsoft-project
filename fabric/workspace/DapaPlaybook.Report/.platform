@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DAPA Mastercard Playbook",
+    "description": "Aggregated results view skeleton (placeholders, no data)."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fb8a4f6b-77fe-5ed0-8eb8-6dbded2f10c1"
+  }
+}

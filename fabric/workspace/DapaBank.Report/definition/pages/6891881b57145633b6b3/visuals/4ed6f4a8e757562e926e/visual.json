@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4ed6f4a8e757562e926e",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 7000,
+    "width": 620,
+    "height": 260,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_year"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "dim_year.year",
+              "nativeQueryRef": "year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_branch_events"
+                    }
+                  },
+                  "Property": "Branch Closings"
+                }
+              },
+              "queryRef": "fact_branch_events.Branch Closings",
+              "nativeQueryRef": "Branch Closings"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_branch_events"
+                    }
+                  },
+                  "Property": "Branch Openings"
+                }
+              },
+              "queryRef": "fact_branch_events.Branch Openings",
+              "nativeQueryRef": "Branch Openings"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Branch closings vs openings by year'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "9ed1f2cdf93a5daf9d44",
+  "displayName": "Scenario: Cost vs LTV",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

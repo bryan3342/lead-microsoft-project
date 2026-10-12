@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "45e0a33c77425b4ab7a8",
+  "position": {
+    "x": 850,
+    "y": 75,
+    "z": 5000,
+    "width": 200,
+    "height": 90,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_tract_complaints"
+                    }
+                  },
+                  "Property": "Banking Access Complaints"
+                }
+              },
+              "queryRef": "fact_tract_complaints.Banking Access Complaints",
+              "nativeQueryRef": "Banking Access Complaints"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Banking Access Complaints'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/// PLACEHOLDER. Bank branches with location and tract.
+table dim_branch
+	lineageTag: 03f2be00-48be-528c-9f1a-e3c1660892fe
+	sourceLineageTag: [dbo].[dim_branch]
+
+	measure Branches = COUNTROWS(dim_branch)
+		formatString: #,0
+		displayFolder: Branches
+		lineageTag: 3fceac75-7b5b-5ed3-afc7-75988edfbb0d
+
+	measure 'Target Issuer Branches' = CALCULATE([Branches], dim_bank[target_issuer] = TRUE())
+		formatString: #,0
+		displayFolder: Branches
+		lineageTag: 68a17815-66db-5b99-b44b-48a6e54661cf
+
+	column uninum
+		dataType: int64
+		lineageTag: ac52ef14-a9a3-5dca-ad35-b8f59fafb07f
+		sourceLineageTag: uninum
+		summarizeBy: none
+		sourceColumn: uninum
+
+	column cert
+		dataType: int64
+		lineageTag: dcb1ad2b-09e9-5128-bfd8-e8a2e7aed6d5
+		sourceLineageTag: cert
+		summarizeBy: none
+		sourceColumn: cert
+
+	column tract_geoid
+		dataType: string
+		lineageTag: 5d140184-e4d1-5e6c-a9d0-0c951bc13422
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column office_name
+		dataType: string
+		lineageTag: 11ef0f8f-005b-5e4f-b1d4-32be744c1123
+		sourceLineageTag: office_name
+		summarizeBy: none
+		sourceColumn: office_name
+
+	column city
+		dataType: string
+		lineageTag: 135a905c-19dc-5bf7-96d0-aa892f981e71
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+	column latitude
+		dataType: double
+		dataCategory: Latitude
+		lineageTag: a4a3a25e-cf0c-5c4c-80c6-e1a811b54f32
+		sourceLineageTag: latitude
+		summarizeBy: none
+		sourceColumn: latitude
+
+	column longitude
+		dataType: double
+		dataCategory: Longitude
+		lineageTag: de53a0d8-e29e-5cc0-8f18-7d3afa32c494
+		sourceLineageTag: longitude
+		summarizeBy: none
+		sourceColumn: longitude
+
+	column servtype_desc
+		dataType: string
+		lineageTag: 61e84c4b-a4d0-5cf0-a4d9-55e8e8f17988
+		sourceLineageTag: servtype_desc
+		summarizeBy: none
+		sourceColumn: servtype_desc
+
+	partition dim_branch = entity
+		mode: directLake
+		source
+			entityName: dim_branch
+			schemaName: dbo
+			expressionSource: DatabaseQuery

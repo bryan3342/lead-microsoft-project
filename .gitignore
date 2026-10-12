@@ -1,0 +1,16 @@
+.venv/
+.env
+__pycache__/
+data/raw/
+# Record-level CSV copies are too large for git; the .parquet versions are kept.
+data/processed/*/hmda_loans.csv
+data/processed/*/complaints.csv
+.DS_Store
+
+# Fabric / Power BI
+sample-output/
+.pytest_cache/
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+fabric/deploy/config.env
+fabric/tools/out/

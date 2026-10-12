@@ -1,0 +1,142 @@
+/// PLACEHOLDER. One row per registration, keyed by referral code. Outcomes only where the attendee opted in.
+table fact_attendee
+	lineageTag: bc776a3c-e9d0-56ad-80d5-92f5cdacbb1d
+	sourceLineageTag: [dbo].[fact_attendee]
+
+	measure Registrations = COUNTROWS(fact_attendee)
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: c0a78f90-3c19-524f-a9cc-124576f8a788
+
+	measure Attendees = CALCULATE(COUNTROWS(fact_attendee), fact_attendee[attended] = TRUE())
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: 9795327c-a26d-5406-a81f-2160eeb3070a
+
+	measure 'Matched Attendees' = CALCULATE(COUNTROWS(fact_attendee), fact_attendee[attended] = TRUE(), fact_attendee[consented] = TRUE())
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: 5971390f-28e0-5b83-954a-92e9086feb0d
+
+	measure 'Accounts Opened' = CALCULATE(COUNTROWS(fact_attendee), fact_attendee[account_opened] = TRUE())
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: 13746ba7-d896-5553-8a82-94f89b9fdf89
+
+	measure 'Funded 30 Days' = CALCULATE(COUNTROWS(fact_attendee), fact_attendee[funded_30d] = TRUE())
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: 6216707e-16c2-5d11-9b7b-bc6654bf669a
+
+	measure 'Active 90 Days' = CALCULATE(COUNTROWS(fact_attendee), fact_attendee[active_90d] = TRUE())
+		formatString: #,0
+		displayFolder: Funnel
+		lineageTag: 943e0771-b0fc-5346-ad64-21a7dd4bc211
+
+	measure 'Attendance Rate' = DIVIDE([Attendees], [Registrations])
+		formatString: 0.0%
+		displayFolder: Funnel
+		lineageTag: ab956a48-a4d3-5c43-8759-438aa8ffc622
+
+	measure 'Open Rate' = DIVIDE([Accounts Opened], [Matched Attendees])
+		formatString: 0.0%
+		displayFolder: Funnel
+		lineageTag: 59dd3745-65e4-52db-aa53-c4a312805c02
+
+	measure 'Active Rate' = DIVIDE([Active 90 Days], [Accounts Opened])
+		formatString: 0.0%
+		displayFolder: Funnel
+		lineageTag: 1bb1bd35-36f6-5dac-972a-7415489b87aa
+
+	measure 'Avg Trust Lift' =
+			AVERAGEX(
+			    FILTER(fact_attendee, NOT ISBLANK(fact_attendee[trust_after])),
+			    fact_attendee[trust_after] - fact_attendee[trust_before]
+			)
+		formatString: +0.00;-0.00;0.00
+		displayFolder: Trust
+		lineageTag: 1396b316-f7ac-575f-a83b-9fa36086143e
+
+	column referral_code
+		dataType: string
+		lineageTag: 89969876-fd1e-535c-b238-5559189af729
+		sourceLineageTag: referral_code
+		summarizeBy: none
+		sourceColumn: referral_code
+
+	column event_id
+		dataType: string
+		lineageTag: 870d3ab6-d81f-5bc3-9451-c79759b8a58f
+		sourceLineageTag: event_id
+		summarizeBy: none
+		sourceColumn: event_id
+
+	column channel
+		dataType: string
+		lineageTag: 00bc5bf1-a21f-57cc-94a2-4de1afb213be
+		sourceLineageTag: channel
+		summarizeBy: none
+		sourceColumn: channel
+
+	column consented
+		dataType: boolean
+		lineageTag: c298e85e-17a2-5373-b395-722d5dd181d5
+		sourceLineageTag: consented
+		summarizeBy: none
+		sourceColumn: consented
+
+	column attended
+		dataType: boolean
+		lineageTag: 19dfa7ec-7da4-5878-8244-c6e62818ff98
+		sourceLineageTag: attended
+		summarizeBy: none
+		sourceColumn: attended
+
+	column trust_before
+		dataType: double
+		lineageTag: 7bf810cd-ff01-5bd5-8715-2e10f2d917b6
+		sourceLineageTag: trust_before
+		summarizeBy: none
+		sourceColumn: trust_before
+
+	column trust_after
+		dataType: double
+		lineageTag: 9cb32ed1-1885-574b-a551-2496725dabe5
+		sourceLineageTag: trust_after
+		summarizeBy: none
+		sourceColumn: trust_after
+
+	column account_opened
+		dataType: boolean
+		lineageTag: c8942d19-3093-50dd-a7ed-8d3ffc8b87d4
+		sourceLineageTag: account_opened
+		summarizeBy: none
+		sourceColumn: account_opened
+
+	column funded_30d
+		dataType: boolean
+		lineageTag: f155b003-ef60-5ec1-bcbd-397d983f6f33
+		sourceLineageTag: funded_30d
+		summarizeBy: none
+		sourceColumn: funded_30d
+
+	column active_90d
+		dataType: boolean
+		lineageTag: 169a2981-ac37-5591-8adf-274157ac1503
+		sourceLineageTag: active_90d
+		summarizeBy: none
+		sourceColumn: active_90d
+
+	column products_held
+		dataType: double
+		lineageTag: 3041e783-a689-5429-8148-f3714f5a2b8b
+		sourceLineageTag: products_held
+		summarizeBy: none
+		sourceColumn: products_held
+
+	partition fact_attendee = entity
+		mode: directLake
+		source
+			entityName: fact_attendee
+			schemaName: dbo
+			expressionSource: DatabaseQuery

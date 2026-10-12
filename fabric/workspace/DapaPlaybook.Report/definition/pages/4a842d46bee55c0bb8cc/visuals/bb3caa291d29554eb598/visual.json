@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "bb3caa291d29554eb598",
+  "position": {
+    "x": 10,
+    "y": 310,
+    "z": 8000,
+    "width": 300,
+    "height": 125,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "product_focus"
+                }
+              },
+              "queryRef": "agg_playbook.product_focus",
+              "nativeQueryRef": "product_focus"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Product focus'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

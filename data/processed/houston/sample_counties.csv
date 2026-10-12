@@ -1,0 +1,11 @@
+county_fips,county_name,state,cbsa,cbsa_title,metro_division,central_or_outlying,in_omb_2023_metro,has_fdic_metro_branches
+48015,Austin County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,True
+48039,Brazoria County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Central,True,True
+48071,Chambers County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,True
+48157,Fort Bend County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Central,True,True
+48167,Galveston County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,True
+48201,Harris County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Central,True,True
+48291,Liberty County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,True
+48339,Montgomery County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,True
+48407,San Jacinto County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Outlying,True,False
+48473,Waller County,Texas,26420,"Houston-Pasadena-The Woodlands, TX",,Central,True,True

@@ -1,0 +1,38 @@
+/// PLACEHOLDER. Deposits per branch per year (FDIC Summary of Deposits, $000).
+table fact_branch_deposits
+	lineageTag: 7111a2c4-ed0b-56d0-b2fd-1e5b109bd38c
+	sourceLineageTag: [dbo].[fact_branch_deposits]
+
+	measure 'Branch Deposits ($000)' = SUM(fact_branch_deposits[branch_deposits_000])
+		formatString: #,0
+		displayFolder: Branches
+		lineageTag: 6a01319a-831c-5a4d-a0e5-e237c6796102
+
+	column uninum
+		dataType: int64
+		lineageTag: e3cd11f9-95d9-5647-a490-c884c6616fc0
+		sourceLineageTag: uninum
+		summarizeBy: none
+		sourceColumn: uninum
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: a8f34b3d-046a-529b-be91-860864a5d2b6
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column branch_deposits_000
+		dataType: int64
+		lineageTag: d241570c-4627-5a6a-a15e-39e10c6250bc
+		sourceLineageTag: branch_deposits_000
+		summarizeBy: none
+		sourceColumn: branch_deposits_000
+
+	partition fact_branch_deposits = entity
+		mode: directLake
+		source
+			entityName: fact_branch_deposits
+			schemaName: dbo
+			expressionSource: DatabaseQuery

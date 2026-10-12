@@ -1,0 +1,185 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "38e8e803e70050b38514",
+  "position": {
+    "x": 10,
+    "y": 445,
+    "z": 9000,
+    "width": 1260,
+    "height": 265,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "event_id"
+                }
+              },
+              "queryRef": "dim_event.event_id",
+              "nativeQueryRef": "event_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "event_date"
+                }
+              },
+              "queryRef": "dim_event.event_date",
+              "nativeQueryRef": "event_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "event_type"
+                }
+              },
+              "queryRef": "dim_event.event_type",
+              "nativeQueryRef": "event_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "approach"
+                }
+              },
+              "queryRef": "dim_event.approach",
+              "nativeQueryRef": "approach"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "product_focus"
+                }
+              },
+              "queryRef": "dim_event.product_focus",
+              "nativeQueryRef": "product_focus"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_attendee"
+                    }
+                  },
+                  "Property": "Registrations"
+                }
+              },
+              "queryRef": "fact_attendee.Registrations",
+              "nativeQueryRef": "Registrations"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_attendee"
+                    }
+                  },
+                  "Property": "Attendees"
+                }
+              },
+              "queryRef": "fact_attendee.Attendees",
+              "nativeQueryRef": "Attendees"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_attendee"
+                    }
+                  },
+                  "Property": "Accounts Opened"
+                }
+              },
+              "queryRef": "fact_attendee.Accounts Opened",
+              "nativeQueryRef": "Accounts Opened"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_attendee"
+                    }
+                  },
+                  "Property": "Active 90 Days"
+                }
+              },
+              "queryRef": "fact_attendee.Active 90 Days",
+              "nativeQueryRef": "Active 90 Days"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "Cost per Active Customer"
+                }
+              },
+              "queryRef": "dim_event.Cost per Active Customer",
+              "nativeQueryRef": "Cost per Active Customer"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Results by event'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

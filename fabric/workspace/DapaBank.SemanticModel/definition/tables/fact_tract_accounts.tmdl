@@ -1,0 +1,46 @@
+/// PLACEHOLDER. Bank's new active accounts per tract per year, for pilot vs control (bank tenant only).
+table fact_tract_accounts
+	lineageTag: 86d479f4-9bb3-5593-9ecf-0b4792c0bcbb
+	sourceLineageTag: [dbo].[fact_tract_accounts]
+
+	measure 'New Active Accounts per 1k Households' = DIVIDE(SUM(fact_tract_accounts[new_active_accounts]), [Households]) * 1000
+		formatString: 0.0
+		displayFolder: Pilot vs control
+		lineageTag: ff48c691-f615-5319-8669-c670cbe314ff
+
+	measure 'Lift vs Control' =
+			VAR pilot = CALCULATE([New Active Accounts per 1k Households], dim_tract[pilot_arm] IN {"Pilot A", "Pilot B"})
+			VAR control = CALCULATE([New Active Accounts per 1k Households], dim_tract[pilot_arm] = "Control")
+			RETURN pilot - control
+		formatString: +0.0;-0.0;0.0
+		displayFolder: Pilot vs control
+		lineageTag: d9836766-0d49-52b0-b5a4-ef1e705be927
+
+	column tract_geoid
+		dataType: string
+		lineageTag: f51a0169-ca6a-5cc6-9443-d6fbf3553d83
+		sourceLineageTag: tract_geoid
+		summarizeBy: none
+		sourceColumn: tract_geoid
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: feef4db6-e131-5afa-b0bf-e0de6750a328
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	column new_active_accounts
+		dataType: int64
+		lineageTag: 302629c6-5a28-58bc-8e6c-e5c3c1a463f7
+		sourceLineageTag: new_active_accounts
+		summarizeBy: none
+		sourceColumn: new_active_accounts
+
+	partition fact_tract_accounts = entity
+		mode: directLake
+		source
+			entityName: fact_tract_accounts
+			schemaName: dbo
+			expressionSource: DatabaseQuery

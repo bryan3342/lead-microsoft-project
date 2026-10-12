@@ -1,0 +1,160 @@
+/// PLACEHOLDER. De-identified aggregate for Mastercard. Groups under 10 attendees suppressed upstream.
+table agg_playbook
+	lineageTag: fe91a6a5-27b3-50ca-a243-6ef1b30f1257
+	sourceLineageTag: [dbo].[agg_playbook]
+
+	measure Events = SUM(agg_playbook[events])
+		formatString: #,0
+		displayFolder: Results
+		lineageTag: 2537f319-a54e-57e8-b9c0-7acd3239244f
+
+	measure Registrations = SUM(agg_playbook[registrations])
+		formatString: #,0
+		displayFolder: Results
+		lineageTag: f01dd833-35db-589c-855f-b32019e2bd1c
+
+	measure Attendees = SUM(agg_playbook[attendees])
+		formatString: #,0
+		displayFolder: Results
+		lineageTag: 0782289c-da44-57a8-9644-9b9f1343b441
+
+	measure 'Accounts Opened' = SUM(agg_playbook[accounts_opened])
+		formatString: #,0
+		displayFolder: Results
+		lineageTag: 83aa4bfc-a889-54c7-bc0c-010f49d4b54c
+
+	measure 'Active 90 Days' = SUM(agg_playbook[active_90d])
+		formatString: #,0
+		displayFolder: Results
+		lineageTag: 138fd390-2ed8-5ccf-a954-f194930d39ca
+
+	measure 'Attendance Rate' = DIVIDE([Attendees], [Registrations])
+		formatString: 0.0%
+		displayFolder: Rates
+		lineageTag: 39f9a957-e776-5ae3-a4bb-03114cff2ed3
+
+	measure 'Open Rate' = DIVIDE([Accounts Opened], SUM(agg_playbook[matched_attendees]))
+		formatString: 0.0%
+		displayFolder: Rates
+		lineageTag: 9c746997-1238-5b1e-a4f1-15ce23285f76
+
+	measure 'Active Rate' = DIVIDE([Active 90 Days], [Accounts Opened])
+		formatString: 0.0%
+		displayFolder: Rates
+		lineageTag: db312432-4e9b-5072-8f44-274efe551880
+
+	measure 'Cost per Active Customer' = DIVIDE(SUM(agg_playbook[cost_usd]), [Active 90 Days])
+		formatString: \$#,0
+		displayFolder: Rates
+		lineageTag: 2bb9d056-0d18-5241-aca9-882231fc841e
+
+	measure 'Avg Trust Lift' = DIVIDE(SUM(agg_playbook[trust_lift_sum]), SUM(agg_playbook[survey_responses]))
+		formatString: +0.00;-0.00;0.00
+		displayFolder: Rates
+		lineageTag: 7e5b8f54-d9fb-53b6-a01a-16fa50898bb0
+
+	column area
+		dataType: string
+		lineageTag: da349552-a4b5-519e-b95c-4a7514a1a218
+		sourceLineageTag: area
+		summarizeBy: none
+		sourceColumn: area
+
+	column product_focus
+		dataType: string
+		lineageTag: b2cb1bb1-221e-58b3-87b0-7a70dbeb5008
+		sourceLineageTag: product_focus
+		summarizeBy: none
+		sourceColumn: product_focus
+
+	column event_type
+		dataType: string
+		lineageTag: 2daef212-a0bd-5051-b3c5-75eb14c7f3e7
+		sourceLineageTag: event_type
+		summarizeBy: none
+		sourceColumn: event_type
+
+	column approach
+		dataType: string
+		lineageTag: 733f1095-b40d-5b02-a035-06c6da5e51c5
+		sourceLineageTag: approach
+		summarizeBy: none
+		sourceColumn: approach
+
+	column contributor_bank_type
+		dataType: string
+		lineageTag: e304adb1-8e9c-5e35-bfd9-d4ba5fbba4d9
+		sourceLineageTag: contributor_bank_type
+		summarizeBy: none
+		sourceColumn: contributor_bank_type
+
+	column events
+		dataType: int64
+		lineageTag: e96878dc-cedb-5b05-9e9e-b00285d9754a
+		sourceLineageTag: events
+		summarizeBy: none
+		sourceColumn: events
+
+	column registrations
+		dataType: int64
+		lineageTag: 7591bd39-88f5-5e01-b9f5-17fd9ef91fd7
+		sourceLineageTag: registrations
+		summarizeBy: none
+		sourceColumn: registrations
+
+	column attendees
+		dataType: int64
+		lineageTag: 90020b73-d4fb-5d7d-b5e1-f6b8180090a5
+		sourceLineageTag: attendees
+		summarizeBy: none
+		sourceColumn: attendees
+
+	column matched_attendees
+		dataType: int64
+		lineageTag: eebf1c61-0230-5c51-8c80-38c94663149f
+		sourceLineageTag: matched_attendees
+		summarizeBy: none
+		sourceColumn: matched_attendees
+
+	column accounts_opened
+		dataType: int64
+		lineageTag: f92d0993-4800-54d9-8f61-6744fd25c2db
+		sourceLineageTag: accounts_opened
+		summarizeBy: none
+		sourceColumn: accounts_opened
+
+	column active_90d
+		dataType: int64
+		lineageTag: 5bb79bcb-e643-575f-8852-95dae512cf88
+		sourceLineageTag: active_90d
+		summarizeBy: none
+		sourceColumn: active_90d
+
+	column cost_usd
+		dataType: double
+		formatString: \$#,0
+		lineageTag: 1bf3001a-f737-52aa-8724-f2b3a8958a6f
+		sourceLineageTag: cost_usd
+		summarizeBy: none
+		sourceColumn: cost_usd
+
+	column trust_lift_sum
+		dataType: double
+		lineageTag: c27b6895-4e85-5c80-82a1-b24526f00ef9
+		sourceLineageTag: trust_lift_sum
+		summarizeBy: none
+		sourceColumn: trust_lift_sum
+
+	column survey_responses
+		dataType: int64
+		lineageTag: b95eed04-b0c9-566a-b1ec-9dbade3e9037
+		sourceLineageTag: survey_responses
+		summarizeBy: none
+		sourceColumn: survey_responses
+
+	partition agg_playbook = entity
+		mode: directLake
+		source
+			entityName: agg_playbook
+			schemaName: dbo
+			expressionSource: DatabaseQuery

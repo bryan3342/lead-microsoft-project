@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Create Tables",
+    "description": "Creates the empty DAPA gold tables. Loads no data."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "df2c183a-08dd-5444-9ab8-a1aa19a3db21"
+  }
+}

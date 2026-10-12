@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "9d5f1db5fea655beaf5e",
+  "position": {
+    "x": 850,
+    "y": 75,
+    "z": 5000,
+    "width": 200,
+    "height": 90,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "Cost per Active Customer"
+                }
+              },
+              "queryRef": "agg_playbook.Cost per Active Customer",
+              "nativeQueryRef": "Cost per Active Customer"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Cost per Active Customer'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/// PLACEHOLDER. Years shared by every yearly fact, for one year slicer.
+table dim_year
+	lineageTag: 3e3009f1-70a9-5402-b2f1-5dd0f0eff837
+	sourceLineageTag: [dbo].[dim_year]
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 4683bf2f-b7c9-5cfa-9445-03f4e13ee832
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+	partition dim_year = entity
+		mode: directLake
+		source
+			entityName: dim_year
+			schemaName: dbo
+			expressionSource: DatabaseQuery

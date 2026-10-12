@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0629688c49ba5e8983c4",
+  "position": {
+    "x": 10,
+    "y": 530,
+    "z": 4000,
+    "width": 1260,
+    "height": 180,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "scenario"
+                }
+              },
+              "queryRef": "scenario_ltv.scenario",
+              "nativeQueryRef": "scenario"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "scenario_ltv.year",
+              "nativeQueryRef": "year"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "cumulative_ltv_usd"
+                }
+              },
+              "queryRef": "scenario_ltv.cumulative_ltv_usd",
+              "nativeQueryRef": "cumulative_ltv_usd"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "basis"
+                }
+              },
+              "queryRef": "scenario_ltv.basis",
+              "nativeQueryRef": "basis"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Assumption table'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

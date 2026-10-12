@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "8848b8a84ee45007aba4",
+  "position": {
+    "x": 800,
+    "y": 175,
+    "z": 10000,
+    "width": 470,
+    "height": 260,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "approach"
+                }
+              },
+              "queryRef": "agg_playbook.approach",
+              "nativeQueryRef": "approach"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_playbook"
+                    }
+                  },
+                  "Property": "Active Rate"
+                }
+              },
+              "queryRef": "agg_playbook.Active Rate",
+              "nativeQueryRef": "Active Rate"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Active rate by approach'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

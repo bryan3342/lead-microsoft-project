@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DAPA Bank Dashboard",
+    "description": "Bank-facing dashboard skeleton (placeholders, no data)."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8591f2b5-59df-50af-aa32-a4e068daced2"
+  }
+}

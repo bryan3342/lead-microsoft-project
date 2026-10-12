@@ -1,0 +1,10 @@
+/// Direct Lake connection to the DapaLakehouse SQL analytics endpoint.
+/// The deploy script fills both placeholders in memory (see fabric/deploy/RUNBOOK.md).
+expression DatabaseQuery =
+		let
+		    database = Sql.Database("<SQL_ENDPOINT_HOST>", "<SQL_ENDPOINT_ID>")
+		in
+		    database
+	lineageTag: 81da37cd-7c7a-5de7-8f0f-c216edbdceb7
+
+	annotation PBI_IncludeFutureArtifacts = False

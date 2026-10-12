@@ -1,0 +1,60 @@
+/// PLACEHOLDER. FDIC-insured banks. target_issuer marks local banks under $10B.
+table dim_bank
+	lineageTag: 83c6a976-4451-528b-9400-512458e1eed8
+	sourceLineageTag: [dbo].[dim_bank]
+
+	column cert
+		dataType: int64
+		lineageTag: cea17a27-8dd8-5999-b67e-4a14024c15ca
+		sourceLineageTag: cert
+		summarizeBy: none
+		sourceColumn: cert
+
+	column fed_rssd
+		dataType: string
+		lineageTag: 3f860af3-c3e8-5d17-bb14-b965f5e16595
+		sourceLineageTag: fed_rssd
+		summarizeBy: none
+		sourceColumn: fed_rssd
+
+	column bank_name
+		dataType: string
+		lineageTag: 14e29ebf-ed17-553a-a3b3-9379c9e34f23
+		sourceLineageTag: bank_name
+		summarizeBy: none
+		sourceColumn: bank_name
+
+	column assets_000
+		dataType: double
+		lineageTag: d39ae0be-a101-506a-84a2-aac7db6b90e9
+		sourceLineageTag: assets_000
+		summarizeBy: none
+		sourceColumn: assets_000
+
+	column target_issuer
+		dataType: boolean
+		lineageTag: ec008c2f-5db4-5d80-8c9d-5db25890ca9b
+		sourceLineageTag: target_issuer
+		summarizeBy: none
+		sourceColumn: target_issuer
+
+	column is_mdi
+		dataType: boolean
+		lineageTag: 4f7447dd-26e1-5305-9e46-52df9ef72118
+		sourceLineageTag: is_mdi
+		summarizeBy: none
+		sourceColumn: is_mdi
+
+	column is_tenant_bank
+		dataType: boolean
+		lineageTag: 9c513762-5a70-5213-a9a7-59d0001b15de
+		sourceLineageTag: is_tenant_bank
+		summarizeBy: none
+		sourceColumn: is_tenant_bank
+
+	partition dim_bank = entity
+		mode: directLake
+		source
+			entityName: dim_bank
+			schemaName: dbo
+			expressionSource: DatabaseQuery

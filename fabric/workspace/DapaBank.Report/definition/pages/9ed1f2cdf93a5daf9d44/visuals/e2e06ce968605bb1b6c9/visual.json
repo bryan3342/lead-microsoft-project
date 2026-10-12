@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e2e06ce968605bb1b6c9",
+  "position": {
+    "x": 10,
+    "y": 175,
+    "z": 3000,
+    "width": 1260,
+    "height": 345,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "scenario_ltv.year",
+              "nativeQueryRef": "year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV Low (Assumption)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV Low (Assumption)",
+              "nativeQueryRef": "LTV Low (Assumption)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV Base (Assumption)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV Base (Assumption)",
+              "nativeQueryRef": "LTV Base (Assumption)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "scenario_ltv"
+                    }
+                  },
+                  "Property": "LTV High (Assumption)"
+                }
+              },
+              "queryRef": "scenario_ltv.LTV High (Assumption)",
+              "nativeQueryRef": "LTV High (Assumption)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_event"
+                    }
+                  },
+                  "Property": "Cost per Active Customer"
+                }
+              },
+              "queryRef": "dim_event.Cost per Active Customer",
+              "nativeQueryRef": "Cost per Active Customer"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: ASSUMPTION: 5-year cumulative LTV per active account vs measured cost per active customer'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

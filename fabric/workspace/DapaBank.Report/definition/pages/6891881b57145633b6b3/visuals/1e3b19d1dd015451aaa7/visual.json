@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1e3b19d1dd015451aaa7",
+  "position": {
+    "x": 1060,
+    "y": 75,
+    "z": 6000,
+    "width": 200,
+    "height": 90,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_branch_events"
+                    }
+                  },
+                  "Property": "Branch Closings"
+                }
+              },
+              "queryRef": "fact_branch_events.Branch Closings",
+              "nativeQueryRef": "Branch Closings"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PLACEHOLDER: Branch Closings'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

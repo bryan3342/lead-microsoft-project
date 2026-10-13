@@ -104,7 +104,7 @@ class DataLoader:
         hmda = self._latest_hmda_by_tract()
         out = out.merge(hmda, on="tract_geoid", how="left")
 
-        out["banking_complaints_per_1k"] = self._complaints_per_1k_per_year(households)
+        out["banking_complaints_per_1k"] = self._complaints_per_1k_per_year(acs["tract_geoid"], households)
         out["branch_closings_past_5_years"] = self._closings_past_5_years()
 
         # Deliberately out of scope: no playbook signal depends on raw distance-to-any-branch,
@@ -158,7 +158,7 @@ class DataLoader:
             columns={"denial_rate": "mortgage_denial_rate", "high_cost_share": "high_cost_lending_share"}
         )
 
-    def _complaints_per_1k_per_year(self, households: pd.Series) -> pd.Series:
+    def _complaints_per_1k_per_year(self, tract_geoid: pd.Series, households: pd.Series) -> pd.Series:
         """Average complaints per 1,000 households per year, tract-level.
 
         New derivation. CFPB complaints are published by ZIP; split across a ZIP's tracts by
@@ -176,7 +176,12 @@ class DataLoader:
 
         num_years = complaints["year"].nunique()
         by_tract = joined.groupby("tract_geoid", as_index=False)["complaints"].sum()
-        total = by_tract.set_index("tract_geoid")["complaints"].reindex(households.index).fillna(0)
+        tract_complaints = by_tract.set_index("tract_geoid")["complaints"]
+
+        # Reindex to match tract_geoid order, fill missing with 0
+        total = tract_complaints.reindex(tract_geoid.values, fill_value=0)
+        total.index = range(len(total))  # Match the position index
+
         avg_per_year = total / max(num_years, 1)
         return (avg_per_year / households * 1000).where(households > 0)
 

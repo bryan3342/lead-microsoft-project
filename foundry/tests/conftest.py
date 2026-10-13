@@ -9,6 +9,7 @@ def sample_demographic():
     return DemographicProfile(
         tract_geoid="48201123400",
         county_name="Harris County",
+        households=1500,
         median_household_income=35000,
         poverty_rate=0.28,
         limited_english_households_share=0.35,
@@ -17,9 +18,9 @@ def sample_demographic():
         unbanked_share=0.08,
         mortgage_denial_rate=0.18,
         high_cost_lending_share=0.12,
-        banking_complaints_per_1k=2.3,
+        banking_complaints_per_1k=42.5,
         branch_closings_past_5_years=1,
-        nearest_branch_distance_miles=0.8
+        nearest_branch_distance_miles=None
     )
 
 

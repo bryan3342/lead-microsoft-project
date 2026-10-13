@@ -6,6 +6,7 @@ class DemographicProfile(BaseModel):
     """Census tract demographic profile."""
     tract_geoid: str
     county_name: str
+    households: Optional[int] = None
     median_household_income: Optional[float] = None
     poverty_rate: Optional[float] = None
     limited_english_households_share: Optional[float] = None

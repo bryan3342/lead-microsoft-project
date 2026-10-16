@@ -3,6 +3,7 @@ from foundry.models import CampaignSignal, CampaignRecommendation
 from foundry.data_loader import DataLoader
 from typing import List
 import pandas as pd
+import numpy as np
 
 
 class CampaignMatcher:
@@ -20,6 +21,13 @@ class CampaignMatcher:
     def __init__(self, data_loader: DataLoader = None):
         self.data_loader = data_loader or DataLoader()
         self.playbook = self.data_loader.load_campaign_playbook()
+
+    def _safe_get(self, row, key):
+        """Get value from pandas row, converting NaN to None."""
+        val = row.get(key)
+        if pd.isna(val):
+            return None
+        return val
 
     def match_campaigns(
         self,
@@ -48,6 +56,11 @@ class CampaignMatcher:
 
             match_row = match.iloc[0]
 
+            # Get confidence from playbook or infer from signal strength
+            confidence = self._safe_get(match_row, 'confidence')
+            if not confidence:
+                confidence = "high" if signal.signal_strength == "high" else "medium"
+
             recommendation = CampaignRecommendation(
                 tract_geoid=tract_geoid,
                 top_need=match_row['top_need'],
@@ -55,7 +68,13 @@ class CampaignMatcher:
                 campaign=match_row['campaign'],
                 channel=match_row['channel'],
                 signal_justification=signal.interpretation,
-                confidence="high" if signal.signal_strength == "high" else "medium"
+                confidence=confidence,
+                source_program_name=self._safe_get(match_row, 'source_program_name'),
+                source_program_type=self._safe_get(match_row, 'source_program_type'),
+                source_evidence=self._safe_get(match_row, 'source_evidence'),
+                source_evidence_url=self._safe_get(match_row, 'source_evidence_url'),
+                source_caveats=self._safe_get(match_row, 'source_caveats'),
+                local_tactic_hypothesis=self._safe_get(match_row, 'local_tactic_hypothesis')
             )
             recommendations.append(recommendation)
 

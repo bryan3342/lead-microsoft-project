@@ -53,6 +53,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - uses: anthropics/claude-code-action@v1
+        id: claude-review
+        continue-on-error: true
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
@@ -112,6 +114,12 @@ jobs:
             --model claude-sonnet-5-5
             --max-turns 60
             --disallowedTools "WebFetch,WebSearch"
-            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git show:*),Bash(git fetch:*),Bash(git rev-parse:*),Bash(git merge-base:*),Bash(git ls-files:*),Bash(git blame:*),Bash(git add:*),Bash(git commit:*),Bash(git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr comment:*),Bash(gh issue view:*),Bash(cat:*),Bash(ls:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(grep:*),Bash(find:*),Bash(npm ci:*),Bash(npm test:*),Bash(npm run lint:*),Bash(npm run typecheck:*)"
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git show:*),Bash(git fetch:*),Bash(git rev-parse:*),Bash(git merge-base:*),Bash(g
         env:
           GH_TOKEN: ${{ github.token }}
+      - name: Upload Claude execution output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-execution-output
+          path: /home/runner/work/_temp/claude-execution-output.json

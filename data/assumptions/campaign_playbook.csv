@@ -1,6 +1,6 @@
-signal,top_need,entry_product,campaign,channel
-limited_english_share,Language access,No-fee account with in-language onboarding,Financial education series in the community's language,"Community partners, in-language assistant"
-denial_rate,Credit building,Secured card,Credit-builder workshops,"Branch events, SMS assistant"
-complaints_per_1k,Trust and fees,No-fee no-minimum account,Fee-transparency pledge with spend-and-get on first deposits,Trusted community partners
-closings_per_100k,Branch access,Mobile-first account,Pop-up branch days and local merchant experiences,"Mobile banker, partner organisations"
-unbanked_share,First account,No-fee no-minimum account,Spend-and-get on first deposits,"Community partners, branch events"
+signal,top_need,entry_product,campaign,channel,source_program_name,source_program_type,source_evidence,source_evidence_url,source_caveats,local_tactic_hypothesis,confidence
+limited_english_share,Language access,No-fee account with in-language onboarding,Language-accessible onboarding + partner education,"Community partners, language-matched channels",DiskarTech (RCBC Philippines 2022-2024),banking_model,"Language-localized app + trusted channels + plain-language education; 25000+ cardholders tracked; success factors identified through focus groups",https://www.mastercard.com/news/media/virpdtj4/rcbc_white-paper_inclusionbydesign.pdf,"Philippines market; no control arm; outcome mechanism not isolated; page reference pending verification","Language-accessible onboarding + partner-delivered financial education (within existing bank capacity)",candidate_hypothesis
+denial_rate,Credit building,Secured card,Credit-builder workshops,"Branch events, SMS assistant",,,,,,,unsupported_suggestion
+complaints_per_1k,Trust and fees,No-fee no-minimum account,Fee-transparency pledge with spend-and-get on first deposits,Trusted community partners,,,,,,,unsupported_suggestion
+closings_per_100k,Branch access,Mobile-first account,Pop-up branch days and local merchant experiences,"Mobile banker, partner organisations",,,,,,,unsupported_suggestion
+unbanked_share,First account,No-fee no-minimum account,Spend-and-get on first deposits,"Community partners, branch events",,,,,,,unsupported_suggestion

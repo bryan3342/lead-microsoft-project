@@ -39,7 +39,15 @@ class CampaignRecommendation(BaseModel):
     campaign: str  # e.g., "Financial education series"
     channel: str  # e.g., "Community partners, in-language assistant"
     signal_justification: str  # Why this recommendation fits
-    confidence: str  # "high", "medium", "low"
+    confidence: str  # "high", "medium", "low", "candidate_hypothesis", "unsupported_suggestion"
+
+    # Evidence and source fields (new)
+    source_program_name: Optional[str] = None  # e.g., "DiskarTech (RCBC, Philippines, 2022–2024)"
+    source_program_type: Optional[str] = None  # Enum: banking_model, campaign, partnership, educational_resource
+    source_evidence: Optional[str] = None  # Summary of what was observed/measured
+    source_evidence_url: Optional[str] = None  # Primary source URL
+    source_caveats: Optional[str] = None  # Limitations of the evidence
+    local_tactic_hypothesis: Optional[str] = None  # What we propose to test locally
 
 
 class PlaybookOutput(BaseModel):

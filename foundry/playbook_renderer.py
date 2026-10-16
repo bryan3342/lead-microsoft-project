@@ -48,6 +48,12 @@ class PlaybookRenderer:
                 "channel": rec.channel,
                 "confidence": rec.confidence,
                 "signal_justification": rec.signal_justification,
+                "source_program_name": rec.source_program_name or "",
+                "source_program_type": rec.source_program_type or "",
+                "source_evidence": rec.source_evidence or "",
+                "source_evidence_url": rec.source_evidence_url or "",
+                "source_caveats": rec.source_caveats or "",
+                "local_tactic_hypothesis": rec.local_tactic_hypothesis or "",
             })
 
         if not rows:
